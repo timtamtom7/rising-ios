@@ -27,6 +27,35 @@ struct SettingsView: View {
                     }
                     .listRowBackground(Color.risingSurfaceDark)
 
+                    // Investment Tools Section (R7)
+                    Section {
+                        NavigationLink {
+                            ROICalculatorView()
+                        } label: {
+                            HStack {
+                                Image(systemName: "chart.line.uptrend.xyaxis")
+                                    .foregroundStyle(Color.risingPrimary)
+                                Text("ROI Calculator")
+                                    .foregroundStyle(Color.risingTextPrimaryDark)
+                            }
+                        }
+                        
+                        NavigationLink {
+                            PortfolioView()
+                        } label: {
+                            HStack {
+                                Image(systemName: "building.columns")
+                                    .foregroundStyle(Color.risingPrimary)
+                                Text("Investment Portfolio")
+                                    .foregroundStyle(Color.risingTextPrimaryDark)
+                            }
+                        }
+                    } header: {
+                        Text("Investment Tools")
+                            .foregroundStyle(Color.risingTextSecondaryDark)
+                    }
+                    .listRowBackground(Color.risingSurfaceDark)
+
                     // Notifications Section
                     Section {
                         NavigationLink {

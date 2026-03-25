@@ -19,6 +19,7 @@
 		30C580500F21EC289B6B3125 /* AddDepositViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385A89E67B0EB32FE623A250 /* AddDepositViewModel.swift */; };
 		36F9A3FAEDBEF7BB8EB98F03 /* FirstGoalStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452758A307DE91F753E024D9 /* FirstGoalStepView.swift */; };
 		38C8D69A8841B8C57DA7878E /* DepositChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73944867520786798541352A /* DepositChartView.swift */; };
+		3B66D39E8B2D303655604983 /* InvestmentPortfolio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05535FF7D6C61AD87824B828 /* InvestmentPortfolio.swift */; };
 		3ED553461BF117B6EAFFD85F /* Spacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86477AE4C85D6A9C4007624C /* Spacing.swift */; };
 		4708CDCBB75A30480CDFC27B /* GoalDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B98EA7B3C5823F0C1464CD9 /* GoalDetailViewModel.swift */; };
 		493FA335B09D70A503D36DDF /* Deposit.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE3BF74AD8E7D53A1BB43B1 /* Deposit.swift */; };
@@ -32,7 +33,9 @@
 		6722018CFF3A4013633AD8FB /* PropertyListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87509B2CB5B6F9C210589BD6 /* PropertyListViewModel.swift */; };
 		71FB1CFB634335BFB643AF8B /* Agent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE034EEED9600A6F3AF70A6 /* Agent.swift */; };
 		774BD67CF5EC3BC0A9BA6AAE /* MilestoneService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6389812A06B6725D9D465A72 /* MilestoneService.swift */; };
+		7CF688674399EFAD6EF5A5A8 /* ROICalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FA80C796D9F0C1E61C7C7F /* ROICalculatorView.swift */; };
 		7D2B254CB310DBCDA99CB635 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F599A425BF38F9ED93E6935 /* OnboardingView.swift */; };
+		8346CDBAD1FBEE2C095DD029 /* PortfolioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4D38673B11883E56AAF373 /* PortfolioView.swift */; };
 		8587C88D0CF6D243FF01E15A /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 1D8022CDD144C166C8278C22 /* PrivacyInfo.xcprivacy */; };
 		889782DA9E969B8C7CA50826 /* Milestone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F574DE913B62B1A3BF63C86 /* Milestone.swift */; };
 		896597AC853CCDA4899F783B /* MortgageCalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63C1FE5EE29B4FF2C1D6CCA /* MortgageCalculatorView.swift */; };
@@ -69,6 +72,7 @@
 
 /* Begin PBXFileReference section */
 		03980658288E14508DBA5DCE /* AgentListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentListViewModel.swift; sourceTree = "<group>"; };
+		05535FF7D6C61AD87824B828 /* InvestmentPortfolio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestmentPortfolio.swift; sourceTree = "<group>"; };
 		0E507E8C7B41462BCFD3BF4F /* RisingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RisingApp.swift; sourceTree = "<group>"; };
 		14CDCD2B22832BDAEB2895FF /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
 		14E401E320B4165D9D14A54A /* ShareableGoalCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareableGoalCardView.swift; sourceTree = "<group>"; };
@@ -77,6 +81,7 @@
 		1E8C83CBE7AE4E3E7A1B9A63 /* AgentListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentListView.swift; sourceTree = "<group>"; };
 		26323A9FEBA93A35DF021291 /* WelcomeStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeStepView.swift; sourceTree = "<group>"; };
 		2853DBC05802B80A42AF147A /* AddDepositView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDepositView.swift; sourceTree = "<group>"; };
+		2E4D38673B11883E56AAF373 /* PortfolioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioView.swift; sourceTree = "<group>"; };
 		2F599A425BF38F9ED93E6935 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		335EFFCE276B653825D53E03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		385A89E67B0EB32FE623A250 /* AddDepositViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDepositViewModel.swift; sourceTree = "<group>"; };
@@ -107,6 +112,7 @@
 		8F574DE913B62B1A3BF63C86 /* Milestone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Milestone.swift; sourceTree = "<group>"; };
 		933117014751DCDB73313B4A /* ThemeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeService.swift; sourceTree = "<group>"; };
 		A1C22F77C7E0767715058F24 /* ReadyStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadyStepView.swift; sourceTree = "<group>"; };
+		A1FA80C796D9F0C1E61C7C7F /* ROICalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ROICalculatorView.swift; sourceTree = "<group>"; };
 		AA34F51FB7BCB7B563B00FB2 /* ShareCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareCardViewModel.swift; sourceTree = "<group>"; };
 		ABC147A1050017D180A9DCB0 /* WhyRisingStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhyRisingStepView.swift; sourceTree = "<group>"; };
 		AFA2F5714C48135A9F25F76B /* Typography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typography.swift; sourceTree = "<group>"; };
@@ -159,6 +165,7 @@
 				EAE034EEED9600A6F3AF70A6 /* Agent.swift */,
 				DAE3BF74AD8E7D53A1BB43B1 /* Deposit.swift */,
 				B27766F72B5DD25D1D6D4045 /* Goal.swift */,
+				05535FF7D6C61AD87824B828 /* InvestmentPortfolio.swift */,
 				8F574DE913B62B1A3BF63C86 /* Milestone.swift */,
 				E5BAE1A6023455590B3C6254 /* Property.swift */,
 			);
@@ -172,6 +179,14 @@
 				0E507E8C7B41462BCFD3BF4F /* RisingApp.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		33F8B2E9571D88D0B0B047F9 /* Portfolio */ = {
+			isa = PBXGroup;
+			children = (
+				2E4D38673B11883E56AAF373 /* PortfolioView.swift */,
+			);
+			path = Portfolio;
 			sourceTree = "<group>";
 		};
 		418368D79A01F2DBBDCB5AB3 /* Design */ = {
@@ -294,6 +309,7 @@
 			isa = PBXGroup;
 			children = (
 				2C0B44078BC974B46E62589E /* App */,
+				D1B2AB09F51FEA96D0DB0A9B /* Calculators */,
 				418368D79A01F2DBBDCB5AB3 /* Design */,
 				2B003945229A0D57561961A3 /* Models */,
 				94E00E58708E93E9D10EB79F /* Resources */,
@@ -302,6 +318,14 @@
 				FCCA5992ADE90206A2278A03 /* Views */,
 			);
 			path = Rising;
+			sourceTree = "<group>";
+		};
+		D1B2AB09F51FEA96D0DB0A9B /* Calculators */ = {
+			isa = PBXGroup;
+			children = (
+				A1FA80C796D9F0C1E61C7C7F /* ROICalculatorView.swift */,
+			);
+			path = Calculators;
 			sourceTree = "<group>";
 		};
 		E175483BDD4F31FBC6DA3FDE /* Share */ = {
@@ -359,6 +383,7 @@
 				721693824734107F251DCC95 /* Goals */,
 				BD7E26AB183ED3E9325C1361 /* Milestones */,
 				1E4913F6E7526C5CA20DF1D1 /* Onboarding */,
+				33F8B2E9571D88D0B0B047F9 /* Portfolio */,
 				EDCE6EDA15CDB736B78146FD /* Properties */,
 				9622DF50186F9DCC09F0A00B /* Settings */,
 				E175483BDD4F31FBC6DA3FDE /* Share */,
@@ -470,6 +495,7 @@
 				641AD08BDE78C0B7007331D7 /* GoalDetailView.swift in Sources */,
 				4708CDCBB75A30480CDFC27B /* GoalDetailViewModel.swift in Sources */,
 				580CD610107552E9C18C6D8F /* GoalService.swift in Sources */,
+				3B66D39E8B2D303655604983 /* InvestmentPortfolio.swift in Sources */,
 				889782DA9E969B8C7CA50826 /* Milestone.swift in Sources */,
 				774BD67CF5EC3BC0A9BA6AAE /* MilestoneService.swift in Sources */,
 				B9966AFA107E1D6D5DF7F0C8 /* MilestoneTrackerView.swift in Sources */,
@@ -481,10 +507,12 @@
 				9E375667465DEA03293FF63B /* OnboardingService.swift in Sources */,
 				7D2B254CB310DBCDA99CB635 /* OnboardingView.swift in Sources */,
 				EBC97C167C5964752B7139C0 /* OnboardingViewModel.swift in Sources */,
+				8346CDBAD1FBEE2C095DD029 /* PortfolioView.swift in Sources */,
 				D2522D1ADA0F422DA5DFBD91 /* Property.swift in Sources */,
 				91C35DB810E0E71B71F8F249 /* PropertyListView.swift in Sources */,
 				6722018CFF3A4013633AD8FB /* PropertyListViewModel.swift in Sources */,
 				2D064A5D844F6D63124EAD72 /* PropertyService.swift in Sources */,
+				7CF688674399EFAD6EF5A5A8 /* ROICalculatorView.swift in Sources */,
 				64CD0D4D243BF4EA5069EF01 /* ReadyStepView.swift in Sources */,
 				10926747C4959C8A9ADAFE84 /* RisingApp.swift in Sources */,
 				F1D4EC9E8FF91C34DA7CCD3C /* SettingsView.swift in Sources */,

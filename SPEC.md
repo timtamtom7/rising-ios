@@ -299,3 +299,76 @@ Rising/
 - Milestone tracker progress bar animates smoothly
 - Market trend badges on property cards (up/down/stable with icons)
 - Consistent dark theme with risingPrimary amber accent throughout
+
+## R7 — Advanced Features, Polish & Investment Tools
+
+### ROI Calculator
+- ROICalculatorView: comprehensive investment property analysis
+- Inputs: purchase price, down payment, closing costs, renovation, mortgage, taxes, insurance, vacancy rate, appreciation rate, holding period
+- Outputs: total ROI, annualized ROI, cash-on-cash return, cap rate, monthly/annual cash flow, break-even months, debt service coverage ratio, future value projection
+- Investment breakdown showing all upfront costs
+- Results displayed in clear, visual cards
+
+### Investment Portfolio Tracking
+- InvestmentPortfolio model: track multiple properties as a portfolio
+- PortfolioProperty: purchase price, down payment, monthly rent, expenses, cash flow, cap rate, cash-on-cash return
+- PortfolioView: overview of all portfolios with aggregate metrics
+- PortfolioSummary: total investment, equity, cash flow, ROI, cap rate across all properties
+- Data persisted via UserDefaults (lightweight, no SQLite needed)
+
+### Portfolio Analytics
+- ROIAnalysis model: detailed analysis of individual properties
+- MarketComparison model: Zillow-style price history and rent history
+- Cash flow analysis: effective rent (accounting for vacancy), total monthly expenses
+- Total return calculation: cash flow + equity + appreciation - costs
+
+### Investment Tools Section
+- ROI Calculator accessible from Settings
+- Investment Portfolio accessible from Settings
+- Market comparison tools (model in place for future API integration)
+
+## R8 — Advanced AI, Integrations
+
+### AI Market Predictions
+- On-device ML predictions for property appreciation based on historical patterns
+- Risk assessment scoring for investment properties
+- Optimal holding period recommendations
+
+### Financial Integrations
+- Plaid-like account linking framework (API mock)
+- Bank account aggregation for deposit tracking
+- Automatic deposit detection and categorization
+
+### Portfolio Analytics Dashboard
+- Real-time portfolio performance tracking
+- Benchmark comparison (vs. SPY, real estate indices)
+- Tax implications calculator
+
+## R9 — Community, Subscriptions
+
+### Subscription Tiers
+- Free: 3 goals, 1 property per goal, basic tracking
+- Investor ($4.99/mo): unlimited goals/properties, full ROI calculator, portfolio analytics
+- Agent ($9.99/mo): Investor + client sharing, agent dashboard, export reports
+
+### Community Features
+- Anonymous investment portfolio benchmarking
+- "Rising Investor" achievement badges
+- Tips from experienced investors (curated feed)
+
+## R10 — Launch, Marketing, Platform
+
+### App Store
+- Full App Store listing with screenshots
+- Feature highlights: AI insights, ROI calculator, milestone tracking
+- Privacy policy and parental guidance
+
+### Marketing
+- Rising.app marketing site
+- SEO: "real estate savings app", "house down payment tracker"
+- Blog: market insights, saving tips
+
+### Platform
+- iPad optimized layouts
+- watchOS for savings reminders
+- Android app (Flutter)
