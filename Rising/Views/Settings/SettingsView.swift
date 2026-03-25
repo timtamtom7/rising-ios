@@ -4,6 +4,7 @@ struct SettingsView: View {
     @Environment(\.dismiss) private var dismiss
     @State private var viewModel = SettingsViewModel()
     @State private var showResetAlert = false
+    @State private var showNotificationSettings = false
 
     var body: some View {
         NavigationStack {
@@ -22,6 +23,24 @@ struct SettingsView: View {
                         .tint(Color.risingPrimary)
                     } header: {
                         Text("Appearance")
+                            .foregroundStyle(Color.risingTextSecondaryDark)
+                    }
+                    .listRowBackground(Color.risingSurfaceDark)
+
+                    // Notifications Section
+                    Section {
+                        NavigationLink {
+                            NotificationSettingsView()
+                        } label: {
+                            HStack {
+                                Image(systemName: "bell.fill")
+                                    .foregroundStyle(Color.risingPrimary)
+                                Text("Notifications")
+                                    .foregroundStyle(Color.risingTextPrimaryDark)
+                            }
+                        }
+                    } header: {
+                        Text("Reminders")
                             .foregroundStyle(Color.risingTextSecondaryDark)
                     }
                     .listRowBackground(Color.risingSurfaceDark)

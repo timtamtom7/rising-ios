@@ -10,6 +10,7 @@
 		06F4B8BB235A130163331685 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C253E1BBA7EB2F71403C3368 /* Assets.xcassets */; };
 		0F8984DBB0DAFBEF75AF6AA6 /* Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA2F5714C48135A9F25F76B /* Typography.swift */; };
 		10926747C4959C8A9ADAFE84 /* RisingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E507E8C7B41462BCFD3BF4F /* RisingApp.swift */; };
+		1BA3B9C054CB2D43953379E8 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C6C3E193BC1FDBE72B9820 /* NotificationService.swift */; };
 		1E999F50C392EF7924B2CF67 /* ShareableGoalCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E401E320B4165D9D14A54A /* ShareableGoalCardView.swift */; };
 		20262525B866C887A986E751 /* AgentListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8C83CBE7AE4E3E7A1B9A63 /* AgentListView.swift */; };
 		28F37E87589B0B9A3AA8C3C0 /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F49FA55268402507A351FA /* DatabaseService.swift */; };
@@ -35,6 +36,7 @@
 		8587C88D0CF6D243FF01E15A /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 1D8022CDD144C166C8278C22 /* PrivacyInfo.xcprivacy */; };
 		889782DA9E969B8C7CA50826 /* Milestone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F574DE913B62B1A3BF63C86 /* Milestone.swift */; };
 		896597AC853CCDA4899F783B /* MortgageCalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63C1FE5EE29B4FF2C1D6CCA /* MortgageCalculatorView.swift */; };
+		8A46213EA2989CE7D05162EF /* NotificationSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476F8CC99DF23FEF6C154DC4 /* NotificationSettingsView.swift */; };
 		8F348328A33339C0327D50AA /* EmptyDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B776190C25D2D8DEEE6EEC9 /* EmptyDashboardView.swift */; };
 		91C35DB810E0E71B71F8F249 /* PropertyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C0DAF47189A26D2585FD30 /* PropertyListView.swift */; };
 		96097939C9F71E1A3943E09B /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D054AC23AEE97736543367D /* Colors.swift */; };
@@ -81,6 +83,7 @@
 		452758A307DE91F753E024D9 /* FirstGoalStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstGoalStepView.swift; sourceTree = "<group>"; };
 		46808465A20ABC077BF8AA39 /* EditGoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditGoalView.swift; sourceTree = "<group>"; };
 		4707B42FE0ED0FC743BFB87B /* OnboardingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingService.swift; sourceTree = "<group>"; };
+		476F8CC99DF23FEF6C154DC4 /* NotificationSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSettingsView.swift; sourceTree = "<group>"; };
 		4D9050335E6A63D675B305B9 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		5568B6110CBFAED6E5B41094 /* MilestoneTrackerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilestoneTrackerView.swift; sourceTree = "<group>"; };
 		57C0DAF47189A26D2585FD30 /* PropertyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyListView.swift; sourceTree = "<group>"; };
@@ -98,6 +101,7 @@
 		805AC69F459593268B38AF76 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		81F49FA55268402507A351FA /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
 		82AA8AB10E9A95265683B2F4 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		83C6C3E193BC1FDBE72B9820 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		86477AE4C85D6A9C4007624C /* Spacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spacing.swift; sourceTree = "<group>"; };
 		87509B2CB5B6F9C210589BD6 /* PropertyListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyListViewModel.swift; sourceTree = "<group>"; };
 		8F574DE913B62B1A3BF63C86 /* Milestone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Milestone.swift; sourceTree = "<group>"; };
@@ -247,6 +251,7 @@
 		9622DF50186F9DCC09F0A00B /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				476F8CC99DF23FEF6C154DC4 /* NotificationSettingsView.swift */,
 				ED98B2A447278974B3105E06 /* SettingsView.swift */,
 			);
 			path = Settings;
@@ -326,6 +331,7 @@
 				FF045C29001235656C73FCE9 /* GoalService.swift */,
 				6389812A06B6725D9D465A72 /* MilestoneService.swift */,
 				E977B42127D8AB33C4F274C2 /* MortgageCalculatorService.swift */,
+				83C6C3E193BC1FDBE72B9820 /* NotificationService.swift */,
 				4707B42FE0ED0FC743BFB87B /* OnboardingService.swift */,
 				7F6CB6381FAB333A595829B9 /* PropertyService.swift */,
 				933117014751DCDB73313B4A /* ThemeService.swift */,
@@ -470,6 +476,8 @@
 				FA24E840F748D79EA590002C /* MilestoneTrackerViewModel.swift in Sources */,
 				9BD35250FA5083C190AFDA97 /* MortgageCalculatorService.swift in Sources */,
 				896597AC853CCDA4899F783B /* MortgageCalculatorView.swift in Sources */,
+				1BA3B9C054CB2D43953379E8 /* NotificationService.swift in Sources */,
+				8A46213EA2989CE7D05162EF /* NotificationSettingsView.swift in Sources */,
 				9E375667465DEA03293FF63B /* OnboardingService.swift in Sources */,
 				7D2B254CB310DBCDA99CB635 /* OnboardingView.swift in Sources */,
 				EBC97C167C5964752B7139C0 /* OnboardingViewModel.swift in Sources */,
