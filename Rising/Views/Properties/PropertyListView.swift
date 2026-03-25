@@ -113,9 +113,29 @@ struct PropertyCardView: View {
             }
 
             HStack {
-                Text(formatCurrency(property.price))
+                Text(property.displayPrice)
                     .risingHeading3()
                     .foregroundStyle(Color.risingPrimary)
+
+                // R6: Market trend badge
+                let trendColor: Color = {
+                    switch property.marketTrend {
+                    case .up: return .green
+                    case .down: return .red
+                    case .stable: return .gray
+                    }
+                }()
+                HStack(spacing: 2) {
+                    Image(systemName: property.marketTrend.iconName)
+                        .font(.caption2)
+                    Text(String(format: "%.1f%%", property.estimatedValueChange * 100))
+                        .font(.caption2.weight(.medium))
+                }
+                .foregroundStyle(trendColor)
+                .padding(.horizontal, 6)
+                .padding(.vertical, 2)
+                .background(trendColor.opacity(0.15))
+                .clipShape(RoundedRectangle(cornerRadius: 4))
 
                 Spacer()
 
