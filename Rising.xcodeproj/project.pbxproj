@@ -10,23 +10,31 @@
 		06F4B8BB235A130163331685 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C253E1BBA7EB2F71403C3368 /* Assets.xcassets */; };
 		0F8984DBB0DAFBEF75AF6AA6 /* Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA2F5714C48135A9F25F76B /* Typography.swift */; };
 		10926747C4959C8A9ADAFE84 /* RisingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E507E8C7B41462BCFD3BF4F /* RisingApp.swift */; };
+		20262525B866C887A986E751 /* AgentListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8C83CBE7AE4E3E7A1B9A63 /* AgentListView.swift */; };
 		28F37E87589B0B9A3AA8C3C0 /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F49FA55268402507A351FA /* DatabaseService.swift */; };
+		2D064A5D844F6D63124EAD72 /* PropertyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6CB6381FAB333A595829B9 /* PropertyService.swift */; };
 		2D8F5DF230C814873E0BE6E1 /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27766F72B5DD25D1D6D4045 /* Goal.swift */; };
 		30C580500F21EC289B6B3125 /* AddDepositViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385A89E67B0EB32FE623A250 /* AddDepositViewModel.swift */; };
 		36F9A3FAEDBEF7BB8EB98F03 /* FirstGoalStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452758A307DE91F753E024D9 /* FirstGoalStepView.swift */; };
+		38C8D69A8841B8C57DA7878E /* DepositChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73944867520786798541352A /* DepositChartView.swift */; };
 		3ED553461BF117B6EAFFD85F /* Spacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86477AE4C85D6A9C4007624C /* Spacing.swift */; };
 		4708CDCBB75A30480CDFC27B /* GoalDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B98EA7B3C5823F0C1464CD9 /* GoalDetailViewModel.swift */; };
 		493FA335B09D70A503D36DDF /* Deposit.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE3BF74AD8E7D53A1BB43B1 /* Deposit.swift */; };
 		49BC501FD19AE9E2A176195E /* EditGoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46808465A20ABC077BF8AA39 /* EditGoalView.swift */; };
+		4B977B78D88E6622FFD08919 /* AgentListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03980658288E14508DBA5DCE /* AgentListViewModel.swift */; };
 		580CD610107552E9C18C6D8F /* GoalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF045C29001235656C73FCE9 /* GoalService.swift */; };
+		5E5AECDC79167C269DC6D5E9 /* AddAgentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D24A6F64C944CD9786FE27 /* AddAgentView.swift */; };
 		62723678F1832692262016DF /* CreateGoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3C5B56BCFE61EA7208052B /* CreateGoalView.swift */; };
 		641AD08BDE78C0B7007331D7 /* GoalDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6479880849D717D76AC015D8 /* GoalDetailView.swift */; };
 		64CD0D4D243BF4EA5069EF01 /* ReadyStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C22F77C7E0767715058F24 /* ReadyStepView.swift */; };
+		6722018CFF3A4013633AD8FB /* PropertyListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87509B2CB5B6F9C210589BD6 /* PropertyListViewModel.swift */; };
 		71FB1CFB634335BFB643AF8B /* Agent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE034EEED9600A6F3AF70A6 /* Agent.swift */; };
+		774BD67CF5EC3BC0A9BA6AAE /* MilestoneService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6389812A06B6725D9D465A72 /* MilestoneService.swift */; };
 		7D2B254CB310DBCDA99CB635 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F599A425BF38F9ED93E6935 /* OnboardingView.swift */; };
 		8587C88D0CF6D243FF01E15A /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 1D8022CDD144C166C8278C22 /* PrivacyInfo.xcprivacy */; };
 		889782DA9E969B8C7CA50826 /* Milestone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F574DE913B62B1A3BF63C86 /* Milestone.swift */; };
 		8F348328A33339C0327D50AA /* EmptyDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B776190C25D2D8DEEE6EEC9 /* EmptyDashboardView.swift */; };
+		91C35DB810E0E71B71F8F249 /* PropertyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C0DAF47189A26D2585FD30 /* PropertyListView.swift */; };
 		96097939C9F71E1A3943E09B /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D054AC23AEE97736543367D /* Colors.swift */; };
 		9713A39C3ABF75CE619C2772 /* WhyRisingStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC147A1050017D180A9DCB0 /* WhyRisingStepView.swift */; };
 		9E375667465DEA03293FF63B /* OnboardingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4707B42FE0ED0FC743BFB87B /* OnboardingService.swift */; };
@@ -35,23 +43,31 @@
 		AE838EFC5D8E58E647912FC4 /* ThemeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933117014751DCDB73313B4A /* ThemeService.swift */; };
 		AF41C0411582E4C90B2065EE /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AA8AB10E9A95265683B2F4 /* DashboardView.swift */; };
 		B97C79AFCB3D889131B5ADFA /* DepositRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE33067033388798AD65A080 /* DepositRowView.swift */; };
+		B9966AFA107E1D6D5DF7F0C8 /* MilestoneTrackerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5568B6110CBFAED6E5B41094 /* MilestoneTrackerView.swift */; };
 		B99C91D6A94C63F6552647B4 /* WelcomeStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26323A9FEBA93A35DF021291 /* WelcomeStepView.swift */; };
 		C210F4C7AEF8363B7499DE68 /* AddDepositView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2853DBC05802B80A42AF147A /* AddDepositView.swift */; };
 		D2522D1ADA0F422DA5DFBD91 /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5BAE1A6023455590B3C6254 /* Property.swift */; };
 		D4759F6A78AD10697607368C /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CDCD2B22832BDAEB2895FF /* DashboardViewModel.swift */; };
+		DC6145FDCB00AABDA52C15C2 /* AddAgentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDA9BB2466418326C4CF65C /* AddAgentViewModel.swift */; };
 		DF6C7EF64CEC41E99204EA94 /* GoalCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AAE62963399D65FDE2ECEF /* GoalCardView.swift */; };
 		EBC97C167C5964752B7139C0 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9050335E6A63D675B305B9 /* OnboardingViewModel.swift */; };
 		EE8DCA9F9BD87B8F6FCAADAB /* DepositService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60D7DFE158324C0663DB5E7 /* DepositService.swift */; };
+		EFE0EC3702E7AF52CDA97347 /* AddPropertyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5963C01787036C759456FAC7 /* AddPropertyView.swift */; };
 		F1D4EC9E8FF91C34DA7CCD3C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED98B2A447278974B3105E06 /* SettingsView.swift */; };
+		F5690BEBC8554A2F73A90983 /* AgentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DE6CDAEBD204AFC417FAA7 /* AgentService.swift */; };
 		F7F1B152995A810E67D2A831 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805AC69F459593268B38AF76 /* SettingsViewModel.swift */; };
 		F8A4523FD47E5F525F44B964 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4C32D122BF324996905690 /* ContentView.swift */; };
+		FA24E840F748D79EA590002C /* MilestoneTrackerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5E87FCFF622D0CD13F83FB /* MilestoneTrackerViewModel.swift */; };
+		FCD74658A25279E519B6F218 /* AddPropertyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D90ACBB75F489CE2BDBCC8 /* AddPropertyViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		03980658288E14508DBA5DCE /* AgentListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentListViewModel.swift; sourceTree = "<group>"; };
 		0E507E8C7B41462BCFD3BF4F /* RisingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RisingApp.swift; sourceTree = "<group>"; };
 		14CDCD2B22832BDAEB2895FF /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
 		1D8022CDD144C166C8278C22 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		1E80889252D0D171DF4D312D /* CreateGoalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGoalViewModel.swift; sourceTree = "<group>"; };
+		1E8C83CBE7AE4E3E7A1B9A63 /* AgentListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentListView.swift; sourceTree = "<group>"; };
 		26323A9FEBA93A35DF021291 /* WelcomeStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeStepView.swift; sourceTree = "<group>"; };
 		2853DBC05802B80A42AF147A /* AddDepositView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDepositView.swift; sourceTree = "<group>"; };
 		2F599A425BF38F9ED93E6935 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
@@ -61,15 +77,24 @@
 		46808465A20ABC077BF8AA39 /* EditGoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditGoalView.swift; sourceTree = "<group>"; };
 		4707B42FE0ED0FC743BFB87B /* OnboardingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingService.swift; sourceTree = "<group>"; };
 		4D9050335E6A63D675B305B9 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
+		5568B6110CBFAED6E5B41094 /* MilestoneTrackerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilestoneTrackerView.swift; sourceTree = "<group>"; };
+		57C0DAF47189A26D2585FD30 /* PropertyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyListView.swift; sourceTree = "<group>"; };
+		58D24A6F64C944CD9786FE27 /* AddAgentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAgentView.swift; sourceTree = "<group>"; };
+		5963C01787036C759456FAC7 /* AddPropertyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPropertyView.swift; sourceTree = "<group>"; };
 		5D054AC23AEE97736543367D /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		5E5E87FCFF622D0CD13F83FB /* MilestoneTrackerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilestoneTrackerViewModel.swift; sourceTree = "<group>"; };
+		6389812A06B6725D9D465A72 /* MilestoneService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilestoneService.swift; sourceTree = "<group>"; };
 		6479880849D717D76AC015D8 /* GoalDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalDetailView.swift; sourceTree = "<group>"; };
 		6B98EA7B3C5823F0C1464CD9 /* GoalDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalDetailViewModel.swift; sourceTree = "<group>"; };
 		70AAE62963399D65FDE2ECEF /* GoalCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalCardView.swift; sourceTree = "<group>"; };
+		73944867520786798541352A /* DepositChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepositChartView.swift; sourceTree = "<group>"; };
 		7B776190C25D2D8DEEE6EEC9 /* EmptyDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyDashboardView.swift; sourceTree = "<group>"; };
+		7F6CB6381FAB333A595829B9 /* PropertyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyService.swift; sourceTree = "<group>"; };
 		805AC69F459593268B38AF76 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		81F49FA55268402507A351FA /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
 		82AA8AB10E9A95265683B2F4 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		86477AE4C85D6A9C4007624C /* Spacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spacing.swift; sourceTree = "<group>"; };
+		87509B2CB5B6F9C210589BD6 /* PropertyListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyListViewModel.swift; sourceTree = "<group>"; };
 		8F574DE913B62B1A3BF63C86 /* Milestone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Milestone.swift; sourceTree = "<group>"; };
 		933117014751DCDB73313B4A /* ThemeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeService.swift; sourceTree = "<group>"; };
 		A1C22F77C7E0767715058F24 /* ReadyStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadyStepView.swift; sourceTree = "<group>"; };
@@ -77,9 +102,12 @@
 		AFA2F5714C48135A9F25F76B /* Typography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typography.swift; sourceTree = "<group>"; };
 		B27766F72B5DD25D1D6D4045 /* Goal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
 		B60D7DFE158324C0663DB5E7 /* DepositService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepositService.swift; sourceTree = "<group>"; };
+		B8D90ACBB75F489CE2BDBCC8 /* AddPropertyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPropertyViewModel.swift; sourceTree = "<group>"; };
 		BB2C7091254AAE950B63A649 /* Rising.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Rising.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C253E1BBA7EB2F71403C3368 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C6DE6CDAEBD204AFC417FAA7 /* AgentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentService.swift; sourceTree = "<group>"; };
 		DAE3BF74AD8E7D53A1BB43B1 /* Deposit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deposit.swift; sourceTree = "<group>"; };
+		DFDA9BB2466418326C4CF65C /* AddAgentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAgentViewModel.swift; sourceTree = "<group>"; };
 		E5BAE1A6023455590B3C6254 /* Property.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Property.swift; sourceTree = "<group>"; };
 		EAE034EEED9600A6F3AF70A6 /* Agent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Agent.swift; sourceTree = "<group>"; };
 		ED98B2A447278974B3105E06 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -144,6 +172,14 @@
 			path = Design;
 			sourceTree = "<group>";
 		};
+		4627B79C69BC67BDCE674ECF /* Charts */ = {
+			isa = PBXGroup;
+			children = (
+				73944867520786798541352A /* DepositChartView.swift */,
+			);
+			path = Charts;
+			sourceTree = "<group>";
+		};
 		721693824734107F251DCC95 /* Goals */ = {
 			isa = PBXGroup;
 			children = (
@@ -154,14 +190,28 @@
 			path = Goals;
 			sourceTree = "<group>";
 		};
+		87E54EB6F3053CDE0D643E42 /* Agents */ = {
+			isa = PBXGroup;
+			children = (
+				58D24A6F64C944CD9786FE27 /* AddAgentView.swift */,
+				1E8C83CBE7AE4E3E7A1B9A63 /* AgentListView.swift */,
+			);
+			path = Agents;
+			sourceTree = "<group>";
+		};
 		87F9EA0516B7C25C8D7435AD /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				DFDA9BB2466418326C4CF65C /* AddAgentViewModel.swift */,
 				385A89E67B0EB32FE623A250 /* AddDepositViewModel.swift */,
+				B8D90ACBB75F489CE2BDBCC8 /* AddPropertyViewModel.swift */,
+				03980658288E14508DBA5DCE /* AgentListViewModel.swift */,
 				1E80889252D0D171DF4D312D /* CreateGoalViewModel.swift */,
 				14CDCD2B22832BDAEB2895FF /* DashboardViewModel.swift */,
 				6B98EA7B3C5823F0C1464CD9 /* GoalDetailViewModel.swift */,
+				5E5E87FCFF622D0CD13F83FB /* MilestoneTrackerViewModel.swift */,
 				4D9050335E6A63D675B305B9 /* OnboardingViewModel.swift */,
+				87509B2CB5B6F9C210589BD6 /* PropertyListViewModel.swift */,
 				805AC69F459593268B38AF76 /* SettingsViewModel.swift */,
 			);
 			path = ViewModels;
@@ -183,6 +233,14 @@
 				ED98B2A447278974B3105E06 /* SettingsView.swift */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		BD7E26AB183ED3E9325C1361 /* Milestones */ = {
+			isa = PBXGroup;
+			children = (
+				5568B6110CBFAED6E5B41094 /* MilestoneTrackerView.swift */,
+			);
+			path = Milestones;
 			sourceTree = "<group>";
 		};
 		BDA4739C088417B424B5E2F4 /* Products */ = {
@@ -237,22 +295,38 @@
 		E61E19216E6682201931CA4C /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				C6DE6CDAEBD204AFC417FAA7 /* AgentService.swift */,
 				81F49FA55268402507A351FA /* DatabaseService.swift */,
 				B60D7DFE158324C0663DB5E7 /* DepositService.swift */,
 				FF045C29001235656C73FCE9 /* GoalService.swift */,
+				6389812A06B6725D9D465A72 /* MilestoneService.swift */,
 				4707B42FE0ED0FC743BFB87B /* OnboardingService.swift */,
+				7F6CB6381FAB333A595829B9 /* PropertyService.swift */,
 				933117014751DCDB73313B4A /* ThemeService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
 		};
+		EDCE6EDA15CDB736B78146FD /* Properties */ = {
+			isa = PBXGroup;
+			children = (
+				5963C01787036C759456FAC7 /* AddPropertyView.swift */,
+				57C0DAF47189A26D2585FD30 /* PropertyListView.swift */,
+			);
+			path = Properties;
+			sourceTree = "<group>";
+		};
 		FCCA5992ADE90206A2278A03 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				87E54EB6F3053CDE0D643E42 /* Agents */,
+				4627B79C69BC67BDCE674ECF /* Charts */,
 				E2937225926ECB937D8DACF3 /* Dashboard */,
 				D0D7BC1386AEC133A83E8D23 /* Deposits */,
 				721693824734107F251DCC95 /* Goals */,
+				BD7E26AB183ED3E9325C1361 /* Milestones */,
 				1E4913F6E7526C5CA20DF1D1 /* Onboarding */,
+				EDCE6EDA15CDB736B78146FD /* Properties */,
 				9622DF50186F9DCC09F0A00B /* Settings */,
 			);
 			path = Views;
@@ -333,9 +407,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E5AECDC79167C269DC6D5E9 /* AddAgentView.swift in Sources */,
+				DC6145FDCB00AABDA52C15C2 /* AddAgentViewModel.swift in Sources */,
 				C210F4C7AEF8363B7499DE68 /* AddDepositView.swift in Sources */,
 				30C580500F21EC289B6B3125 /* AddDepositViewModel.swift in Sources */,
+				EFE0EC3702E7AF52CDA97347 /* AddPropertyView.swift in Sources */,
+				FCD74658A25279E519B6F218 /* AddPropertyViewModel.swift in Sources */,
 				71FB1CFB634335BFB643AF8B /* Agent.swift in Sources */,
+				20262525B866C887A986E751 /* AgentListView.swift in Sources */,
+				4B977B78D88E6622FFD08919 /* AgentListViewModel.swift in Sources */,
+				F5690BEBC8554A2F73A90983 /* AgentService.swift in Sources */,
 				96097939C9F71E1A3943E09B /* Colors.swift in Sources */,
 				F8A4523FD47E5F525F44B964 /* ContentView.swift in Sources */,
 				62723678F1832692262016DF /* CreateGoalView.swift in Sources */,
@@ -344,6 +425,7 @@
 				D4759F6A78AD10697607368C /* DashboardViewModel.swift in Sources */,
 				28F37E87589B0B9A3AA8C3C0 /* DatabaseService.swift in Sources */,
 				493FA335B09D70A503D36DDF /* Deposit.swift in Sources */,
+				38C8D69A8841B8C57DA7878E /* DepositChartView.swift in Sources */,
 				B97C79AFCB3D889131B5ADFA /* DepositRowView.swift in Sources */,
 				EE8DCA9F9BD87B8F6FCAADAB /* DepositService.swift in Sources */,
 				49BC501FD19AE9E2A176195E /* EditGoalView.swift in Sources */,
@@ -355,10 +437,16 @@
 				4708CDCBB75A30480CDFC27B /* GoalDetailViewModel.swift in Sources */,
 				580CD610107552E9C18C6D8F /* GoalService.swift in Sources */,
 				889782DA9E969B8C7CA50826 /* Milestone.swift in Sources */,
+				774BD67CF5EC3BC0A9BA6AAE /* MilestoneService.swift in Sources */,
+				B9966AFA107E1D6D5DF7F0C8 /* MilestoneTrackerView.swift in Sources */,
+				FA24E840F748D79EA590002C /* MilestoneTrackerViewModel.swift in Sources */,
 				9E375667465DEA03293FF63B /* OnboardingService.swift in Sources */,
 				7D2B254CB310DBCDA99CB635 /* OnboardingView.swift in Sources */,
 				EBC97C167C5964752B7139C0 /* OnboardingViewModel.swift in Sources */,
 				D2522D1ADA0F422DA5DFBD91 /* Property.swift in Sources */,
+				91C35DB810E0E71B71F8F249 /* PropertyListView.swift in Sources */,
+				6722018CFF3A4013633AD8FB /* PropertyListViewModel.swift in Sources */,
+				2D064A5D844F6D63124EAD72 /* PropertyService.swift in Sources */,
 				64CD0D4D243BF4EA5069EF01 /* ReadyStepView.swift in Sources */,
 				10926747C4959C8A9ADAFE84 /* RisingApp.swift in Sources */,
 				F1D4EC9E8FF91C34DA7CCD3C /* SettingsView.swift in Sources */,
