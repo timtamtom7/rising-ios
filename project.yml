@@ -1,0 +1,43 @@
+name: Rising
+options:
+  bundleIdPrefix: com.rising
+  deploymentTarget:
+    iOS: "26.0"
+  xcodeVersion: "15.0"
+  generateEmptyDirectories: true
+
+settings:
+  base:
+    SWIFT_VERSION: "6.0"
+    IPHONEOS_DEPLOYMENT_TARGET: "26.0"
+    DEVELOPMENT_TEAM: ""
+    CODE_SIGN_STYLE: Automatic
+    CODE_SIGN_IDENTITY: "-"
+    ENABLE_USER_SCRIPT_SANDBOXING: false
+
+packages:
+  SQLite.swift:
+    url: https://github.com/stephencelis/SQLite.swift
+    from: "0.15.3"
+
+targets:
+  Rising:
+    type: application
+    platform: iOS
+    sources:
+      - path: Rising
+        excludes:
+          - "**/.DS_Store"
+    settings:
+      base:
+        INFOPLIST_FILE: Rising/Resources/Info.plist
+        PRODUCT_BUNDLE_IDENTIFIER: com.rising.app
+        MARKETING_VERSION: "1.0.0"
+        CURRENT_PROJECT_VERSION: "1"
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+        GENERATE_INFOPLIST_FILE: false
+        SWIFT_EMIT_LOC_STRINGS: true
+    dependencies:
+      - package: SQLite.swift
+        product: SQLite
