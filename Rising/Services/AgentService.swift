@@ -6,49 +6,30 @@ import Foundation
 final class AgentService {
     static let shared = AgentService()
 
+    private let db = DatabaseService.shared
+
     private init() {}
 
+    // R5: Uses SQLite via DatabaseService (was in-memory in R2)
     func fetchAll() async -> [Agent] {
-        return AgentStorage.shared.agents
+        do {
+            return try db.fetchAllAgents()
+        } catch {
+            print("AgentService.fetchAll error: \(error)")
+            return []
+        }
     }
 
     func create(name: String, phone: String?, email: String?, notes: String?) async throws {
         let agent = Agent(name: name, phone: phone, email: email, notes: notes)
-        AgentStorage.shared.add(agent)
+        try db.insertAgent(agent)
     }
 
     func update(_ agent: Agent) async throws {
-        AgentStorage.shared.update(agent)
+        try db.updateAgent(agent)
     }
 
     func delete(id: UUID) async throws {
-        AgentStorage.shared.delete(id: id)
-    }
-}
-
-// MARK: - In-Memory Storage (R2)
-
-@MainActor
-final class AgentStorage {
-    static let shared = AgentStorage()
-
-    private var _agents: [Agent] = []
-
-    var agents: [Agent] { _agents }
-
-    private init() {}
-
-    func add(_ agent: Agent) {
-        _agents.append(agent)
-    }
-
-    func update(_ agent: Agent) {
-        if let index = _agents.firstIndex(where: { $0.id == agent.id }) {
-            _agents[index] = agent
-        }
-    }
-
-    func delete(id: UUID) {
-        _agents.removeAll { $0.id == id }
+        try db.deleteAgent(id: id)
     }
 }

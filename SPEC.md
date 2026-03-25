@@ -259,3 +259,43 @@ Rising/
     ├── Assets.xcassets/
     └── PrivacyInfo.xcprivacy
 ```
+
+---
+
+## R5 — Platform, Data & Persistence
+
+### SQLite Persistence (Properties, Agents, Milestones)
+- Properties, Agents, and Milestones now persisted to SQLite (was in-memory in R2-R4)
+- Data survives app restart and deletion
+- Deleting a goal cascades to associated properties and milestones
+- All services updated to use DatabaseService for CRUD operations
+
+### Market Data Simulation
+- Property model includes `marketTrend` (up/down/stable) — deterministic based on address
+- `estimatedValueChange` shows simulated price change (-8% to +12%)
+- Display price formatted as USD currency string
+
+### Notification System
+- Local push notifications via UNUserNotificationCenter
+- Deposit reminders, milestone alerts, closing countdowns
+- Notification settings in SettingsView
+
+---
+
+## R6 — Polish, Stability & Edge Cases
+
+### Stability
+- MilestoneService: toggleComplete uses direct update() instead of broken complete()/reset()
+- All DatabaseService operations wrapped in error handling with fallbacks
+- Property/Agent/Milestone deletion cascades properly when goal is deleted
+
+### Edge Cases
+- No properties → empty state in PropertyListView
+- No agents → empty state in AgentListView  
+- Milestone completion/uncompletion updates in-memory then saves to SQLite
+- Goal deletion confirms and cleans up all associated data
+
+### UI Polish
+- Milestone tracker progress bar animates smoothly
+- Market trend badges on property cards (up/down/stable with icons)
+- Consistent dark theme with risingPrimary amber accent throughout

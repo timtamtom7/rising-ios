@@ -43,11 +43,15 @@ final class MilestoneTrackerViewModel {
     }
 
     func toggleComplete(_ milestone: Milestone) async {
+        var updated = milestone
         if milestone.status == .completed {
-            try? await MilestoneService.shared.reset(id: milestone.id)
+            updated.status = .pending
+            updated.completedAt = nil
         } else {
-            try? await MilestoneService.shared.complete(id: milestone.id)
+            updated.status = .completed
+            updated.completedAt = Date()
         }
+        try? await MilestoneService.shared.update(updated)
         await load()
     }
 }
