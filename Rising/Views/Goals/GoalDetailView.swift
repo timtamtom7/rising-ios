@@ -7,6 +7,8 @@ struct GoalDetailView: View {
     @State private var showPropertyList = false
     @State private var showMilestones = false
     @State private var showAgents = false
+    @State private var showShareCard = false
+    @State private var showMortgageCalculator = false
 
     init(goal: Goal) {
         _viewModel = State(initialValue: GoalDetailViewModel(goal: goal))
@@ -55,12 +57,29 @@ struct GoalDetailView: View {
         .navigationTitle(viewModel.goal.name)
         .navigationBarTitleDisplayMode(.large)
         .toolbar {
-            ToolbarItem(placement: .topBarTrailing) {
+            ToolbarItem(placement: .topBarLeading) {
                 Button {
-                    showEditGoal = true
+                    showMortgageCalculator = true
                 } label: {
-                    Image(systemName: "pencil")
+                    Image(systemName: "calculator")
                         .foregroundStyle(Color.risingTextSecondaryDark)
+                }
+            }
+            ToolbarItem(placement: .topBarTrailing) {
+                HStack(spacing: RisingSpacing.sm) {
+                    Button {
+                        showShareCard = true
+                    } label: {
+                        Image(systemName: "square.and.arrow.up")
+                            .foregroundStyle(Color.risingPrimary)
+                    }
+
+                    Button {
+                        showEditGoal = true
+                    } label: {
+                        Image(systemName: "pencil")
+                            .foregroundStyle(Color.risingTextSecondaryDark)
+                    }
                 }
             }
         }
@@ -90,6 +109,17 @@ struct GoalDetailView: View {
                 AgentListView()
                     .background(Color.risingBackgroundDark)
                     .navigationTitle("Agents")
+                    .navigationBarTitleDisplayMode(.inline)
+            }
+        }
+        .sheet(isPresented: $showShareCard) {
+            ShareCardSheet(goal: viewModel.goal)
+        }
+        .sheet(isPresented: $showMortgageCalculator) {
+            NavigationStack {
+                MortgageCalculatorView()
+                    .background(Color.risingBackgroundDark)
+                    .navigationTitle("Calculator")
                     .navigationBarTitleDisplayMode(.inline)
             }
         }

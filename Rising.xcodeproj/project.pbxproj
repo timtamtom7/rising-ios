@@ -10,6 +10,7 @@
 		06F4B8BB235A130163331685 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C253E1BBA7EB2F71403C3368 /* Assets.xcassets */; };
 		0F8984DBB0DAFBEF75AF6AA6 /* Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA2F5714C48135A9F25F76B /* Typography.swift */; };
 		10926747C4959C8A9ADAFE84 /* RisingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E507E8C7B41462BCFD3BF4F /* RisingApp.swift */; };
+		1E999F50C392EF7924B2CF67 /* ShareableGoalCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E401E320B4165D9D14A54A /* ShareableGoalCardView.swift */; };
 		20262525B866C887A986E751 /* AgentListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8C83CBE7AE4E3E7A1B9A63 /* AgentListView.swift */; };
 		28F37E87589B0B9A3AA8C3C0 /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F49FA55268402507A351FA /* DatabaseService.swift */; };
 		2D064A5D844F6D63124EAD72 /* PropertyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6CB6381FAB333A595829B9 /* PropertyService.swift */; };
@@ -33,15 +34,18 @@
 		7D2B254CB310DBCDA99CB635 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F599A425BF38F9ED93E6935 /* OnboardingView.swift */; };
 		8587C88D0CF6D243FF01E15A /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 1D8022CDD144C166C8278C22 /* PrivacyInfo.xcprivacy */; };
 		889782DA9E969B8C7CA50826 /* Milestone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F574DE913B62B1A3BF63C86 /* Milestone.swift */; };
+		896597AC853CCDA4899F783B /* MortgageCalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63C1FE5EE29B4FF2C1D6CCA /* MortgageCalculatorView.swift */; };
 		8F348328A33339C0327D50AA /* EmptyDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B776190C25D2D8DEEE6EEC9 /* EmptyDashboardView.swift */; };
 		91C35DB810E0E71B71F8F249 /* PropertyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C0DAF47189A26D2585FD30 /* PropertyListView.swift */; };
 		96097939C9F71E1A3943E09B /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D054AC23AEE97736543367D /* Colors.swift */; };
 		9713A39C3ABF75CE619C2772 /* WhyRisingStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC147A1050017D180A9DCB0 /* WhyRisingStepView.swift */; };
+		9BD35250FA5083C190AFDA97 /* MortgageCalculatorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E977B42127D8AB33C4F274C2 /* MortgageCalculatorService.swift */; };
 		9E375667465DEA03293FF63B /* OnboardingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4707B42FE0ED0FC743BFB87B /* OnboardingService.swift */; };
 		A47BD7F77BB70592B3647031 /* CreateGoalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E80889252D0D171DF4D312D /* CreateGoalViewModel.swift */; };
 		A62C7A6DE67BECBF22A48E55 /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = E8ACD8A6E983145E9144FCBB /* SQLite */; };
 		AE838EFC5D8E58E647912FC4 /* ThemeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933117014751DCDB73313B4A /* ThemeService.swift */; };
 		AF41C0411582E4C90B2065EE /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AA8AB10E9A95265683B2F4 /* DashboardView.swift */; };
+		B9047548780A17A7DA498BDC /* ShareCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA34F51FB7BCB7B563B00FB2 /* ShareCardViewModel.swift */; };
 		B97C79AFCB3D889131B5ADFA /* DepositRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE33067033388798AD65A080 /* DepositRowView.swift */; };
 		B9966AFA107E1D6D5DF7F0C8 /* MilestoneTrackerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5568B6110CBFAED6E5B41094 /* MilestoneTrackerView.swift */; };
 		B99C91D6A94C63F6552647B4 /* WelcomeStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26323A9FEBA93A35DF021291 /* WelcomeStepView.swift */; };
@@ -65,6 +69,7 @@
 		03980658288E14508DBA5DCE /* AgentListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentListViewModel.swift; sourceTree = "<group>"; };
 		0E507E8C7B41462BCFD3BF4F /* RisingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RisingApp.swift; sourceTree = "<group>"; };
 		14CDCD2B22832BDAEB2895FF /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
+		14E401E320B4165D9D14A54A /* ShareableGoalCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareableGoalCardView.swift; sourceTree = "<group>"; };
 		1D8022CDD144C166C8278C22 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		1E80889252D0D171DF4D312D /* CreateGoalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGoalViewModel.swift; sourceTree = "<group>"; };
 		1E8C83CBE7AE4E3E7A1B9A63 /* AgentListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentListView.swift; sourceTree = "<group>"; };
@@ -98,6 +103,7 @@
 		8F574DE913B62B1A3BF63C86 /* Milestone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Milestone.swift; sourceTree = "<group>"; };
 		933117014751DCDB73313B4A /* ThemeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeService.swift; sourceTree = "<group>"; };
 		A1C22F77C7E0767715058F24 /* ReadyStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadyStepView.swift; sourceTree = "<group>"; };
+		AA34F51FB7BCB7B563B00FB2 /* ShareCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareCardViewModel.swift; sourceTree = "<group>"; };
 		ABC147A1050017D180A9DCB0 /* WhyRisingStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhyRisingStepView.swift; sourceTree = "<group>"; };
 		AFA2F5714C48135A9F25F76B /* Typography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typography.swift; sourceTree = "<group>"; };
 		B27766F72B5DD25D1D6D4045 /* Goal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
@@ -109,9 +115,11 @@
 		DAE3BF74AD8E7D53A1BB43B1 /* Deposit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deposit.swift; sourceTree = "<group>"; };
 		DFDA9BB2466418326C4CF65C /* AddAgentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAgentViewModel.swift; sourceTree = "<group>"; };
 		E5BAE1A6023455590B3C6254 /* Property.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Property.swift; sourceTree = "<group>"; };
+		E977B42127D8AB33C4F274C2 /* MortgageCalculatorService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MortgageCalculatorService.swift; sourceTree = "<group>"; };
 		EAE034EEED9600A6F3AF70A6 /* Agent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Agent.swift; sourceTree = "<group>"; };
 		ED98B2A447278974B3105E06 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		EE33067033388798AD65A080 /* DepositRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepositRowView.swift; sourceTree = "<group>"; };
+		F63C1FE5EE29B4FF2C1D6CCA /* MortgageCalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MortgageCalculatorView.swift; sourceTree = "<group>"; };
 		FD3C5B56BCFE61EA7208052B /* CreateGoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGoalView.swift; sourceTree = "<group>"; };
 		FF045C29001235656C73FCE9 /* GoalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalService.swift; sourceTree = "<group>"; };
 		FF4C32D122BF324996905690 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -180,6 +188,14 @@
 			path = Charts;
 			sourceTree = "<group>";
 		};
+		5F051A0386DDDA8B6721F283 /* Calculators */ = {
+			isa = PBXGroup;
+			children = (
+				F63C1FE5EE29B4FF2C1D6CCA /* MortgageCalculatorView.swift */,
+			);
+			path = Calculators;
+			sourceTree = "<group>";
+		};
 		721693824734107F251DCC95 /* Goals */ = {
 			isa = PBXGroup;
 			children = (
@@ -213,6 +229,7 @@
 				4D9050335E6A63D675B305B9 /* OnboardingViewModel.swift */,
 				87509B2CB5B6F9C210589BD6 /* PropertyListViewModel.swift */,
 				805AC69F459593268B38AF76 /* SettingsViewModel.swift */,
+				AA34F51FB7BCB7B563B00FB2 /* ShareCardViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -282,6 +299,14 @@
 			path = Rising;
 			sourceTree = "<group>";
 		};
+		E175483BDD4F31FBC6DA3FDE /* Share */ = {
+			isa = PBXGroup;
+			children = (
+				14E401E320B4165D9D14A54A /* ShareableGoalCardView.swift */,
+			);
+			path = Share;
+			sourceTree = "<group>";
+		};
 		E2937225926ECB937D8DACF3 /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
@@ -300,6 +325,7 @@
 				B60D7DFE158324C0663DB5E7 /* DepositService.swift */,
 				FF045C29001235656C73FCE9 /* GoalService.swift */,
 				6389812A06B6725D9D465A72 /* MilestoneService.swift */,
+				E977B42127D8AB33C4F274C2 /* MortgageCalculatorService.swift */,
 				4707B42FE0ED0FC743BFB87B /* OnboardingService.swift */,
 				7F6CB6381FAB333A595829B9 /* PropertyService.swift */,
 				933117014751DCDB73313B4A /* ThemeService.swift */,
@@ -320,6 +346,7 @@
 			isa = PBXGroup;
 			children = (
 				87E54EB6F3053CDE0D643E42 /* Agents */,
+				5F051A0386DDDA8B6721F283 /* Calculators */,
 				4627B79C69BC67BDCE674ECF /* Charts */,
 				E2937225926ECB937D8DACF3 /* Dashboard */,
 				D0D7BC1386AEC133A83E8D23 /* Deposits */,
@@ -328,6 +355,7 @@
 				1E4913F6E7526C5CA20DF1D1 /* Onboarding */,
 				EDCE6EDA15CDB736B78146FD /* Properties */,
 				9622DF50186F9DCC09F0A00B /* Settings */,
+				E175483BDD4F31FBC6DA3FDE /* Share */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -440,6 +468,8 @@
 				774BD67CF5EC3BC0A9BA6AAE /* MilestoneService.swift in Sources */,
 				B9966AFA107E1D6D5DF7F0C8 /* MilestoneTrackerView.swift in Sources */,
 				FA24E840F748D79EA590002C /* MilestoneTrackerViewModel.swift in Sources */,
+				9BD35250FA5083C190AFDA97 /* MortgageCalculatorService.swift in Sources */,
+				896597AC853CCDA4899F783B /* MortgageCalculatorView.swift in Sources */,
 				9E375667465DEA03293FF63B /* OnboardingService.swift in Sources */,
 				7D2B254CB310DBCDA99CB635 /* OnboardingView.swift in Sources */,
 				EBC97C167C5964752B7139C0 /* OnboardingViewModel.swift in Sources */,
@@ -451,6 +481,8 @@
 				10926747C4959C8A9ADAFE84 /* RisingApp.swift in Sources */,
 				F1D4EC9E8FF91C34DA7CCD3C /* SettingsView.swift in Sources */,
 				F7F1B152995A810E67D2A831 /* SettingsViewModel.swift in Sources */,
+				B9047548780A17A7DA498BDC /* ShareCardViewModel.swift in Sources */,
+				1E999F50C392EF7924B2CF67 /* ShareableGoalCardView.swift in Sources */,
 				3ED553461BF117B6EAFFD85F /* Spacing.swift in Sources */,
 				AE838EFC5D8E58E647912FC4 /* ThemeService.swift in Sources */,
 				0F8984DBB0DAFBEF75AF6AA6 /* Typography.swift in Sources */,

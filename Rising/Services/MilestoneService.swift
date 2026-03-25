@@ -82,18 +82,3 @@ final class MilestoneStorage {
         _milestones.removeAll { $0.id == id }
     }
 }
-
-// MARK: - MilestoneType Extension
-
-extension MilestoneType {
-    var sortOrder: Int {
-        switch self {
-        case .preApproval: return 0
-        case .saveDownPayment: return 1
-        case .makeOffer: return 2
-        case .offerAccepted: return 3
-        case .inspection: return 4
-        case .closing: return 5
-        }
-    }
-}

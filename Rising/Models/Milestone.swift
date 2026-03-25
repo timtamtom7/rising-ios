@@ -31,6 +31,17 @@ enum MilestoneType: String, Codable, CaseIterable {
         case .closing: return "key"
         }
     }
+
+    var sortOrder: Int {
+        switch self {
+        case .preApproval: return 0
+        case .saveDownPayment: return 1
+        case .makeOffer: return 2
+        case .offerAccepted: return 3
+        case .inspection: return 4
+        case .closing: return 5
+        }
+    }
 }
 
 // MARK: - Milestone Status
@@ -40,7 +51,34 @@ enum MilestoneStatus: String, Codable {
     case completed
 }
 
-// MARK: - Milestone Model (R2)
+// MARK: - Offer Status (R3)
+
+enum OfferStatus: String, Codable, CaseIterable {
+    case pending
+    case accepted
+    case rejected
+    case countered
+
+    var displayText: String {
+        switch self {
+        case .pending: return "Pending"
+        case .accepted: return "Accepted ✓"
+        case .rejected: return "Rejected ✗"
+        case .countered: return "Countered ↔"
+        }
+    }
+
+    var iconName: String {
+        switch self {
+        case .pending: return "questionmark.circle"
+        case .accepted: return "checkmark.circle.fill"
+        case .rejected: return "xmark.circle.fill"
+        case .countered: return "arrow.left.arrow.right.circle.fill"
+        }
+    }
+}
+
+// MARK: - Milestone Model
 
 struct Milestone: Identifiable, Codable, Equatable {
     let id: UUID
@@ -52,6 +90,17 @@ struct Milestone: Identifiable, Codable, Equatable {
     var amount: Double?
     var createdAt: Date
 
+    // R3: Pre-approval fields
+    var preApprovalLender: String?
+    var preApprovalDate: Date?
+
+    // R3: Offer fields
+    var offerAmount: Double?
+    var offerStatus: OfferStatus?
+
+    // R3: Closing
+    var closingDate: Date?
+
     init(
         id: UUID = UUID(),
         goalId: UUID,
@@ -60,7 +109,12 @@ struct Milestone: Identifiable, Codable, Equatable {
         status: MilestoneStatus = .pending,
         completedAt: Date? = nil,
         amount: Double? = nil,
-        createdAt: Date = Date()
+        createdAt: Date = Date(),
+        preApprovalLender: String? = nil,
+        preApprovalDate: Date? = nil,
+        offerAmount: Double? = nil,
+        offerStatus: OfferStatus? = nil,
+        closingDate: Date? = nil
     ) {
         self.id = id
         self.goalId = goalId
@@ -70,5 +124,10 @@ struct Milestone: Identifiable, Codable, Equatable {
         self.completedAt = completedAt
         self.amount = amount
         self.createdAt = createdAt
+        self.preApprovalLender = preApprovalLender
+        self.preApprovalDate = preApprovalDate
+        self.offerAmount = offerAmount
+        self.offerStatus = offerStatus
+        self.closingDate = closingDate
     }
 }
