@@ -35,6 +35,7 @@
 		774BD67CF5EC3BC0A9BA6AAE /* MilestoneService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6389812A06B6725D9D465A72 /* MilestoneService.swift */; };
 		7CF688674399EFAD6EF5A5A8 /* ROICalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FA80C796D9F0C1E61C7C7F /* ROICalculatorView.swift */; };
 		7D2B254CB310DBCDA99CB635 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F599A425BF38F9ED93E6935 /* OnboardingView.swift */; };
+		826B6E517FED599D7B23A01D /* RisingR12Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7CF167FFA0C458F7E019CB /* RisingR12Service.swift */; };
 		8346CDBAD1FBEE2C095DD029 /* PortfolioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4D38673B11883E56AAF373 /* PortfolioView.swift */; };
 		8587C88D0CF6D243FF01E15A /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 1D8022CDD144C166C8278C22 /* PrivacyInfo.xcprivacy */; };
 		889782DA9E969B8C7CA50826 /* Milestone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F574DE913B62B1A3BF63C86 /* Milestone.swift */; };
@@ -55,8 +56,10 @@
 		B9966AFA107E1D6D5DF7F0C8 /* MilestoneTrackerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5568B6110CBFAED6E5B41094 /* MilestoneTrackerView.swift */; };
 		B99C91D6A94C63F6552647B4 /* WelcomeStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26323A9FEBA93A35DF021291 /* WelcomeStepView.swift */; };
 		C210F4C7AEF8363B7499DE68 /* AddDepositView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2853DBC05802B80A42AF147A /* AddDepositView.swift */; };
+		C8220F28EE0467E6DEDC226B /* RisingR11Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37CE8624A1DE96D3A7DAD5F /* RisingR11Service.swift */; };
 		D2522D1ADA0F422DA5DFBD91 /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5BAE1A6023455590B3C6254 /* Property.swift */; };
 		D4759F6A78AD10697607368C /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CDCD2B22832BDAEB2895FF /* DashboardViewModel.swift */; };
+		D7736B2C825222BBD104EED0 /* CommunityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F22459B359B8DD7B740BC0 /* CommunityView.swift */; };
 		DC6145FDCB00AABDA52C15C2 /* AddAgentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDA9BB2466418326C4CF65C /* AddAgentViewModel.swift */; };
 		DF6C7EF64CEC41E99204EA94 /* GoalCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AAE62963399D65FDE2ECEF /* GoalCardView.swift */; };
 		EBC97C167C5964752B7139C0 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9050335E6A63D675B305B9 /* OnboardingViewModel.swift */; };
@@ -113,6 +116,7 @@
 		933117014751DCDB73313B4A /* ThemeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeService.swift; sourceTree = "<group>"; };
 		A1C22F77C7E0767715058F24 /* ReadyStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadyStepView.swift; sourceTree = "<group>"; };
 		A1FA80C796D9F0C1E61C7C7F /* ROICalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ROICalculatorView.swift; sourceTree = "<group>"; };
+		A37CE8624A1DE96D3A7DAD5F /* RisingR11Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RisingR11Service.swift; sourceTree = "<group>"; };
 		AA34F51FB7BCB7B563B00FB2 /* ShareCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareCardViewModel.swift; sourceTree = "<group>"; };
 		ABC147A1050017D180A9DCB0 /* WhyRisingStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhyRisingStepView.swift; sourceTree = "<group>"; };
 		AFA2F5714C48135A9F25F76B /* Typography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typography.swift; sourceTree = "<group>"; };
@@ -120,8 +124,10 @@
 		B60D7DFE158324C0663DB5E7 /* DepositService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepositService.swift; sourceTree = "<group>"; };
 		B8D90ACBB75F489CE2BDBCC8 /* AddPropertyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPropertyViewModel.swift; sourceTree = "<group>"; };
 		BB2C7091254AAE950B63A649 /* Rising.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Rising.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0F22459B359B8DD7B740BC0 /* CommunityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityView.swift; sourceTree = "<group>"; };
 		C253E1BBA7EB2F71403C3368 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C6DE6CDAEBD204AFC417FAA7 /* AgentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentService.swift; sourceTree = "<group>"; };
+		CF7CF167FFA0C458F7E019CB /* RisingR12Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RisingR12Service.swift; sourceTree = "<group>"; };
 		DAE3BF74AD8E7D53A1BB43B1 /* Deposit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deposit.swift; sourceTree = "<group>"; };
 		DFDA9BB2466418326C4CF65C /* AddAgentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAgentViewModel.swift; sourceTree = "<group>"; };
 		E5BAE1A6023455590B3C6254 /* Property.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Property.swift; sourceTree = "<group>"; };
@@ -272,6 +278,14 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
+		B4593BC1BE27AF24120BA350 /* Community */ = {
+			isa = PBXGroup;
+			children = (
+				C0F22459B359B8DD7B740BC0 /* CommunityView.swift */,
+			);
+			path = Community;
+			sourceTree = "<group>";
+		};
 		BD7E26AB183ED3E9325C1361 /* Milestones */ = {
 			isa = PBXGroup;
 			children = (
@@ -358,6 +372,8 @@
 				83C6C3E193BC1FDBE72B9820 /* NotificationService.swift */,
 				4707B42FE0ED0FC743BFB87B /* OnboardingService.swift */,
 				7F6CB6381FAB333A595829B9 /* PropertyService.swift */,
+				A37CE8624A1DE96D3A7DAD5F /* RisingR11Service.swift */,
+				CF7CF167FFA0C458F7E019CB /* RisingR12Service.swift */,
 				933117014751DCDB73313B4A /* ThemeService.swift */,
 			);
 			path = Services;
@@ -378,6 +394,7 @@
 				87E54EB6F3053CDE0D643E42 /* Agents */,
 				5F051A0386DDDA8B6721F283 /* Calculators */,
 				4627B79C69BC67BDCE674ECF /* Charts */,
+				B4593BC1BE27AF24120BA350 /* Community */,
 				E2937225926ECB937D8DACF3 /* Dashboard */,
 				D0D7BC1386AEC133A83E8D23 /* Deposits */,
 				721693824734107F251DCC95 /* Goals */,
@@ -477,6 +494,7 @@
 				4B977B78D88E6622FFD08919 /* AgentListViewModel.swift in Sources */,
 				F5690BEBC8554A2F73A90983 /* AgentService.swift in Sources */,
 				96097939C9F71E1A3943E09B /* Colors.swift in Sources */,
+				D7736B2C825222BBD104EED0 /* CommunityView.swift in Sources */,
 				F8A4523FD47E5F525F44B964 /* ContentView.swift in Sources */,
 				62723678F1832692262016DF /* CreateGoalView.swift in Sources */,
 				A47BD7F77BB70592B3647031 /* CreateGoalViewModel.swift in Sources */,
@@ -515,6 +533,8 @@
 				7CF688674399EFAD6EF5A5A8 /* ROICalculatorView.swift in Sources */,
 				64CD0D4D243BF4EA5069EF01 /* ReadyStepView.swift in Sources */,
 				10926747C4959C8A9ADAFE84 /* RisingApp.swift in Sources */,
+				C8220F28EE0467E6DEDC226B /* RisingR11Service.swift in Sources */,
+				826B6E517FED599D7B23A01D /* RisingR12Service.swift in Sources */,
 				F1D4EC9E8FF91C34DA7CCD3C /* SettingsView.swift in Sources */,
 				F7F1B152995A810E67D2A831 /* SettingsViewModel.swift in Sources */,
 				B9047548780A17A7DA498BDC /* ShareCardViewModel.swift in Sources */,

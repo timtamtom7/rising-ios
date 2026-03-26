@@ -4,6 +4,7 @@ struct DashboardView: View {
     @State private var viewModel = DashboardViewModel()
     @State private var showCreateGoal = false
     @State private var showSettings = false
+    @State private var showCommunity = false
 
     var body: some View {
         NavigationStack {
@@ -25,11 +26,20 @@ struct DashboardView: View {
             .navigationBarTitleDisplayMode(.large)
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
-                    Button {
-                        showSettings = true
-                    } label: {
-                        Image(systemName: "gearshape")
-                            .foregroundStyle(Color.risingTextSecondaryDark)
+                    HStack(spacing: RisingSpacing.sm) {
+                        Button {
+                            showCommunity = true
+                        } label: {
+                            Image(systemName: "person.3")
+                                .foregroundStyle(Color.risingPrimary)
+                        }
+                        
+                        Button {
+                            showSettings = true
+                        } label: {
+                            Image(systemName: "gearshape")
+                                .foregroundStyle(Color.risingTextSecondaryDark)
+                        }
                     }
                 }
             }
@@ -40,6 +50,9 @@ struct DashboardView: View {
             }
             .sheet(isPresented: $showSettings) {
                 SettingsView()
+            }
+            .sheet(isPresented: $showCommunity) {
+                CommunityView()
             }
             .task {
                 await viewModel.load()

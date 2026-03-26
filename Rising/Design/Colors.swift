@@ -92,3 +92,19 @@ extension Color {
         Color(hex: "334155") // Dark: #334155
     }
 }
+
+// MARK: - ShapeStyle Extensions
+
+extension ShapeStyle where Self == Color {
+    static var risingPrimary: Color { Color.risingPrimary }
+    static var risingPrimaryDark: Color { Color.risingPrimaryDark }
+    static var risingAccent: Color { Color.risingAccent }
+    static var risingBackground: Color { Color.risingBackground }
+    static var risingSurface: Color { Color.risingSurface }
+    static var risingCard: Color { Color.risingCard }
+    static var risingTextPrimary: Color { Color.risingTextPrimary }
+    static var risingTextSecondary: Color { Color.risingTextSecondary }
+    static var risingSuccess: Color { Color.risingSuccess }
+    static var risingWarning: Color { Color.risingWarning }
+    static var risingError: Color { Color.risingError }
+}
