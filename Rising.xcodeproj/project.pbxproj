@@ -22,6 +22,7 @@
 		3B66D39E8B2D303655604983 /* InvestmentPortfolio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05535FF7D6C61AD87824B828 /* InvestmentPortfolio.swift */; };
 		3ED553461BF117B6EAFFD85F /* Spacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86477AE4C85D6A9C4007624C /* Spacing.swift */; };
 		4708CDCBB75A30480CDFC27B /* GoalDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B98EA7B3C5823F0C1464CD9 /* GoalDetailViewModel.swift */; };
+		47EB5797EDEEA4E89D88E030 /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0E5C89D6F80F40987209F0 /* ButtonStyles.swift */; };
 		493FA335B09D70A503D36DDF /* Deposit.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE3BF74AD8E7D53A1BB43B1 /* Deposit.swift */; };
 		49BC501FD19AE9E2A176195E /* EditGoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46808465A20ABC077BF8AA39 /* EditGoalView.swift */; };
 		4B977B78D88E6622FFD08919 /* AgentListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03980658288E14508DBA5DCE /* AgentListViewModel.swift */; };
@@ -57,6 +58,7 @@
 		B99C91D6A94C63F6552647B4 /* WelcomeStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26323A9FEBA93A35DF021291 /* WelcomeStepView.swift */; };
 		C210F4C7AEF8363B7499DE68 /* AddDepositView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2853DBC05802B80A42AF147A /* AddDepositView.swift */; };
 		C8220F28EE0467E6DEDC226B /* RisingR11Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37CE8624A1DE96D3A7DAD5F /* RisingR11Service.swift */; };
+		CD4838F3C71F8DCA2850D73A /* HapticsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D37A7D23D7340201998FE2 /* HapticsService.swift */; };
 		D2522D1ADA0F422DA5DFBD91 /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5BAE1A6023455590B3C6254 /* Property.swift */; };
 		D4759F6A78AD10697607368C /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CDCD2B22832BDAEB2895FF /* DashboardViewModel.swift */; };
 		D7736B2C825222BBD104EED0 /* CommunityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F22459B359B8DD7B740BC0 /* CommunityView.swift */; };
@@ -112,6 +114,7 @@
 		83C6C3E193BC1FDBE72B9820 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		86477AE4C85D6A9C4007624C /* Spacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spacing.swift; sourceTree = "<group>"; };
 		87509B2CB5B6F9C210589BD6 /* PropertyListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyListViewModel.swift; sourceTree = "<group>"; };
+		8D0E5C89D6F80F40987209F0 /* ButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
 		8F574DE913B62B1A3BF63C86 /* Milestone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Milestone.swift; sourceTree = "<group>"; };
 		933117014751DCDB73313B4A /* ThemeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeService.swift; sourceTree = "<group>"; };
 		A1C22F77C7E0767715058F24 /* ReadyStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadyStepView.swift; sourceTree = "<group>"; };
@@ -132,6 +135,7 @@
 		DFDA9BB2466418326C4CF65C /* AddAgentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAgentViewModel.swift; sourceTree = "<group>"; };
 		E5BAE1A6023455590B3C6254 /* Property.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Property.swift; sourceTree = "<group>"; };
 		E977B42127D8AB33C4F274C2 /* MortgageCalculatorService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MortgageCalculatorService.swift; sourceTree = "<group>"; };
+		E9D37A7D23D7340201998FE2 /* HapticsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsService.swift; sourceTree = "<group>"; };
 		EAE034EEED9600A6F3AF70A6 /* Agent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Agent.swift; sourceTree = "<group>"; };
 		ED98B2A447278974B3105E06 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		EE33067033388798AD65A080 /* DepositRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepositRowView.swift; sourceTree = "<group>"; };
@@ -198,6 +202,7 @@
 		418368D79A01F2DBBDCB5AB3 /* Design */ = {
 			isa = PBXGroup;
 			children = (
+				8D0E5C89D6F80F40987209F0 /* ButtonStyles.swift */,
 				5D054AC23AEE97736543367D /* Colors.swift */,
 				86477AE4C85D6A9C4007624C /* Spacing.swift */,
 				AFA2F5714C48135A9F25F76B /* Typography.swift */,
@@ -367,6 +372,7 @@
 				81F49FA55268402507A351FA /* DatabaseService.swift */,
 				B60D7DFE158324C0663DB5E7 /* DepositService.swift */,
 				FF045C29001235656C73FCE9 /* GoalService.swift */,
+				E9D37A7D23D7340201998FE2 /* HapticsService.swift */,
 				6389812A06B6725D9D465A72 /* MilestoneService.swift */,
 				E977B42127D8AB33C4F274C2 /* MortgageCalculatorService.swift */,
 				83C6C3E193BC1FDBE72B9820 /* NotificationService.swift */,
@@ -493,6 +499,7 @@
 				20262525B866C887A986E751 /* AgentListView.swift in Sources */,
 				4B977B78D88E6622FFD08919 /* AgentListViewModel.swift in Sources */,
 				F5690BEBC8554A2F73A90983 /* AgentService.swift in Sources */,
+				47EB5797EDEEA4E89D88E030 /* ButtonStyles.swift in Sources */,
 				96097939C9F71E1A3943E09B /* Colors.swift in Sources */,
 				D7736B2C825222BBD104EED0 /* CommunityView.swift in Sources */,
 				F8A4523FD47E5F525F44B964 /* ContentView.swift in Sources */,
@@ -513,6 +520,7 @@
 				641AD08BDE78C0B7007331D7 /* GoalDetailView.swift in Sources */,
 				4708CDCBB75A30480CDFC27B /* GoalDetailViewModel.swift in Sources */,
 				580CD610107552E9C18C6D8F /* GoalService.swift in Sources */,
+				CD4838F3C71F8DCA2850D73A /* HapticsService.swift in Sources */,
 				3B66D39E8B2D303655604983 /* InvestmentPortfolio.swift in Sources */,
 				889782DA9E969B8C7CA50826 /* Milestone.swift in Sources */,
 				774BD67CF5EC3BC0A9BA6AAE /* MilestoneService.swift in Sources */,

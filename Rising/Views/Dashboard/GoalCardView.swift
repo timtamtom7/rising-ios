@@ -22,6 +22,7 @@ struct GoalCardView: View {
                     .risingHeading3()
                     .foregroundStyle(Color.risingTextPrimaryDark)
                     .lineLimit(1)
+                    .accessibilityLabel("\(goal.name) goal")
 
                 HStack(spacing: RisingSpacing.xxs) {
                     Text(formatCurrency(goal.currentAmount))
@@ -32,11 +33,13 @@ struct GoalCardView: View {
                         .risingBodySmall()
                         .foregroundStyle(Color.risingTextSecondaryDark)
                 }
+                .accessibilityLabel("\(formatCurrency(goal.currentAmount)) of \(formatCurrency(goal.targetAmount)) saved")
 
                 if let days = goal.daysRemaining {
                     Text("\(days) days remaining")
                         .risingCaption()
                         .foregroundStyle(Color.risingTextSecondaryDark)
+                        .accessibilityLabel("\(days) days remaining to reach goal")
                 }
             }
 

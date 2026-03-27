@@ -78,7 +78,7 @@ struct ROICalculatorView: View {
         }
         .padding(16)
         .background(Color.risingSurface)
-        .clipShape(RoundedRectangle(cornerRadius: 16))
+        .clipShape(RoundedRectangle(cornerRadius: RisingRadius.xl))
     }
     
     private var incomeSection: some View {
@@ -92,7 +92,7 @@ struct ROICalculatorView: View {
         }
         .padding(16)
         .background(Color.risingSurface)
-        .clipShape(RoundedRectangle(cornerRadius: 16))
+        .clipShape(RoundedRectangle(cornerRadius: RisingRadius.xl))
     }
     
     private var expensesSection: some View {
@@ -111,7 +111,7 @@ struct ROICalculatorView: View {
         }
         .padding(16)
         .background(Color.risingSurface)
-        .clipShape(RoundedRectangle(cornerRadius: 16))
+        .clipShape(RoundedRectangle(cornerRadius: RisingRadius.xl))
     }
     
     private var assumptionsSection: some View {
@@ -125,7 +125,7 @@ struct ROICalculatorView: View {
         }
         .padding(16)
         .background(Color.risingSurface)
-        .clipShape(RoundedRectangle(cornerRadius: 16))
+        .clipShape(RoundedRectangle(cornerRadius: RisingRadius.xl))
     }
     
     private var calculateButton: some View {
@@ -139,7 +139,7 @@ struct ROICalculatorView: View {
                 .frame(maxWidth: .infinity)
                 .padding(.vertical, 16)
                 .background(canCalculate ? Color.risingPrimary : Color.risingTextSecondary)
-                .clipShape(RoundedRectangle(cornerRadius: 12))
+                .clipShape(RoundedRectangle(cornerRadius: RisingRadius.lg))
         }
         .disabled(!canCalculate)
     }
@@ -190,7 +190,7 @@ struct ROICalculatorView: View {
             }
             .padding(12)
             .background(Color.risingBackground)
-            .clipShape(RoundedRectangle(cornerRadius: 8))
+            .clipShape(RoundedRectangle(cornerRadius: RisingRadius.md))
         }
     }
     
@@ -286,7 +286,7 @@ struct ROIResultsView: View {
         .padding(20)
         .frame(maxWidth: .infinity)
         .background(Color.risingSurface)
-        .clipShape(RoundedRectangle(cornerRadius: 16))
+        .clipShape(RoundedRectangle(cornerRadius: RisingRadius.xl))
     }
     
     private var cashFlowCard: some View {
@@ -306,7 +306,7 @@ struct ROIResultsView: View {
         }
         .padding(16)
         .background(Color.risingSurface)
-        .clipShape(RoundedRectangle(cornerRadius: 16))
+        .clipShape(RoundedRectangle(cornerRadius: RisingRadius.xl))
     }
     
     private var returnsCard: some View {
@@ -327,7 +327,7 @@ struct ROIResultsView: View {
         }
         .padding(16)
         .background(Color.risingSurface)
-        .clipShape(RoundedRectangle(cornerRadius: 16))
+        .clipShape(RoundedRectangle(cornerRadius: RisingRadius.xl))
     }
     
     private var metricsCard: some View {
@@ -348,7 +348,7 @@ struct ROIResultsView: View {
         }
         .padding(16)
         .background(Color.risingSurface)
-        .clipShape(RoundedRectangle(cornerRadius: 16))
+        .clipShape(RoundedRectangle(cornerRadius: RisingRadius.xl))
     }
     
     private var breakdownCard: some View {
@@ -372,7 +372,7 @@ struct ROIResultsView: View {
         }
         .padding(16)
         .background(Color.risingSurface)
-        .clipShape(RoundedRectangle(cornerRadius: 16))
+        .clipShape(RoundedRectangle(cornerRadius: RisingRadius.xl))
     }
     
     private func metricItem(title: String, value: String, color: Color) -> some View {

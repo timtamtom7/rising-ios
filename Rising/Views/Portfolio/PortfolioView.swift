@@ -145,7 +145,7 @@ struct PortfolioCard: View {
         }
         .padding(16)
         .background(Color.risingSurfaceDark)
-        .clipShape(RoundedRectangle(cornerRadius: 16))
+        .clipShape(RoundedRectangle(cornerRadius: RisingRadius.xl))
     }
     
     private func metricItem(title: String, value: String, color: Color) -> some View {
@@ -179,7 +179,7 @@ struct CreatePortfolioSheet: View {
                         .textFieldStyle(.plain)
                         .padding(12)
                         .background(Color.risingSurfaceDark)
-                        .clipShape(RoundedRectangle(cornerRadius: 8))
+                        .clipShape(RoundedRectangle(cornerRadius: RisingRadius.md))
                         .foregroundStyle(Color.risingTextPrimaryDark)
                     
                     Spacer()
@@ -252,7 +252,7 @@ struct PortfolioDetailSheet: View {
                         .padding(20)
                         .frame(maxWidth: .infinity)
                         .background(Color.risingSurfaceDark)
-                        .clipShape(RoundedRectangle(cornerRadius: 16))
+                        .clipShape(RoundedRectangle(cornerRadius: RisingRadius.xl))
                         
                         // Properties
                         VStack(alignment: .leading, spacing: 12) {
@@ -274,7 +274,7 @@ struct PortfolioDetailSheet: View {
                         .padding(16)
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .background(Color.risingSurfaceDark)
-                        .clipShape(RoundedRectangle(cornerRadius: 16))
+                        .clipShape(RoundedRectangle(cornerRadius: RisingRadius.xl))
                     }
                     .padding(16)
                 }
@@ -322,7 +322,7 @@ struct PortfolioPropertyRow: View {
         }
         .padding(12)
         .background(Color.risingBackgroundDark)
-        .clipShape(RoundedRectangle(cornerRadius: 8))
+        .clipShape(RoundedRectangle(cornerRadius: RisingRadius.md))
     }
 }
 
