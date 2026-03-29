@@ -45,7 +45,7 @@ struct MacEditGoalView: View {
             footer
         }
         .frame(width: 500, height: 560)
-        .background(Color(hex: "1E293B"))
+        .background(Color.risingSurfaceDark)
     }
 
     private var header: some View {
@@ -62,6 +62,8 @@ struct MacEditGoalView: View {
                     .font(.title2)
             }
             .buttonStyle(.plain)
+            .accessibilityLabel("Close")
+            .accessibilityHint("Close this dialog")
         }
         .padding(20)
     }
@@ -74,7 +76,7 @@ struct MacEditGoalView: View {
             TextField("e.g. House Down Payment", text: $name)
                 .textFieldStyle(.plain)
                 .padding(12)
-                .background(Color(hex: "334155"))
+                .background(Color.risingCardDark)
                 .clipShape(RoundedRectangle(cornerRadius: 8))
                 .foregroundStyle(.risingTextPrimary)
         }
@@ -94,7 +96,7 @@ struct MacEditGoalView: View {
                     .foregroundStyle(.risingTextPrimary)
             }
             .padding(12)
-            .background(Color(hex: "334155"))
+            .background(Color.risingCardDark)
             .clipShape(RoundedRectangle(cornerRadius: 8))
         }
     }
@@ -111,7 +113,7 @@ struct MacEditGoalView: View {
                     .datePickerStyle(.graphical)
                     .tint(.risingPrimary)
                     .padding(8)
-                    .background(Color(hex: "334155"))
+                    .background(Color.risingCardDark)
                     .clipShape(RoundedRectangle(cornerRadius: 8))
             }
         }
@@ -131,10 +133,12 @@ struct MacEditGoalView: View {
                             .font(.title3)
                             .foregroundStyle(iconName == icon ? .white : .risingTextSecondary)
                             .frame(width: 36, height: 36)
-                            .background(iconName == icon ? Color(hex: "10B981") : Color(hex: "334155"))
+                            .background(iconName == icon ? Color.risingPrimary : Color.risingCardDark)
                             .clipShape(RoundedRectangle(cornerRadius: 8))
                     }
                     .buttonStyle(.plain)
+                    .accessibilityLabel("\(icon) icon")
+                    .accessibilityHint(iconName == icon ? "Currently selected" : "Select this icon for your goal")
                 }
             }
         }
@@ -149,7 +153,7 @@ struct MacEditGoalView: View {
                 .textFieldStyle(.plain)
                 .lineLimit(2...4)
                 .padding(12)
-                .background(Color(hex: "334155"))
+                .background(Color.risingCardDark)
                 .clipShape(RoundedRectangle(cornerRadius: 8))
                 .foregroundStyle(.risingTextPrimary)
         }
@@ -170,6 +174,8 @@ struct MacEditGoalView: View {
             .foregroundStyle(.risingTextSecondary)
             .padding(.horizontal, 16)
             .padding(.vertical, 8)
+            .accessibilityLabel("Cancel")
+            .accessibilityHint("Discard and close this form")
 
             Button {
                 save()
@@ -185,9 +191,11 @@ struct MacEditGoalView: View {
             .foregroundStyle(.white)
             .padding(.horizontal, 20)
             .padding(.vertical, 8)
-            .background(Color(hex: "10B981"))
+            .background(Color.risingPrimary)
             .clipShape(RoundedRectangle(cornerRadius: 8))
             .disabled(isSaving || name.isEmpty || targetAmount.isEmpty)
+            .accessibilityLabel(isSaving ? "Saving..." : "Save Changes")
+            .accessibilityHint("Apply your goal edits")
         }
         .padding(20)
     }

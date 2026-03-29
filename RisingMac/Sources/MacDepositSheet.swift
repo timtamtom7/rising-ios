@@ -20,7 +20,7 @@ struct MacDepositSheet: View {
             footer
         }
         .frame(width: 420, height: 380)
-        .background(Color(hex: "1E293B"))
+        .background(Color.risingSurfaceDark)
     }
 
     private var header: some View {
@@ -39,6 +39,8 @@ struct MacDepositSheet: View {
                     .font(.title2)
             }
             .buttonStyle(.plain)
+            .accessibilityLabel("Close")
+            .accessibilityHint("Close this dialog")
         }
         .padding(20)
     }
@@ -71,7 +73,7 @@ struct MacDepositSheet: View {
                     .foregroundStyle(.risingTextPrimary)
             }
             .padding(14)
-            .background(Color(hex: "334155"))
+            .background(Color.risingCardDark)
             .clipShape(RoundedRectangle(cornerRadius: 10))
         }
     }
@@ -86,7 +88,7 @@ struct MacDepositSheet: View {
                 .datePickerStyle(.compact)
                 .tint(.risingPrimary)
                 .padding(10)
-                .background(Color(hex: "334155"))
+                .background(Color.risingCardDark)
                 .clipShape(RoundedRectangle(cornerRadius: 10))
                 .labelsHidden()
         }
@@ -102,7 +104,7 @@ struct MacDepositSheet: View {
                 .textFieldStyle(.plain)
                 .lineLimit(2...4)
                 .padding(12)
-                .background(Color(hex: "334155"))
+                .background(Color.risingCardDark)
                 .clipShape(RoundedRectangle(cornerRadius: 10))
                 .foregroundStyle(.risingTextPrimary)
         }
@@ -124,6 +126,8 @@ struct MacDepositSheet: View {
             .foregroundStyle(.risingTextSecondary)
             .padding(.horizontal, 16)
             .padding(.vertical, 8)
+            .accessibilityLabel("Cancel")
+            .accessibilityHint("Discard and close this form")
 
             Button {
                 save()
@@ -139,9 +143,11 @@ struct MacDepositSheet: View {
             .foregroundStyle(.white)
             .padding(.horizontal, 18)
             .padding(.vertical, 8)
-            .background(Color(hex: "10B981"))
+            .background(Color.risingPrimary)
             .clipShape(RoundedRectangle(cornerRadius: 8))
             .disabled(isSaving || amount.isEmpty)
+            .accessibilityLabel(isSaving ? "Saving..." : "Save Deposit")
+            .accessibilityHint("Record this deposit to your goal")
         }
         .padding(20)
     }

@@ -22,6 +22,7 @@ extension Color {
     // Text
     static let risingTextPrimaryDark = Color(hex: "F8FAFC")
     static let risingTextSecondaryDark = Color(hex: "94A3B8")
+    static let risingTextTertiaryDark = Color(hex: "64748B")
     static let risingTextPrimaryLight = Color(hex: "0F172A")
     static let risingTextSecondaryLight = Color(hex: "64748B")
 

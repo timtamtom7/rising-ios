@@ -19,6 +19,7 @@
 		41E192A4C62F248235CEFB76 /* GoalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1946549F9DF7FF63B08DAA09 /* GoalService.swift */; };
 		4639A2366F74C112AE8AFE66 /* Deposit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23B440BAE501D2C76BAD1E7 /* Deposit.swift */; };
 		5A248F0A2DBFB6FDC60DEB7D /* MacDepositSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C9AEEB35CA560A0B951E07 /* MacDepositSheet.swift */; };
+		5BE5C96A1B72BBCDB3CAE9FA /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509954D03EBF2851293CCD5A /* ButtonStyles.swift */; };
 		6001F88E968B31EBD005E694 /* MacStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC8CFD00750E5359525B06F /* MacStatsView.swift */; };
 		6354768337DAFBC535200DB4 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3AD2CFD8CCFF2EE76E244ED /* SwiftUI.framework */; };
 		7E86BAD1A9F07E138EBDE8EE /* InvestmentPortfolio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB7CB80D352BD287D5336BC /* InvestmentPortfolio.swift */; };
@@ -60,6 +61,7 @@
 		36F6E78BE3CDBBD7D8BEC755 /* MilestoneService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilestoneService.swift; sourceTree = "<group>"; };
 		3D4F8766E94FF4A4D15A312A /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		4431364B247164C7586C89E5 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		509954D03EBF2851293CCD5A /* ButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
 		51613941382634FA9B65C48D /* MacContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacContentView.swift; sourceTree = "<group>"; };
 		56F44A72C65E2952B030AFC6 /* AgentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentService.swift; sourceTree = "<group>"; };
 		5D302BFDF7C6EE5ED15DC86A /* RisingMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RisingMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -214,6 +216,7 @@
 		E4EC2C052D40B6B3438E8112 /* Design */ = {
 			isa = PBXGroup;
 			children = (
+				509954D03EBF2851293CCD5A /* ButtonStyles.swift */,
 				4431364B247164C7586C89E5 /* Colors.swift */,
 				DAC9E1EFB108916D4ADD2CB9 /* Spacing.swift */,
 				CBC0743C85D9244D30A8AAA0 /* Typography.swift */,
@@ -299,6 +302,7 @@
 				901B107699F5BC1372C13C22 /* AddDepositViewModel.swift in Sources */,
 				24819AFAA408E44186D3AA3A /* Agent.swift in Sources */,
 				AB9D7937F027416D2D4D3DFE /* AgentService.swift in Sources */,
+				5BE5C96A1B72BBCDB3CAE9FA /* ButtonStyles.swift in Sources */,
 				FCF7FD79629C0E1499780710 /* Colors.swift in Sources */,
 				90126060234137E847B1D120 /* CreateGoalViewModel.swift in Sources */,
 				3BBD1955BF34618E321967FE /* DashboardViewModel.swift in Sources */,

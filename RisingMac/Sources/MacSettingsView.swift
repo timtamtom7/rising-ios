@@ -21,7 +21,7 @@ struct MacSettingsView: View {
             }
         }
         .frame(width: 480, height: 420)
-        .background(Color(hex: "1E293B"))
+        .background(Color.risingSurfaceDark)
     }
 
     private var header: some View {
@@ -40,6 +40,8 @@ struct MacSettingsView: View {
                     .font(.title2)
             }
             .buttonStyle(.plain)
+            .accessibilityLabel("Close")
+            .accessibilityHint("Close the settings view")
         }
         .padding(20)
     }
@@ -60,7 +62,7 @@ struct MacSettingsView: View {
                 )
 
                 Divider()
-                    .background(Color(hex: "334155"))
+                    .background(Color.risingCardDark)
 
                 settingsRow(
                     title: "Deposit Reminders",
@@ -70,7 +72,7 @@ struct MacSettingsView: View {
                 .disabled(!notificationsEnabled)
                 .opacity(notificationsEnabled ? 1 : 0.5)
             }
-            .background(Color(hex: "334155"))
+            .background(Color.risingCardDark)
             .clipShape(RoundedRectangle(cornerRadius: 12))
         }
     }
@@ -90,6 +92,8 @@ struct MacSettingsView: View {
                 .toggleStyle(.switch)
                 .tint(.risingPrimary)
                 .labelsHidden()
+                .accessibilityLabel(title)
+                .accessibilityHint(subtitle)
         }
         .padding(14)
     }
@@ -124,8 +128,10 @@ struct MacSettingsView: View {
                     .padding(14)
                 }
                 .buttonStyle(.plain)
+                .accessibilityLabel("Export data")
+                .accessibilityHint("Download all your goals and deposits as a JSON file")
             }
-            .background(Color(hex: "334155"))
+            .background(Color.risingCardDark)
             .clipShape(RoundedRectangle(cornerRadius: 12))
             .overlay(
                 Group {
@@ -151,12 +157,12 @@ struct MacSettingsView: View {
 
             VStack(spacing: 0) {
                 aboutRow(title: "Version", value: "1.0.0")
-                Divider().background(Color(hex: "334155"))
+                Divider().background(Color.risingCardDark)
                 aboutRow(title: "Built with", value: "SwiftUI + Charts")
-                Divider().background(Color(hex: "334155"))
+                Divider().background(Color.risingCardDark)
                 aboutRow(title: "Platform", value: "macOS 15+")
             }
-            .background(Color(hex: "334155"))
+            .background(Color.risingCardDark)
             .clipShape(RoundedRectangle(cornerRadius: 12))
         }
     }

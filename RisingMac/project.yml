@@ -28,6 +28,8 @@ targets:
       - path: Sources
       - path: ../Rising/Models
       - path: ../Rising/Services
+        excludes:
+          - "HapticsService.swift"
       - path: ../Rising/ViewModels
         excludes:
           - "ShareCardViewModel.swift"

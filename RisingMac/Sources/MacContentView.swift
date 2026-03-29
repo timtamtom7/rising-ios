@@ -47,6 +47,8 @@ struct MacContentView: View {
                 .buttonStyle(.plain)
                 .foregroundStyle(selectedTab == .goals ? .risingPrimary : .risingTextSecondary)
                 .padding(.vertical, 4)
+                .accessibilityLabel("Goals tab")
+                .accessibilityHint("View your savings goals")
 
                 Button {
                     showingStats = true
@@ -56,6 +58,8 @@ struct MacContentView: View {
                 .buttonStyle(.plain)
                 .foregroundStyle(.risingTextSecondary)
                 .padding(.vertical, 4)
+                .accessibilityLabel("Stats tab")
+                .accessibilityHint("View your savings statistics")
 
                 Button {
                     showingSettings = true
@@ -65,6 +69,8 @@ struct MacContentView: View {
                 .buttonStyle(.plain)
                 .foregroundStyle(.risingTextSecondary)
                 .padding(.vertical, 4)
+                .accessibilityLabel("Settings tab")
+                .accessibilityHint("Open app settings")
             }
 
             if selectedTab == .goals {
@@ -114,12 +120,14 @@ struct MacContentView: View {
                     }
                     .buttonStyle(.plain)
                     .padding(.vertical, 4)
+                    .accessibilityLabel("Add new goal")
+                    .accessibilityHint("Create a new savings goal")
                 }
             }
         }
         .listStyle(.sidebar)
         .frame(minWidth: 220)
-        .background(Color(hex: "1E293B"))
+        .background(Color.risingSurfaceDark)
     }
 
     // MARK: - Detail
@@ -157,14 +165,16 @@ struct MacContentView: View {
                     .foregroundStyle(.white)
                     .padding(.horizontal, 24)
                     .padding(.vertical, 12)
-                    .background(Color(hex: "10B981"))
+                    .background(Color.risingPrimary)
                     .clipShape(RoundedRectangle(cornerRadius: 10))
             }
             .buttonStyle(.plain)
             .padding(.top, 8)
+            .accessibilityLabel("Create first goal")
+            .accessibilityHint("Create your first savings goal")
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color(hex: "0F172A"))
+        .background(Color.risingBackgroundDark)
     }
 
     private func formatCurrency(_ amount: Double) -> String {
@@ -261,7 +271,7 @@ struct MacCreateGoalView: View {
             footer
         }
         .frame(width: 500, height: 560)
-        .background(Color(hex: "1E293B"))
+        .background(Color.risingSurfaceDark)
     }
 
     private var header: some View {
@@ -278,6 +288,8 @@ struct MacCreateGoalView: View {
                     .font(.title2)
             }
             .buttonStyle(.plain)
+            .accessibilityLabel("Close")
+            .accessibilityHint("Close this dialog")
         }
         .padding(20)
     }
@@ -290,7 +302,7 @@ struct MacCreateGoalView: View {
             TextField("e.g. House Down Payment", text: $name)
                 .textFieldStyle(.plain)
                 .padding(12)
-                .background(Color(hex: "334155"))
+                .background(Color.risingCardDark)
                 .clipShape(RoundedRectangle(cornerRadius: 8))
                 .foregroundStyle(.risingTextPrimary)
         }
@@ -310,7 +322,7 @@ struct MacCreateGoalView: View {
                     .foregroundStyle(.risingTextPrimary)
             }
             .padding(12)
-            .background(Color(hex: "334155"))
+            .background(Color.risingCardDark)
             .clipShape(RoundedRectangle(cornerRadius: 8))
         }
     }
@@ -327,7 +339,7 @@ struct MacCreateGoalView: View {
                     .datePickerStyle(.graphical)
                     .tint(.risingPrimary)
                     .padding(8)
-                    .background(Color(hex: "334155"))
+                    .background(Color.risingCardDark)
                     .clipShape(RoundedRectangle(cornerRadius: 8))
             }
         }
@@ -347,10 +359,12 @@ struct MacCreateGoalView: View {
                             .font(.title3)
                             .foregroundStyle(iconName == icon ? .white : .risingTextSecondary)
                             .frame(width: 36, height: 36)
-                            .background(iconName == icon ? Color(hex: "10B981") : Color(hex: "334155"))
+                            .background(iconName == icon ? Color.risingPrimary : Color.risingCardDark)
                             .clipShape(RoundedRectangle(cornerRadius: 8))
                     }
                     .buttonStyle(.plain)
+                    .accessibilityLabel("\(icon) icon")
+                    .accessibilityHint(iconName == icon ? "Currently selected" : "Select this icon for your goal")
                 }
             }
         }
@@ -365,7 +379,7 @@ struct MacCreateGoalView: View {
                 .textFieldStyle(.plain)
                 .lineLimit(2...4)
                 .padding(12)
-                .background(Color(hex: "334155"))
+                .background(Color.risingCardDark)
                 .clipShape(RoundedRectangle(cornerRadius: 8))
                 .foregroundStyle(.risingTextPrimary)
         }
@@ -386,6 +400,8 @@ struct MacCreateGoalView: View {
             .foregroundStyle(.risingTextSecondary)
             .padding(.horizontal, 16)
             .padding(.vertical, 8)
+            .accessibilityLabel("Cancel")
+            .accessibilityHint("Discard and close this form")
 
             Button {
                 save()
@@ -401,9 +417,11 @@ struct MacCreateGoalView: View {
             .foregroundStyle(.white)
             .padding(.horizontal, 20)
             .padding(.vertical, 8)
-            .background(Color(hex: "10B981"))
+            .background(Color.risingPrimary)
             .clipShape(RoundedRectangle(cornerRadius: 8))
             .disabled(isSaving || name.isEmpty || targetAmount.isEmpty)
+            .accessibilityLabel(isSaving ? "Saving goal..." : "Create Goal")
+            .accessibilityHint("Save your new savings goal")
         }
         .padding(20)
     }

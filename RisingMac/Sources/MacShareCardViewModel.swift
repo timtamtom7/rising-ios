@@ -26,7 +26,7 @@ struct ShareableGoalCardContent: View {
 
     var body: some View {
         ZStack {
-            Color(hex: "0F172A")
+            Color.risingBackgroundDark
 
             VStack(spacing: 20) {
                 HStack {

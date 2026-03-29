@@ -23,7 +23,7 @@ struct MacStatsView: View {
             }
         }
         .frame(width: 560, height: 520)
-        .background(Color(hex: "1E293B"))
+        .background(Color.risingSurfaceDark)
         .task {
             await viewModel.loadAllDeposits()
         }
@@ -45,6 +45,8 @@ struct MacStatsView: View {
                     .font(.title2)
             }
             .buttonStyle(.plain)
+            .accessibilityLabel("Close")
+            .accessibilityHint("Close the statistics view")
         }
         .padding(20)
     }
@@ -97,7 +99,7 @@ struct MacStatsView: View {
         }
         .padding(14)
         .frame(maxWidth: .infinity, alignment: .leading)
-        .background(Color(hex: "334155"))
+        .background(Color.risingCardDark)
         .clipShape(RoundedRectangle(cornerRadius: 12))
     }
 
@@ -120,23 +122,23 @@ struct MacStatsView: View {
                         x: .value("Month", item.month),
                         y: .value("Amount", item.amount)
                     )
-                    .foregroundStyle(Color(hex: "10B981").gradient)
+                    .foregroundStyle(Color.risingPrimary.gradient)
                     .cornerRadius(4)
                 }
                 .chartXAxis {
                     AxisMarks(values: .automatic) { _ in
                         AxisValueLabel()
-                            .foregroundStyle(Color(hex: "94A3B8"))
+                            .foregroundStyle(Color.risingTextSecondaryDark)
                     }
                 }
                 .chartYAxis {
                     AxisMarks(values: .automatic) { value in
                         AxisGridLine()
-                            .foregroundStyle(Color(hex: "334155"))
+                            .foregroundStyle(Color.risingCardDark)
                         AxisValueLabel {
                             if let doubleValue = value.as(Double.self) {
                                 Text(formatCurrencyCompact(doubleValue))
-                                    .foregroundStyle(Color(hex: "94A3B8"))
+                                    .foregroundStyle(Color.risingTextSecondaryDark)
                             }
                         }
                     }
@@ -145,7 +147,7 @@ struct MacStatsView: View {
             }
         }
         .padding(20)
-        .background(Color(hex: "334155"))
+        .background(Color.risingCardDark)
         .clipShape(RoundedRectangle(cornerRadius: 16))
     }
 
@@ -167,11 +169,11 @@ struct MacStatsView: View {
 
             ZStack {
                 Circle()
-                    .stroke(Color(hex: "334155"), lineWidth: 6)
+                    .stroke(Color.risingCardDark, lineWidth: 6)
                 Circle()
                     .trim(from: 0, to: min(CGFloat(viewModel.streak) / 12.0, 1.0))
                     .stroke(
-                        Color(hex: "F59E0B"),
+                        Color.risingAccent,
                         style: StrokeStyle(lineWidth: 6, lineCap: .round)
                     )
                     .rotationEffect(.degrees(-90))
@@ -183,7 +185,7 @@ struct MacStatsView: View {
             .frame(width: 70, height: 70)
         }
         .padding(20)
-        .background(Color(hex: "334155"))
+        .background(Color.risingCardDark)
         .clipShape(RoundedRectangle(cornerRadius: 16))
     }
 

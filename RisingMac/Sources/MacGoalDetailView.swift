@@ -23,7 +23,7 @@ struct MacGoalDetailView: View {
             .padding(24)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color(hex: "0F172A"))
+        .background(Color.risingBackgroundDark)
         .task {
             await viewModel.loadDeposits()
         }
@@ -88,6 +88,8 @@ struct MacGoalDetailView: View {
                 }
                 .buttonStyle(.plain)
                 .padding(.top, 4)
+                .accessibilityLabel("Edit goal")
+                .accessibilityHint("Modify goal name, target, deadline, or icon")
             }
 
             Spacer()
@@ -95,7 +97,7 @@ struct MacGoalDetailView: View {
             progressRing
         }
         .padding(20)
-        .background(Color(hex: "1E293B"))
+        .background(Color.risingSurfaceDark)
         .clipShape(RoundedRectangle(cornerRadius: 16))
     }
 
@@ -104,12 +106,12 @@ struct MacGoalDetailView: View {
     private var progressRing: some View {
         ZStack {
             Circle()
-                .stroke(Color(hex: "334155"), lineWidth: 12)
+                .stroke(Color.risingCardDark, lineWidth: 12)
 
             Circle()
                 .trim(from: 0, to: viewModel.progress)
                 .stroke(
-                    Color(hex: "10B981"),
+                    Color.risingPrimary,
                     style: StrokeStyle(lineWidth: 12, lineCap: .round)
                 )
                 .rotationEffect(.degrees(-90))
@@ -151,7 +153,7 @@ struct MacGoalDetailView: View {
         .padding(16)
         .background(
             LinearGradient(
-                colors: [Color(hex: "F59E0B").opacity(0.15), Color(hex: "1E293B")],
+                colors: [Color.risingAccent.opacity(0.15), Color.risingSurfaceDark],
                 startPoint: .leading,
                 endPoint: .trailing
             )
@@ -159,7 +161,7 @@ struct MacGoalDetailView: View {
         .clipShape(RoundedRectangle(cornerRadius: 12))
         .overlay(
             RoundedRectangle(cornerRadius: 12)
-                .stroke(Color(hex: "F59E0B").opacity(0.3), lineWidth: 1)
+                .stroke(Color.risingAccent.opacity(0.3), lineWidth: 1)
         )
     }
 
@@ -207,10 +209,12 @@ struct MacGoalDetailView: View {
                         .foregroundStyle(.white)
                         .padding(.horizontal, 14)
                         .padding(.vertical, 7)
-                        .background(Color(hex: "10B981"))
+                        .background(Color.risingPrimary)
                         .clipShape(RoundedRectangle(cornerRadius: 8))
                 }
                 .buttonStyle(.plain)
+                .accessibilityLabel("Add deposit")
+                .accessibilityHint("Log a new savings deposit for this goal")
             }
 
             HStack(spacing: 20) {
@@ -223,7 +227,7 @@ struct MacGoalDetailView: View {
             milestoneMarkers
         }
         .padding(20)
-        .background(Color(hex: "1E293B"))
+        .background(Color.risingSurfaceDark)
         .clipShape(RoundedRectangle(cornerRadius: 16))
     }
 
@@ -239,7 +243,7 @@ struct MacGoalDetailView: View {
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding(12)
-        .background(Color(hex: "334155"))
+        .background(Color.risingCardDark)
         .clipShape(RoundedRectangle(cornerRadius: 10))
     }
 
@@ -262,7 +266,7 @@ struct MacGoalDetailView: View {
 
                     VStack(spacing: 4) {
                         Circle()
-                            .fill(reached ? Color(hex: "10B981") : Color(hex: "334155"))
+                            .fill(reached ? Color.risingPrimary : Color.risingCardDark)
                             .frame(width: 12, height: 12)
 
                         Text(milestone.0)
@@ -273,7 +277,7 @@ struct MacGoalDetailView: View {
 
                     if milestone.0 != "100%" {
                         Rectangle()
-                            .fill(viewModel.progress >= milestone.1 ? Color(hex: "10B981") : Color(hex: "334155"))
+                            .fill(viewModel.progress >= milestone.1 ? Color.risingPrimary : Color.risingCardDark)
                             .frame(height: 2)
                             .frame(maxWidth: 30)
                     }
@@ -322,7 +326,7 @@ struct MacGoalDetailView: View {
             }
         }
         .padding(20)
-        .background(Color(hex: "1E293B"))
+        .background(Color.risingSurfaceDark)
         .clipShape(RoundedRectangle(cornerRadius: 16))
     }
 
@@ -362,9 +366,11 @@ struct MacGoalDetailView: View {
                     .foregroundStyle(.risingError.opacity(0.7))
             }
             .buttonStyle(.plain)
+            .accessibilityLabel("Delete deposit")
+            .accessibilityHint("Remove this deposit from the history")
         }
         .padding(12)
-        .background(Color(hex: "334155"))
+        .background(Color.risingCardDark)
         .clipShape(RoundedRectangle(cornerRadius: 10))
     }
 
