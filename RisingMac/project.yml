@@ -1,0 +1,58 @@
+name: RisingMac
+options:
+  bundleIdPrefix: com.rising
+  deploymentTarget:
+    macOS: "15.0"
+  xcodeVersion: "15.0"
+  generateEmptyDirectories: true
+
+settings:
+  base:
+    SWIFT_VERSION: "6.0"
+    MACOSX_DEPLOYMENT_TARGET: "15.0"
+    DEVELOPMENT_TEAM: ""
+    CODE_SIGN_STYLE: Automatic
+    CODE_SIGN_IDENTITY: "-"
+    ENABLE_USER_SCRIPT_SANDBOXING: false
+
+packages:
+  SQLite.swift:
+    url: https://github.com/stephencelis/SQLite.swift
+    from: "0.15.3"
+
+targets:
+  RisingMac:
+    type: application
+    platform: macOS
+    sources:
+      - path: Sources
+      - path: ../Rising/Models
+      - path: ../Rising/Services
+      - path: ../Rising/ViewModels
+        excludes:
+          - "ShareCardViewModel.swift"
+          - "AddPropertyViewModel.swift"
+          - "PropertyListViewModel.swift"
+          - "AddAgentViewModel.swift"
+          - "AgentListViewModel.swift"
+          - "MilestoneTrackerViewModel.swift"
+          - "OnboardingViewModel.swift"
+      - path: ../Rising/Design
+      - path: ../Rising/Resources/Assets.xcassets
+    resources:
+      - path: Resources
+    settings:
+      base:
+        INFOPLIST_FILE: Resources/Info.plist
+        PRODUCT_BUNDLE_IDENTIFIER: com.rising.macos
+        MARKETING_VERSION: "1.0.0"
+        CURRENT_PROJECT_VERSION: "1"
+        GENERATE_INFOPLIST_FILE: false
+        SWIFT_EMIT_LOC_STRINGS: true
+        LD_RUNPATH_SEARCH_PATHS: "$(inherited) @executable_path/../Frameworks"
+    dependencies:
+      - package: SQLite.swift
+        product: SQLite
+      - sdk: SwiftUI.framework
+      - sdk: AppKit.framework
+      - sdk: Charts.framework
