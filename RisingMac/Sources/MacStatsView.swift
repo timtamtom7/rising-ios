@@ -117,33 +117,46 @@ struct MacStatsView: View {
                     .foregroundStyle(.risingTextSecondary)
                     .frame(maxWidth: .infinity, minHeight: 150)
             } else {
-                Chart(viewModel.monthlyData) { item in
-                    BarMark(
-                        x: .value("Month", item.month),
-                        y: .value("Amount", item.amount)
-                    )
-                    .foregroundStyle(Color.risingPrimary.gradient)
-                    .cornerRadius(4)
-                }
-                .chartXAxis {
-                    AxisMarks(values: .automatic) { _ in
-                        AxisValueLabel()
-                            .foregroundStyle(Color.risingTextSecondaryDark)
+                VStack(alignment: .leading, spacing: 8) {
+                    Chart(viewModel.monthlyData) { item in
+                        BarMark(
+                            x: .value("Month", item.month),
+                            y: .value("Amount", item.amount)
+                        )
+                        .foregroundStyle(Color.risingPrimary.gradient)
+                        .cornerRadius(4)
                     }
-                }
-                .chartYAxis {
-                    AxisMarks(values: .automatic) { value in
-                        AxisGridLine()
-                            .foregroundStyle(Color.risingCardDark)
-                        AxisValueLabel {
-                            if let doubleValue = value.as(Double.self) {
-                                Text(formatCurrencyCompact(doubleValue))
-                                    .foregroundStyle(Color.risingTextSecondaryDark)
+                    .chartXAxis {
+                        AxisMarks(values: .automatic) { _ in
+                            AxisValueLabel()
+                                .foregroundStyle(Color.risingTextSecondaryDark)
+                        }
+                    }
+                    .chartYAxis {
+                        AxisMarks(values: .automatic) { value in
+                            AxisGridLine()
+                                .foregroundStyle(Color.risingCardDark)
+                            AxisValueLabel {
+                                if let doubleValue = value.as(Double.self) {
+                                    Text(formatCurrencyCompact(doubleValue))
+                                        .foregroundStyle(Color.risingTextSecondaryDark)
+                                }
                             }
                         }
                     }
+                    .frame(height: 160)
+
+                    // Colorblind-safe: explicit value labels below chart
+                    HStack(spacing: 0) {
+                        ForEach(viewModel.monthlyData) { item in
+                            Text("\(item.month): \(formatCurrencyCompact(item.amount))")
+                                .font(.caption2)
+                                .foregroundStyle(Color.risingTextSecondaryDark)
+                                .frame(maxWidth: .infinity)
+                        }
+                    }
+                    .accessibilityLabel(viewModel.monthlyData.map { "\($0.month): \(formatCurrencyCompact($0.amount))" }.joined(separator: ", "))
                 }
-                .frame(height: 180)
             }
         }
         .padding(20)
@@ -177,12 +190,22 @@ struct MacStatsView: View {
                         style: StrokeStyle(lineWidth: 6, lineCap: .round)
                     )
                     .rotationEffect(.degrees(-90))
+                // Pattern overlay for colorblind accessibility
+                Circle()
+                    .trim(from: 0, to: min(CGFloat(viewModel.streak) / 12.0, 1.0))
+                    .stroke(
+                        Color.risingTextPrimary.opacity(0.3),
+                        style: StrokeStyle(lineWidth: 2, lineCap: .butt, dash: [3, 2])
+                    )
+                    .rotationEffect(.degrees(-90))
 
                 Text("\(viewModel.streak)")
                     .font(.system(size: 24, weight: .bold, design: .monospaced))
                     .foregroundStyle(.risingAccent)
             }
             .frame(width: 70, height: 70)
+            .accessibilityElement(children: .ignore)
+            .accessibilityLabel("\(viewModel.streak) month streak. Goal: 12 months.")
         }
         .padding(20)
         .background(Color.risingCardDark)

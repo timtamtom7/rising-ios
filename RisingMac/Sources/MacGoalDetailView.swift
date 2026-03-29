@@ -117,6 +117,16 @@ struct MacGoalDetailView: View {
                 .rotationEffect(.degrees(-90))
                 .animation(.easeOut(duration: 0.8), value: viewModel.progress)
 
+            // Pattern overlay for colorblind accessibility (dashed arc)
+            Circle()
+                .trim(from: 0, to: viewModel.progress)
+                .stroke(
+                    Color.risingTextPrimary.opacity(0.3),
+                    style: StrokeStyle(lineWidth: 3, lineCap: .butt, dash: [4, 3])
+                )
+                .rotationEffect(.degrees(-90))
+                .animation(.easeOut(duration: 0.8), value: viewModel.progress)
+
             VStack(spacing: 2) {
                 Text("\(Int(viewModel.progress * 100))%")
                     .font(.system(size: 28, weight: .bold, design: .monospaced))
@@ -127,6 +137,9 @@ struct MacGoalDetailView: View {
             }
         }
         .frame(width: 120, height: 120)
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel("\(Int(viewModel.progress * 100)) percent funded")
+        .accessibilityValue("Target: \(formatCurrency(viewModel.goal.targetAmount)), Saved: \(formatCurrency(viewModel.goal.currentAmount))")
     }
 
     // MARK: - AI Insight Card
@@ -236,15 +249,22 @@ struct MacGoalDetailView: View {
             Text(title)
                 .font(.caption)
                 .foregroundStyle(.risingTextSecondary)
-            Text(formatCurrency(amount))
-                .font(.system(.title3, design: .monospaced))
-                .fontWeight(.bold)
-                .foregroundStyle(Color(hex: color))
+            HStack(spacing: 6) {
+                Text(formatCurrency(amount))
+                    .font(.system(.title3, design: .monospaced))
+                    .fontWeight(.bold)
+                    .foregroundStyle(Color(hex: color))
+                // Colorblind-safe: icon indicator supplements color
+                Image(systemName: color == "10B981" ? "arrow.up.circle.fill" : color == "F59E0B" ? "target" : "minus.circle.fill")
+                    .font(.caption2)
+                    .foregroundStyle(Color(hex: color).opacity(0.7))
+            }
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding(12)
         .background(Color.risingCardDark)
         .clipShape(RoundedRectangle(cornerRadius: 10))
+        .accessibilityLabel("\(title): \(formatCurrency(amount))")
     }
 
     private var milestoneMarkers: some View {
@@ -265,9 +285,22 @@ struct MacGoalDetailView: View {
                     let reached = viewModel.progress >= milestone.1
 
                     VStack(spacing: 4) {
-                        Circle()
-                            .fill(reached ? Color.risingPrimary : Color.risingCardDark)
-                            .frame(width: 12, height: 12)
+                        // Colorblind-safe: use checkmark + filled circle for reached, empty for not reached
+                        ZStack {
+                            Circle()
+                                .fill(reached ? Color.risingPrimary : Color.risingCardDark)
+                                .frame(width: 12, height: 12)
+                            if reached {
+                                Image(systemName: "checkmark")
+                                    .font(.system(size: 7, weight: .bold))
+                                    .foregroundStyle(.white)
+                            } else {
+                                Circle()
+                                    .stroke(Color.risingTextSecondary.opacity(0.5), lineWidth: 1)
+                                    .frame(width: 12, height: 12)
+                            }
+                        }
+                        .accessibilityLabel("\(milestone.0) milestone: \(reached ? "reached" : "not reached")")
 
                         Text(milestone.0)
                             .font(.caption2)
@@ -276,10 +309,33 @@ struct MacGoalDetailView: View {
                     .frame(maxWidth: .infinity)
 
                     if milestone.0 != "100%" {
+                        // Colorblind-safe: use different dash patterns for reached vs not
                         Rectangle()
-                            .fill(viewModel.progress >= milestone.1 ? Color.risingPrimary : Color.risingCardDark)
+                            .fill(
+                                viewModel.progress >= milestone.1
+                                    ? Color.risingPrimary
+                                    : Color.risingCardDark
+                            )
                             .frame(height: 2)
                             .frame(maxWidth: 30)
+                            .overlay(
+                                // Add dash pattern overlay for colorblind distinction
+                                viewModel.progress < milestone.1
+                                    ? nil
+                                    : AnyView(
+                                        Rectangle()
+                                            .fill(Color.risingTextPrimary.opacity(0.3))
+                                            .frame(height: 2)
+                                            .frame(width: 30)
+                                            .mask(
+                                                HStack(spacing: 3) {
+                                                    ForEach(0..<5, id: \.self) { _ in
+                                                        Rectangle().frame(width: 4)
+                                                    }
+                                                }
+                                            )
+                                    )
+                            )
                     }
                 }
             }
