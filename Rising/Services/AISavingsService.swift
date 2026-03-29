@@ -3,6 +3,7 @@ import Foundation
 // MARK: - AI Savings Intelligence Service
 // R11: AI-powered savings prediction and completion date forecasting
 
+@MainActor
 final class AISavingsService {
     static let shared = AISavingsService()
 

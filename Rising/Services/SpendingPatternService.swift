@@ -3,6 +3,7 @@ import Foundation
 // MARK: - Spending Pattern Service
 // R11: Detect recurring expenses, "found money" savings opportunities
 
+@MainActor
 final class SpendingPatternService {
     static let shared = SpendingPatternService()
 
