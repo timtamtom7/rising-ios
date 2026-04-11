@@ -101,7 +101,7 @@ struct ShareableGoalCardView: View {
     private var motivationalMessage: String {
         let progress = goal.progress
         if progress >= 1.0 {
-            return "Goal achieved! 🎉"
+            return "Goal achieved!"
         } else if progress >= 0.75 {
             return "So close! Keep going!"
         } else if progress >= 0.5 {
@@ -161,7 +161,7 @@ struct ShareCardSheet: View {
                     // Share Button
                     ShareLink(
                         item: shareText,
-                        preview: SharePreview(goal.name, image: Image(systemName: "arrow.up.right.circle.fill"))
+                        preview: SharePreview(goal.name, image: Image(systemName: "chart.line.uptrend.xyaxis"))
                     ) {
                         HStack {
                             Image(systemName: "square.and.arrow.up")
@@ -175,6 +175,7 @@ struct ShareCardSheet: View {
                         .background(Color.risingPrimary)
                         .clipShape(RoundedRectangle(cornerRadius: RisingRadius.lg))
                     }
+                    .accessibilityLabel("Share \(goal.name) progress card")
                     .padding(.horizontal, RisingSpacing.lg)
 
                     Spacer()
@@ -196,7 +197,7 @@ struct ShareCardSheet: View {
 
     private var shareText: String {
         let percent = Int(goal.progress * 100)
-        return "I'm \(percent)% toward my \(goal.name)! 🎉 Rising helps me track my savings goals — check it out!"
+        return "I'm \(percent)% toward my \(goal.name)! Rising helps me track my savings goals — check it out!"
     }
 }
 

@@ -143,13 +143,13 @@ final class AchievementsViewModel {
 
     var motivationText: String {
         switch progressPercent {
-        case 0..<0.1: return "Every journey starts with a single step!"
-        case 0.1..<0.25: return "You're making great progress!"
-        case 0.25..<0.5: return "Halfway there — keep it up!"
-        case 0.5..<0.75: return "You're on fire! Amazing dedication."
-        case 0.75..<1.0: return "Almost complete — so close!"
-        case 1.0: return "You did it! Master saver!"
-        default: return "Keep saving!"
+        case 0..<0.1: return "Every journey starts with a single step"
+        case 0.1..<0.25: return "You're making great progress"
+        case 0.25..<0.5: return "Halfway there — keep it up"
+        case 0.5..<0.75: return "You're on fire. Amazing dedication"
+        case 0.75..<1.0: return "Almost complete — so close"
+        case 1.0: return "Master saver. Impressive discipline"
+        default: return "Keep saving"
         }
     }
 }

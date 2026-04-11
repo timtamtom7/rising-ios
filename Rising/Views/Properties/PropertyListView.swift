@@ -107,11 +107,12 @@ struct PropertyCardView: View {
 
                 Spacer()
 
-                if let link = property.link, !link.isEmpty {
-                    Link(destination: URL(string: link) ?? URL(string: "https://example.com")!) {
+                if let link = property.link, !link.isEmpty, let url = URL(string: link), url.scheme != nil {
+                    Link(destination: url) {
                         Image(systemName: "link")
                             .foregroundStyle(Color.risingAccent)
                     }
+                    .accessibilityLabel("Open listing for \(property.address)")
                 }
             }
 

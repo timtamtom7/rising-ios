@@ -137,7 +137,7 @@ struct GoalDetailView: View {
                     .frame(width: 160, height: 160)
 
                 Circle()
-                    .trim(from: 0, to: min(viewModel.progress, 1.0))
+                    .trim(from: 0, to: min(viewModel.progress.safeProgress, 1.0))
                     .stroke(
                         Color.risingPrimary,
                         style: StrokeStyle(lineWidth: 12, lineCap: .round)
@@ -156,6 +156,7 @@ struct GoalDetailView: View {
                         .foregroundStyle(Color.risingTextSecondary)
                 }
             }
+            .accessibilityLabel("Goal progress: \(Int(viewModel.progress * 100)) percent saved toward \(viewModel.goal.name)")
 
             // Stats Row
             HStack(spacing: RisingSpacing.xl) {
@@ -430,6 +431,8 @@ struct StatItem: View {
                 .risingCaption()
                 .foregroundStyle(Color.risingTextSecondary)
         }
+        .accessibilityElement(children: .combine)
+        .accessibilityLabel("\(title): \(value)")
     }
 }
 

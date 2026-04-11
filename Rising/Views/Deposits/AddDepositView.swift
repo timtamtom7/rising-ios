@@ -33,7 +33,7 @@ struct AddDepositView: View {
                                 .foregroundStyle(Color.risingPrimary)
 
                             TextField("0", text: $viewModel.amount)
-                                .font(.system(size: 48, weight: .bold))
+                                .font(.largeTitle.weight(.bold))
                                 .foregroundStyle(Color.risingTextPrimary)
                                 .keyboardType(.decimalPad)
                                 .multilineTextAlignment(.leading)
