@@ -159,8 +159,12 @@ final class DatabaseService {
 
         var result: [Goal] = []
         for row in try db.prepare(goals.order(goalCreatedAt.desc)) {
+            guard let uuid = UUID(uuidString: row[goalId]) else {
+                print("DatabaseService: skipping goal with invalid UUID '\(row[goalId])'")
+                continue
+            }
             let goal = Goal(
-                id: UUID(uuidString: row[goalId]) ?? UUID(),
+                id: uuid,
                 name: row[goalName],
                 targetAmount: row[goalTargetAmount],
                 currentAmount: row[goalCurrentAmount],
@@ -230,9 +234,14 @@ final class DatabaseService {
         let query = deposits.filter(depositGoalId == id.uuidString).order(depositDate.desc)
         var result: [Deposit] = []
         for row in try db.prepare(query) {
+            guard let uuid = UUID(uuidString: row[depositId]),
+                  let goalUUID = UUID(uuidString: row[depositGoalId]) else {
+                print("DatabaseService: skipping deposit with invalid UUID")
+                continue
+            }
             let deposit = Deposit(
-                id: UUID(uuidString: row[depositId]) ?? UUID(),
-                goalId: UUID(uuidString: row[depositGoalId]) ?? UUID(),
+                id: uuid,
+                goalId: goalUUID,
                 amount: row[depositAmount],
                 date: row[depositDate],
                 note: row[depositNote],
@@ -249,9 +258,14 @@ final class DatabaseService {
         let query = deposits.order(depositDate.desc)
         var result: [Deposit] = []
         for row in try db.prepare(query) {
+            guard let uuid = UUID(uuidString: row[depositId]),
+                  let goalUUID = UUID(uuidString: row[depositGoalId]) else {
+                print("DatabaseService: skipping deposit with invalid UUID")
+                continue
+            }
             let deposit = Deposit(
-                id: UUID(uuidString: row[depositId]) ?? UUID(),
-                goalId: UUID(uuidString: row[depositGoalId]) ?? UUID(),
+                id: uuid,
+                goalId: goalUUID,
                 amount: row[depositAmount],
                 date: row[depositDate],
                 note: row[depositNote],
@@ -289,9 +303,14 @@ final class DatabaseService {
 
         var result: [Property] = []
         for row in try db.prepare(properties.order(propertyCreatedAt.desc)) {
+            guard let uuid = UUID(uuidString: row[propertyId]),
+                  let goalUUID = UUID(uuidString: row[propertyGoalId]) else {
+                print("DatabaseService: skipping property with invalid UUID")
+                continue
+            }
             let property = Property(
-                id: UUID(uuidString: row[propertyId]) ?? UUID(),
-                goalId: UUID(uuidString: row[propertyGoalId]) ?? UUID(),
+                id: uuid,
+                goalId: goalUUID,
                 address: row[propertyAddress],
                 price: row[propertyPrice],
                 link: row[propertyLink],
@@ -309,9 +328,14 @@ final class DatabaseService {
         let query = properties.filter(propertyGoalId == id.uuidString).order(propertyCreatedAt.desc)
         var result: [Property] = []
         for row in try db.prepare(query) {
+            guard let uuid = UUID(uuidString: row[propertyId]),
+                  let goalUUID = UUID(uuidString: row[propertyGoalId]) else {
+                print("DatabaseService: skipping property with invalid UUID")
+                continue
+            }
             let property = Property(
-                id: UUID(uuidString: row[propertyId]) ?? UUID(),
-                goalId: UUID(uuidString: row[propertyGoalId]) ?? UUID(),
+                id: uuid,
+                goalId: goalUUID,
                 address: row[propertyAddress],
                 price: row[propertyPrice],
                 link: row[propertyLink],
@@ -363,8 +387,12 @@ final class DatabaseService {
 
         var result: [Agent] = []
         for row in try db.prepare(agents.order(agentCreatedAt.desc)) {
+            guard let uuid = UUID(uuidString: row[agentId]) else {
+                print("DatabaseService: skipping agent with invalid UUID '\(row[agentId])'")
+                continue
+            }
             let agent = Agent(
-                id: UUID(uuidString: row[agentId]) ?? UUID(),
+                id: uuid,
                 name: row[agentName],
                 phone: row[agentPhone],
                 email: row[agentEmail],
@@ -415,10 +443,15 @@ final class DatabaseService {
 
         let query = milestones.filter(milestoneGoalId == id.uuidString).order(milestoneCreatedAt.asc)
         var result: [Milestone] = []
-        for row in try db.prepare(query) {
+        for row in try db.prepare(milestones.filter(milestoneGoalId == id.uuidString).order(milestoneCreatedAt.asc)) {
+            guard let uuid = UUID(uuidString: row[milestoneId]),
+                  let goalUUID = UUID(uuidString: row[milestoneGoalId]) else {
+                print("DatabaseService: skipping milestone with invalid UUID")
+                continue
+            }
             let milestone = Milestone(
-                id: UUID(uuidString: row[milestoneId]) ?? UUID(),
-                goalId: UUID(uuidString: row[milestoneGoalId]) ?? UUID(),
+                id: uuid,
+                goalId: goalUUID,
                 title: row[milestoneTitle],
                 type: MilestoneType(rawValue: row[milestoneType]) ?? .preApproval,
                 status: MilestoneStatus(rawValue: row[milestoneStatus]) ?? .pending,
