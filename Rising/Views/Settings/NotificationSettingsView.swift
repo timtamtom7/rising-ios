@@ -17,15 +17,15 @@ struct NotificationSettingsView: View {
             Toggle(isOn: $notificationsEnabled) {
                 HStack {
                     Image(systemName: "bell.fill")
-                        .foregroundStyle(notificationsEnabled ? Color.risingPrimary : Color.risingTextSecondaryDark)
+                        .foregroundStyle(notificationsEnabled ? Color.risingPrimary : Color.risingTextSecondary)
                     Text("Enable Notifications")
                         .risingBody()
-                        .foregroundStyle(Color.risingTextPrimaryDark)
+                        .foregroundStyle(Color.risingTextPrimary)
                 }
             }
             .tint(Color.risingPrimary)
             .padding(RisingSpacing.md)
-            .background(Color.risingSurfaceDark)
+            .background(Color.risingSurface)
             .clipShape(RoundedRectangle(cornerRadius: RisingRadius.lg))
             .onChange(of: notificationsEnabled) { _, newValue in
                 if newValue {
@@ -120,11 +120,11 @@ struct NotificationToggle: View {
             VStack(alignment: .leading, spacing: 2) {
                 Text(title)
                     .risingBody()
-                    .foregroundStyle(Color.risingTextPrimaryDark)
+                    .foregroundStyle(Color.risingTextPrimary)
 
                 Text(subtitle)
                     .risingCaption()
-                    .foregroundStyle(Color.risingTextSecondaryDark)
+                    .foregroundStyle(Color.risingTextSecondary)
             }
 
             Spacer()
@@ -133,12 +133,12 @@ struct NotificationToggle: View {
                 .tint(Color.risingPrimary)
         }
         .padding(RisingSpacing.md)
-        .background(Color.risingSurfaceDark)
+        .background(Color.risingSurface)
         .clipShape(RoundedRectangle(cornerRadius: RisingRadius.md))
     }
 }
 
 #Preview {
     NotificationSettingsView()
-        .background(Color.risingBackgroundDark)
+        .background(Color.risingBackground)
 }

@@ -17,7 +17,7 @@ struct AddDepositView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                Color.risingBackgroundDark
+                Color.risingBackground
                     .ignoresSafeArea()
 
                 VStack(spacing: RisingSpacing.lg) {
@@ -25,7 +25,7 @@ struct AddDepositView: View {
                     VStack(alignment: .leading, spacing: RisingSpacing.xs) {
                         Text("Amount")
                             .risingLabel()
-                            .foregroundStyle(Color.risingTextSecondaryDark)
+                            .foregroundStyle(Color.risingTextSecondary)
 
                         HStack {
                             Text("$")
@@ -34,13 +34,13 @@ struct AddDepositView: View {
 
                             TextField("0", text: $viewModel.amount)
                                 .font(.system(size: 48, weight: .bold))
-                                .foregroundStyle(Color.risingTextPrimaryDark)
+                                .foregroundStyle(Color.risingTextPrimary)
                                 .keyboardType(.decimalPad)
                                 .multilineTextAlignment(.leading)
                                 .tint(Color.risingPrimary)
                         }
                         .padding(RisingSpacing.lg)
-                        .background(Color.risingSurfaceDark)
+                        .background(Color.risingSurface)
                         .clipShape(RoundedRectangle(cornerRadius: RisingRadius.xl))
                     }
 
@@ -48,7 +48,7 @@ struct AddDepositView: View {
                     VStack(alignment: .leading, spacing: RisingSpacing.xs) {
                         Text("Date")
                             .risingLabel()
-                            .foregroundStyle(Color.risingTextSecondaryDark)
+                            .foregroundStyle(Color.risingTextSecondary)
 
                         DatePicker(
                             "Date",
@@ -59,23 +59,23 @@ struct AddDepositView: View {
                         .datePickerStyle(.compact)
                         .tint(Color.risingPrimary)
                         .padding(RisingSpacing.md)
-                        .background(Color.risingSurfaceDark)
+                        .background(Color.risingSurface)
                         .clipShape(RoundedRectangle(cornerRadius: RisingRadius.md))
-                        .foregroundStyle(Color.risingTextSecondaryDark)
+                        .foregroundStyle(Color.risingTextSecondary)
                     }
 
                     // Note
                     VStack(alignment: .leading, spacing: RisingSpacing.xs) {
                         Text("Note (optional)")
                             .risingLabel()
-                            .foregroundStyle(Color.risingTextSecondaryDark)
+                            .foregroundStyle(Color.risingTextSecondary)
 
                         TextField("e.g. Weekly deposit", text: $viewModel.note, axis: .vertical)
                             .font(.body)
-                            .foregroundStyle(Color.risingTextPrimaryDark)
+                            .foregroundStyle(Color.risingTextPrimary)
                             .lineLimit(2...4)
                             .padding(RisingSpacing.md)
-                            .background(Color.risingSurfaceDark)
+                            .background(Color.risingSurface)
                             .clipShape(RoundedRectangle(cornerRadius: RisingRadius.md))
                             .tint(Color.risingPrimary)
                     }
@@ -103,7 +103,7 @@ struct AddDepositView: View {
                             .frame(maxWidth: .infinity)
                             .padding(.vertical, RisingSpacing.md)
                             .background(
-                                viewModel.isValid ? Color.risingPrimary : Color.risingCardDark
+                                viewModel.isValid ? Color.risingPrimary : Color.risingCard
                             )
                             .clipShape(RoundedRectangle(cornerRadius: RisingRadius.lg))
                         }
@@ -119,7 +119,7 @@ struct AddDepositView: View {
                     Button("Cancel") {
                         dismiss()
                     }
-                    .foregroundStyle(Color.risingTextSecondaryDark)
+                    .foregroundStyle(Color.risingTextSecondary)
                 }
             }
             .alert("Error", isPresented: $showError) {

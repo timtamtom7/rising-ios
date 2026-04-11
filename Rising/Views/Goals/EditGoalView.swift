@@ -38,7 +38,7 @@ struct EditGoalView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                Color.risingBackgroundDark
+                Color.risingBackground
                     .ignoresSafeArea()
 
                 ScrollView {
@@ -47,13 +47,13 @@ struct EditGoalView: View {
                         VStack(alignment: .leading, spacing: RisingSpacing.xs) {
                             Text("Goal Name")
                                 .risingLabel()
-                                .foregroundStyle(Color.risingTextSecondaryDark)
+                                .foregroundStyle(Color.risingTextSecondary)
 
                             TextField("Goal Name", text: $name)
                                 .font(.body)
-                                .foregroundStyle(Color.risingTextPrimaryDark)
+                                .foregroundStyle(Color.risingTextPrimary)
                                 .padding(RisingSpacing.md)
-                                .background(Color.risingSurfaceDark)
+                                .background(Color.risingSurface)
                                 .clipShape(RoundedRectangle(cornerRadius: RisingRadius.md))
                                 .tint(Color.risingPrimary)
                         }
@@ -62,21 +62,21 @@ struct EditGoalView: View {
                         VStack(alignment: .leading, spacing: RisingSpacing.xs) {
                             Text("Target Amount")
                                 .risingLabel()
-                                .foregroundStyle(Color.risingTextSecondaryDark)
+                                .foregroundStyle(Color.risingTextSecondary)
 
                             HStack {
                                 Text("$")
                                     .risingBody()
-                                    .foregroundStyle(Color.risingTextSecondaryDark)
+                                    .foregroundStyle(Color.risingTextSecondary)
 
                                 TextField("0", text: $targetAmount)
                                     .font(.body)
-                                    .foregroundStyle(Color.risingTextPrimaryDark)
+                                    .foregroundStyle(Color.risingTextPrimary)
                                     .keyboardType(.decimalPad)
                                     .tint(Color.risingPrimary)
                             }
                             .padding(RisingSpacing.md)
-                            .background(Color.risingSurfaceDark)
+                            .background(Color.risingSurface)
                             .clipShape(RoundedRectangle(cornerRadius: RisingRadius.md))
                         }
 
@@ -84,11 +84,11 @@ struct EditGoalView: View {
                         Toggle(isOn: $hasDeadline) {
                             Text("Set a target date")
                                 .risingBody()
-                                .foregroundStyle(Color.risingTextPrimaryDark)
+                                .foregroundStyle(Color.risingTextPrimary)
                         }
                         .tint(Color.risingPrimary)
                         .padding(RisingSpacing.md)
-                        .background(Color.risingSurfaceDark)
+                        .background(Color.risingSurface)
                         .clipShape(RoundedRectangle(cornerRadius: RisingRadius.md))
 
                         if hasDeadline {
@@ -101,16 +101,16 @@ struct EditGoalView: View {
                             .datePickerStyle(.compact)
                             .tint(Color.risingPrimary)
                             .padding(RisingSpacing.md)
-                            .background(Color.risingSurfaceDark)
+                            .background(Color.risingSurface)
                             .clipShape(RoundedRectangle(cornerRadius: RisingRadius.md))
-                            .foregroundStyle(Color.risingTextSecondaryDark)
+                            .foregroundStyle(Color.risingTextSecondary)
                         }
 
                         // Icon Picker
                         VStack(alignment: .leading, spacing: RisingSpacing.xs) {
                             Text("Icon")
                                 .risingLabel()
-                                .foregroundStyle(Color.risingTextSecondaryDark)
+                                .foregroundStyle(Color.risingTextSecondary)
 
                             LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: 5), spacing: RisingSpacing.sm) {
                                 ForEach(iconOptions, id: \.self) { icon in
@@ -121,7 +121,7 @@ struct EditGoalView: View {
                                             Circle()
                                                 .fill(selectedIcon == icon
                                                     ? Color.risingPrimary.opacity(0.2)
-                                                    : Color.risingSurfaceDark)
+                                                    : Color.risingSurface)
                                                 .frame(width: 50, height: 50)
 
                                             Image(systemName: icon)
@@ -129,14 +129,14 @@ struct EditGoalView: View {
                                                 .foregroundStyle(
                                                     selectedIcon == icon
                                                     ? Color.risingPrimary
-                                                    : Color.risingTextSecondaryDark
+                                                    : Color.risingTextSecondary
                                                 )
                                         }
                                     }
                                 }
                             }
                             .padding(RisingSpacing.md)
-                            .background(Color.risingSurfaceDark)
+                            .background(Color.risingSurface)
                             .clipShape(RoundedRectangle(cornerRadius: RisingRadius.md))
                         }
 
@@ -144,14 +144,14 @@ struct EditGoalView: View {
                         VStack(alignment: .leading, spacing: RisingSpacing.xs) {
                             Text("Description")
                                 .risingLabel()
-                                .foregroundStyle(Color.risingTextSecondaryDark)
+                                .foregroundStyle(Color.risingTextSecondary)
 
                             TextField("Why is this important?", text: $description, axis: .vertical)
                                 .font(.body)
-                                .foregroundStyle(Color.risingTextPrimaryDark)
+                                .foregroundStyle(Color.risingTextPrimary)
                                 .lineLimit(3...6)
                                 .padding(RisingSpacing.md)
-                                .background(Color.risingSurfaceDark)
+                                .background(Color.risingSurface)
                                 .clipShape(RoundedRectangle(cornerRadius: RisingRadius.md))
                                 .tint(Color.risingPrimary)
                         }
@@ -166,7 +166,7 @@ struct EditGoalView: View {
                     Button("Cancel") {
                         dismiss()
                     }
-                    .foregroundStyle(Color.risingTextSecondaryDark)
+                    .foregroundStyle(Color.risingTextSecondary)
                 }
 
                 ToolbarItem(placement: .topBarTrailing) {
@@ -174,7 +174,7 @@ struct EditGoalView: View {
                         Task { await save() }
                     }
                     .font(.body.weight(.semibold))
-                    .foregroundStyle(isValid ? Color.risingPrimary : Color.risingTextSecondaryDark)
+                    .foregroundStyle(isValid ? Color.risingPrimary : Color.risingTextSecondary)
                     .disabled(!isValid)
                 }
             }

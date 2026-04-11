@@ -32,7 +32,7 @@ struct MilestoneTrackerView: View {
             HStack {
                 Text("Milestones")
                     .risingHeading2()
-                    .foregroundStyle(Color.risingTextPrimaryDark)
+                    .foregroundStyle(Color.risingTextPrimary)
 
                 Spacer()
 
@@ -49,7 +49,7 @@ struct MilestoneTrackerView: View {
             GeometryReader { geometry in
                 ZStack(alignment: .leading) {
                     RoundedRectangle(cornerRadius: RisingRadius.full)
-                        .fill(Color.risingCardDark)
+                        .fill(Color.risingCard)
                         .frame(height: 6)
 
                     RoundedRectangle(cornerRadius: RisingRadius.full)
@@ -61,7 +61,7 @@ struct MilestoneTrackerView: View {
             .frame(height: 6)
         }
         .padding(RisingSpacing.md)
-        .background(Color.risingSurfaceDark)
+        .background(Color.risingSurface)
         .clipShape(RoundedRectangle(cornerRadius: RisingRadius.lg))
     }
 
@@ -100,10 +100,12 @@ struct MilestoneRowView: View {
                         Image(systemName: "checkmark")
                             .font(.system(size: 16, weight: .bold))
                             .foregroundStyle(statusColor)
+                            .accessibilityHidden(true)
                     } else {
                         Image(systemName: milestone.type.iconName)
                             .font(.system(size: 16))
-                            .foregroundStyle(Color.risingTextSecondaryDark)
+                            .foregroundStyle(Color.risingTextSecondary)
+                            .accessibilityHidden(true)
                     }
                 }
 
@@ -113,15 +115,15 @@ struct MilestoneRowView: View {
                         .risingBody()
                         .foregroundStyle(
                             milestone.status == .completed
-                            ? Color.risingTextSecondaryDark
-                            : Color.risingTextPrimaryDark
+                            ? Color.risingTextSecondary
+                            : Color.risingTextPrimary
                         )
-                        .strikethrough(milestone.status == .completed, color: Color.risingTextSecondaryDark)
+                        .strikethrough(milestone.status == .completed, color: Color.risingTextSecondary)
 
                     if let amount = milestone.amount {
-                        Text(formatCurrency(amount))
+                        Text(amount.formattedCurrency)
                             .risingCaption()
-                            .foregroundStyle(Color.risingTextSecondaryDark)
+                            .foregroundStyle(Color.risingTextSecondary)
                     }
 
                     if milestone.status == .completed, let completedAt = milestone.completedAt {
@@ -136,31 +138,31 @@ struct MilestoneRowView: View {
                 // Checkbox
                 Image(systemName: milestone.status == .completed ? "checkmark.circle.fill" : "circle")
                     .font(.system(size: 24))
-                    .foregroundStyle(milestone.status == .completed ? Color.risingPrimary : Color.risingCardDark)
+                    .foregroundStyle(milestone.status == .completed ? Color.risingPrimary : Color.risingCard)
             }
             .padding(RisingSpacing.md)
-            .background(Color.risingSurfaceDark)
+            .background(Color.risingSurface)
             .clipShape(RoundedRectangle(cornerRadius: RisingRadius.lg))
         }
         .buttonStyle(.plain)
+        .accessibilityLabel(accessibilityDescription)
     }
 
     private var statusColor: Color {
-        milestone.status == .completed ? Color.risingSuccess : Color.risingTextSecondaryDark
-    }
-
-    private func formatCurrency(_ value: Double) -> String {
-        let formatter = NumberFormatter()
-        formatter.numberStyle = .currency
-        formatter.currencyCode = "USD"
-        formatter.maximumFractionDigits = 0
-        return formatter.string(from: NSNumber(value: value)) ?? "$0"
+        milestone.status == .completed ? Color.risingSuccess : Color.risingTextSecondary
     }
 
     private func formatDate(_ date: Date) -> String {
         let formatter = DateFormatter()
         formatter.dateStyle = .medium
         return formatter.string(from: date)
+    }
+
+    private var accessibilityDescription: String {
+        let title = milestone.title.isEmpty ? milestone.type.displayTitle : milestone.title
+        let status = milestone.status == .completed ? "Completed" : "Not completed"
+        let amountText = milestone.amount.map { " - \($0.formattedCurrency)" } ?? ""
+        return "\(title)\(amountText) - \(status)"
     }
 }
 
@@ -169,5 +171,5 @@ struct MilestoneRowView: View {
         goalId: UUID(),
         goal: Goal(name: "House", targetAmount: 50000)
     )
-    .background(Color.risingBackgroundDark)
+    .background(Color.risingBackground)
 }

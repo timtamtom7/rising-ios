@@ -11,7 +11,7 @@ struct DepositChartView: View {
         VStack(alignment: .leading, spacing: RisingSpacing.md) {
             Text("Monthly Deposits")
                 .risingHeading2()
-                .foregroundStyle(Color.risingTextPrimaryDark)
+                .foregroundStyle(Color.risingTextPrimary)
 
             if deposits.isEmpty {
                 emptyState
@@ -20,7 +20,7 @@ struct DepositChartView: View {
             }
         }
         .padding(RisingSpacing.md)
-        .background(Color.risingSurfaceDark)
+        .background(Color.risingSurface)
         .clipShape(RoundedRectangle(cornerRadius: RisingRadius.lg))
     }
 
@@ -28,11 +28,12 @@ struct DepositChartView: View {
         VStack(spacing: RisingSpacing.sm) {
             Image(systemName: "chart.bar")
                 .font(.system(size: 24, weight: .light))
-                .foregroundStyle(Color.risingTextSecondaryDark)
+                .foregroundStyle(Color.risingTextSecondary)
+                .accessibilityHidden(true)
 
             Text("No deposits to chart yet")
                 .risingCaption()
-                .foregroundStyle(Color.risingTextSecondaryDark)
+                .foregroundStyle(Color.risingTextSecondary)
         }
         .frame(maxWidth: .infinity)
         .padding(.vertical, RisingSpacing.lg)
@@ -52,19 +53,19 @@ struct DepositChartView: View {
             .chartXAxis {
                 AxisMarks(values: .stride(by: .month)) { value in
                     AxisGridLine()
-                        .foregroundStyle(Color.risingCardDark)
+                        .foregroundStyle(Color.risingCard)
                     AxisValueLabel(format: .dateTime.month(.abbreviated))
-                        .foregroundStyle(Color.risingTextSecondaryDark)
+                        .foregroundStyle(Color.risingTextSecondary)
                 }
             }
             .chartYAxis {
                 AxisMarks { value in
                     AxisGridLine()
-                        .foregroundStyle(Color.risingCardDark)
+                        .foregroundStyle(Color.risingCard)
                     AxisValueLabel {
                         if let amount = value.as(Double.self) {
                             Text(formatCompactCurrency(amount))
-                                .foregroundStyle(Color.risingTextSecondaryDark)
+                                .foregroundStyle(Color.risingTextSecondary)
                         }
                     }
                 }
@@ -86,7 +87,7 @@ struct DepositChartView: View {
 
                     Text(shortMonth(item.month))
                         .risingCaption()
-                        .foregroundStyle(Color.risingTextSecondaryDark)
+                        .foregroundStyle(Color.risingTextSecondary)
                 }
             }
         }
@@ -143,17 +144,18 @@ struct SavingsProjectionView: View {
         VStack(alignment: .leading, spacing: RisingSpacing.md) {
             Text("Savings Projection")
                 .risingHeading2()
-                .foregroundStyle(Color.risingTextPrimaryDark)
+                .foregroundStyle(Color.risingTextPrimary)
 
             if deposits.count < 2 {
                 VStack(spacing: RisingSpacing.sm) {
                     Image(systemName: "chart.line.uptrend.xyaxis")
                         .font(.system(size: 24, weight: .light))
-                        .foregroundStyle(Color.risingTextSecondaryDark)
+                        .foregroundStyle(Color.risingTextSecondary)
+                        .accessibilityHidden(true)
 
                     Text("Add more deposits to see your projection")
                         .risingCaption()
-                        .foregroundStyle(Color.risingTextSecondaryDark)
+                        .foregroundStyle(Color.risingTextSecondary)
                         .multilineTextAlignment(.center)
                 }
                 .frame(maxWidth: .infinity)
@@ -163,7 +165,7 @@ struct SavingsProjectionView: View {
             }
         }
         .padding(RisingSpacing.md)
-        .background(Color.risingSurfaceDark)
+        .background(Color.risingSurface)
         .clipShape(RoundedRectangle(cornerRadius: RisingRadius.lg))
     }
 
@@ -173,14 +175,14 @@ struct SavingsProjectionView: View {
             HStack(spacing: RisingSpacing.xl) {
                 StatPill(
                     title: "Avg. Monthly",
-                    value: formatCurrency(averageMonthlyDeposit),
+                    value: averageMonthlyDeposit.formattedCurrency,
                     color: Color.risingPrimary
                 )
 
                 if let projectedDate = estimatedCompletionDate {
                     StatPill(
                         title: "Est. Completion",
-                        value: formatShortDate(projectedDate),
+                        value: RisingFormatters.monthYear.string(from: projectedDate),
                         color: Color.risingAccent
                     )
                 }
@@ -190,6 +192,7 @@ struct SavingsProjectionView: View {
             HStack(spacing: RisingSpacing.sm) {
                 Image(systemName: onTrackIcon)
                     .foregroundStyle(onTrackColor)
+                    .accessibilityHidden(true)
 
                 Text(onTrackText)
                     .risingCaption()
@@ -230,7 +233,7 @@ struct SavingsProjectionView: View {
 
     private var onTrackColor: Color {
         guard let deadline = goal.deadline, let projected = estimatedCompletionDate else {
-            return Color.risingTextSecondaryDark
+            return Color.risingTextSecondary
         }
         return projected <= deadline ? Color.risingSuccess : Color.risingWarning
     }
@@ -247,20 +250,6 @@ struct SavingsProjectionView: View {
             return "~\(days) days past your target date"
         }
     }
-
-    private func formatCurrency(_ value: Double) -> String {
-        let formatter = NumberFormatter()
-        formatter.numberStyle = .currency
-        formatter.currencyCode = "USD"
-        formatter.maximumFractionDigits = 0
-        return formatter.string(from: NSNumber(value: value)) ?? "$0"
-    }
-
-    private func formatShortDate(_ date: Date) -> String {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "MMM yyyy"
-        return formatter.string(from: date)
-    }
 }
 
 // MARK: - Stat Pill
@@ -274,12 +263,13 @@ struct StatPill: View {
         VStack(alignment: .leading, spacing: RisingSpacing.xxs) {
             Text(title)
                 .risingCaption()
-                .foregroundStyle(Color.risingTextSecondaryDark)
+                .foregroundStyle(Color.risingTextSecondary)
 
             Text(value)
                 .risingHeading3()
                 .foregroundStyle(color)
         }
+        .accessibilityLabel("\(title): \(value)")
     }
 }
 
@@ -296,5 +286,5 @@ struct StatPill: View {
         )
     }
     .padding()
-    .background(Color.risingBackgroundDark)
+    .background(Color.risingBackground)
 }

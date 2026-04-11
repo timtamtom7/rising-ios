@@ -10,10 +10,12 @@ final class MilestoneTrackerViewModel {
 
     let goalId: UUID
     let goal: Goal
+    private let milestoneService: MilestoneServiceProtocol
 
-    init(goalId: UUID, goal: Goal) {
+    init(goalId: UUID, goal: Goal, milestoneService: MilestoneServiceProtocol = MilestoneService.shared) {
         self.goalId = goalId
         self.goal = goal
+        self.milestoneService = milestoneService
     }
 
     var completedCount: Int {
@@ -31,12 +33,12 @@ final class MilestoneTrackerViewModel {
 
     func load() async {
         isLoading = true
-        milestones = await MilestoneService.shared.fetchAll(forGoalId: goalId)
+        milestones = await milestoneService.fetchAll(forGoalId: goalId)
 
         // Auto-create defaults if empty
         if milestones.isEmpty {
-            await MilestoneService.shared.createDefaultMilestones(forGoalId: goalId)
-            milestones = await MilestoneService.shared.fetchAll(forGoalId: goalId)
+            await milestoneService.createDefaultMilestones(forGoalId: goalId)
+            milestones = await milestoneService.fetchAll(forGoalId: goalId)
         }
 
         isLoading = false
@@ -51,7 +53,7 @@ final class MilestoneTrackerViewModel {
             updated.status = .completed
             updated.completedAt = Date()
         }
-        try? await MilestoneService.shared.update(updated)
+        try? await milestoneService.update(updated)
         await load()
     }
 }

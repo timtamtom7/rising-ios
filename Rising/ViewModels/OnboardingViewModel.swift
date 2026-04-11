@@ -9,6 +9,14 @@ final class OnboardingViewModel {
     var currentStep = 0
     let totalSteps = 4
 
+    private let goalService: GoalServiceProtocol
+    private let onboardingService: OnboardingService
+
+    init(goalService: GoalServiceProtocol = GoalService.shared, onboardingService: OnboardingService = OnboardingService.shared) {
+        self.goalService = goalService
+        self.onboardingService = onboardingService
+    }
+
     // Step 1: Welcome
     // Step 2: First Goal
     var goalName = ""
@@ -51,7 +59,7 @@ final class OnboardingViewModel {
         // Create the first goal if valid
         if isValidGoal {
             let amount = Double(goalTargetAmount) ?? 0
-            try await GoalService.shared.create(
+            try await goalService.create(
                 name: goalName.trimmingCharacters(in: .whitespaces),
                 targetAmount: amount,
                 deadline: goalDeadline,
@@ -59,6 +67,6 @@ final class OnboardingViewModel {
                 description: goalDescription.isEmpty ? nil : goalDescription
             )
         }
-        OnboardingService.shared.completeOnboarding()
+        onboardingService.completeOnboarding()
     }
 }

@@ -18,11 +18,11 @@ struct ReadyStepView: View {
             VStack(spacing: RisingSpacing.md) {
                 Text("You're all set!")
                     .risingDisplay()
-                    .foregroundStyle(Color.risingTextPrimaryDark)
+                    .foregroundStyle(Color.risingTextPrimary)
 
                 Text("Your first goal is ready. Every deposit brings you closer to your dream.")
                     .risingBody()
-                    .foregroundStyle(Color.risingTextSecondaryDark)
+                    .foregroundStyle(Color.risingTextSecondary)
                     .multilineTextAlignment(.center)
                     .padding(.horizontal, RisingSpacing.lg)
             }
@@ -36,7 +36,7 @@ struct ReadyStepView: View {
                         .foregroundStyle(Color.risingPrimary)
                     Text("Track your progress daily")
                         .risingBodySmall()
-                        .foregroundStyle(Color.risingTextSecondaryDark)
+                        .foregroundStyle(Color.risingTextSecondary)
                     Spacer()
                 }
 
@@ -45,7 +45,7 @@ struct ReadyStepView: View {
                         .foregroundStyle(Color.risingPrimary)
                     Text("Add deposits to see your goal grow")
                         .risingBodySmall()
-                        .foregroundStyle(Color.risingTextSecondaryDark)
+                        .foregroundStyle(Color.risingTextSecondary)
                     Spacer()
                 }
 
@@ -54,12 +54,12 @@ struct ReadyStepView: View {
                         .foregroundStyle(Color.risingPrimary)
                     Text("We'll remind you to stay on track")
                         .risingBodySmall()
-                        .foregroundStyle(Color.risingTextSecondaryDark)
+                        .foregroundStyle(Color.risingTextSecondary)
                     Spacer()
                 }
             }
             .padding(RisingSpacing.lg)
-            .background(Color.risingSurfaceDark)
+            .background(Color.risingSurface)
             .clipShape(RoundedRectangle(cornerRadius: RisingRadius.lg))
             .padding(.horizontal, RisingSpacing.lg)
 
@@ -71,5 +71,5 @@ struct ReadyStepView: View {
 
 #Preview {
     ReadyStepView()
-        .background(Color.risingBackgroundDark)
+        .background(Color.risingBackground)
 }

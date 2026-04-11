@@ -12,6 +12,12 @@ final class CreateGoalViewModel {
     var description = ""
     var selectedIcon = "target"
 
+    private let goalService: GoalServiceProtocol
+
+    init(goalService: GoalServiceProtocol = GoalService.shared) {
+        self.goalService = goalService
+    }
+
     let iconOptions = [
         "target", "house", "car", "airplane", "gift",
         "graduationcap", "heart", "star", "bag", "creditcard"
@@ -27,7 +33,7 @@ final class CreateGoalViewModel {
             throw GoalError.invalidAmount
         }
 
-        try await GoalService.shared.create(
+        try await goalService.create(
             name: name.trimmingCharacters(in: .whitespaces),
             targetAmount: amount,
             deadline: hasDeadline ? deadline : nil,

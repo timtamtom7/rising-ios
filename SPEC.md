@@ -372,3 +372,70 @@ Rising/
 - iPad optimized layouts
 - watchOS for savings reminders
 - Android app (Flutter)
+
+---
+
+## Implementation Status (as of April 2026)
+
+### ✅ Completed Features
+
+**R1-R4 (Foundation):**
+- ✅ Onboarding (4 screens with Welcome, FirstGoal, WhyRising, Ready)
+- ✅ Goals CRUD with progress ring and milestones
+- ✅ Deposits with history and delete
+- ✅ Dashboard with all-goals overview
+- ✅ Settings with dark/light/system theme toggle
+- ✅ Multiple properties with address, notes
+- ✅ Milestone tracker (pre-approved → save → offer → close)
+- ✅ Agent contacts storage
+- ✅ Monthly deposit history chart
+- ✅ Mortgage calculator
+- ✅ Push notifications via NotificationService
+- ✅ Share progress as image
+- ✅ Dark/light mode with adaptive colors
+
+**R5-R7 (Persistence & Investment):**
+- ✅ SQLite persistence for Goals, Deposits, Properties, Agents, Milestones
+- ✅ ROI Calculator with comprehensive inputs/outputs
+- ✅ Investment Portfolio tracking
+- ✅ Portfolio Analytics (ROIAnalysis, MarketComparison models)
+- ✅ FeatureGate system for subscription access control
+
+**R8 (AI & Integrations):**
+- ✅ AISavingsTipsService with contextual tips based on progress
+- ✅ SubscriptionService stub with StoreKit integration
+- ✅ Deep linking (rising://goal/{uuid}, rising://settings, rising://onboarding)
+
+**R9 (Community & Subscriptions):**
+- ✅ CommunityView with Feed, Goals, Challenges, Groups tabs
+- ✅ RisingR12Service with social features
+- ✅ SubscriptionService with StoreKit (monthly/yearly tiers)
+- ✅ SubscriptionPaywallView with tier cards, purchase flow, restore purchases
+- ✅ AchievementService with 14 badges (first deposit, milestones, streaks, community, premium)
+- ✅ AchievementBadgeView and AchievementsView with progress tracking
+- ✅ Privacy manifest (PrivacyInfo.xcprivacy)
+
+**R10 (Launch Readiness):**
+- ✅ GitHub Actions CI pipeline
+- ✅ 16 passing unit tests
+- ✅ App Store screenshots (6 placeholder images)
+- ✅ Privacy policy document
+- ✅ Programmatic app icon placeholder
+
+### ⏳ Not Yet Implemented
+
+**R8:**
+- On-device ML predictions for property appreciation
+- Plaid bank account linking (API stub exists but not wired)
+- Real-time portfolio performance tracking
+- Tax implications calculator
+
+**R9:**
+- Client sharing for agents
+- Export reports feature
+
+**R10:**
+- Marketing website (rising.app)
+- iPad optimized layouts
+- watchOS companion app
+- Android app (Flutter)

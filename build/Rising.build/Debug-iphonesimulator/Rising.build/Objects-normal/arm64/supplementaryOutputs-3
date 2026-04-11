@@ -1,0 +1,44 @@
+{
+  "/Users/mauriello/Dev/rising-ios/Rising/Models/Deposit.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/arm64/Deposit.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/arm64/Deposit.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/arm64/Deposit.dia",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/arm64/Deposit.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/arm64/Deposit.swiftdeps"
+  },
+  "/Users/mauriello/Dev/rising-ios/Rising/Services/DatabaseService.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/arm64/DatabaseService.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/arm64/DatabaseService.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/arm64/DatabaseService.dia",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/arm64/DatabaseService.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/arm64/DatabaseService.swiftdeps"
+  },
+  "/Users/mauriello/Dev/rising-ios/Rising/ViewModels/CreateGoalViewModel.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/arm64/CreateGoalViewModel.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/arm64/CreateGoalViewModel.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/arm64/CreateGoalViewModel.dia",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/arm64/CreateGoalViewModel.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/arm64/CreateGoalViewModel.swiftdeps"
+  },
+  "/Users/mauriello/Dev/rising-ios/Rising/ViewModels/DashboardViewModel.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/arm64/DashboardViewModel.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/arm64/DashboardViewModel.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/arm64/DashboardViewModel.dia",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/arm64/DashboardViewModel.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/arm64/DashboardViewModel.swiftdeps"
+  },
+  "/Users/mauriello/Dev/rising-ios/Rising/Views/Charts/DepositChartView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/arm64/DepositChartView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/arm64/DepositChartView.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/arm64/DepositChartView.dia",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/arm64/DepositChartView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/arm64/DepositChartView.swiftdeps"
+  },
+  "/Users/mauriello/Dev/rising-ios/Rising/Views/Dashboard/DashboardView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/arm64/DashboardView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/arm64/DashboardView.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/arm64/DashboardView.dia",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/arm64/DashboardView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/arm64/DashboardView.swiftdeps"
+  }
+}

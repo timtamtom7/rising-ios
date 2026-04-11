@@ -34,17 +34,19 @@ struct PropertyListView: View {
         VStack(spacing: RisingSpacing.md) {
             Image(systemName: "house")
                 .font(.system(size: 32, weight: .light))
-                .foregroundStyle(Color.risingTextSecondaryDark)
+                .foregroundStyle(Color.risingTextSecondary)
+                .accessibilityHidden(true)
 
             Text("No properties yet")
                 .risingBody()
-                .foregroundStyle(Color.risingTextSecondaryDark)
+                .foregroundStyle(Color.risingTextSecondary)
 
             Button {
                 showAddProperty = true
             } label: {
                 HStack {
                     Image(systemName: "plus.circle.fill")
+                        .accessibilityHidden(true)
                     Text("Add Property")
                 }
                 .font(.body.weight(.semibold))
@@ -64,7 +66,7 @@ struct PropertyListView: View {
             HStack {
                 Text("Properties")
                     .risingHeading2()
-                    .foregroundStyle(Color.risingTextPrimaryDark)
+                    .foregroundStyle(Color.risingTextPrimary)
 
                 Spacer()
 
@@ -73,6 +75,7 @@ struct PropertyListView: View {
                 } label: {
                     Image(systemName: "plus.circle.fill")
                         .foregroundStyle(Color.risingPrimary)
+                        .accessibilityLabel("Add property")
                 }
             }
 
@@ -99,7 +102,7 @@ struct PropertyCardView: View {
 
                 Text(property.address)
                     .risingBody()
-                    .foregroundStyle(Color.risingTextPrimaryDark)
+                    .foregroundStyle(Color.risingTextPrimary)
                     .lineLimit(2)
 
                 Spacer()
@@ -141,21 +144,21 @@ struct PropertyCardView: View {
 
                 if property.price > 0 {
                     let downPayment = property.price * 0.20
-                    Text("20% down: \(formatCurrency(downPayment))")
+                    Text("20% down: \(downPayment.formattedCurrency)")
                         .risingCaption()
-                        .foregroundStyle(Color.risingTextSecondaryDark)
+                        .foregroundStyle(Color.risingTextSecondary)
                 }
             }
 
             if let notes = property.notes, !notes.isEmpty {
                 Text(notes)
                     .risingCaption()
-                    .foregroundStyle(Color.risingTextSecondaryDark)
+                    .foregroundStyle(Color.risingTextSecondary)
                     .lineLimit(2)
             }
         }
         .padding(RisingSpacing.md)
-        .background(Color.risingSurfaceDark)
+        .background(Color.risingSurface)
         .clipShape(RoundedRectangle(cornerRadius: RisingRadius.lg))
         .contextMenu {
             Button(role: .destructive) {
@@ -165,17 +168,9 @@ struct PropertyCardView: View {
             }
         }
     }
-
-    private func formatCurrency(_ value: Double) -> String {
-        let formatter = NumberFormatter()
-        formatter.numberStyle = .currency
-        formatter.currencyCode = "USD"
-        formatter.maximumFractionDigits = 0
-        return formatter.string(from: NSNumber(value: value)) ?? "$0"
-    }
 }
 
 #Preview {
     PropertyListView(goal: Goal(name: "House", targetAmount: 50000))
-        .background(Color.risingBackgroundDark)
+        .background(Color.risingBackground)
 }

@@ -26,17 +26,19 @@ struct AgentListView: View {
         VStack(spacing: RisingSpacing.md) {
             Image(systemName: "person.crop.circle")
                 .font(.system(size: 32, weight: .light))
-                .foregroundStyle(Color.risingTextSecondaryDark)
+                .foregroundStyle(Color.risingTextSecondary)
+                .accessibilityHidden(true)
 
             Text("No agents yet")
                 .risingBody()
-                .foregroundStyle(Color.risingTextSecondaryDark)
+                .foregroundStyle(Color.risingTextSecondary)
 
             Button {
                 showAddAgent = true
             } label: {
                 HStack {
                     Image(systemName: "plus.circle.fill")
+                        .accessibilityHidden(true)
                     Text("Add Agent")
                 }
                 .font(.body.weight(.semibold))
@@ -56,7 +58,7 @@ struct AgentListView: View {
             HStack {
                 Text("Agents")
                     .risingHeading2()
-                    .foregroundStyle(Color.risingTextPrimaryDark)
+                    .foregroundStyle(Color.risingTextPrimary)
 
                 Spacer()
 
@@ -65,6 +67,7 @@ struct AgentListView: View {
                 } label: {
                     Image(systemName: "plus.circle.fill")
                         .foregroundStyle(Color.risingPrimary)
+                        .accessibilityLabel("Add agent")
                 }
             }
 
@@ -99,16 +102,17 @@ struct AgentCardView: View {
                 VStack(alignment: .leading, spacing: RisingSpacing.xxs) {
                     Text(agent.name)
                         .risingBody()
-                        .foregroundStyle(Color.risingTextPrimaryDark)
+                        .foregroundStyle(Color.risingTextPrimary)
 
                     if let phone = agent.phone, !phone.isEmpty {
                         HStack(spacing: RisingSpacing.xxs) {
                             Image(systemName: "phone")
                                 .font(.caption)
+                                .accessibilityHidden(true)
                             Text(phone)
                                 .risingCaption()
                         }
-                        .foregroundStyle(Color.risingTextSecondaryDark)
+                        .foregroundStyle(Color.risingTextSecondary)
                     }
                 }
 
@@ -125,6 +129,7 @@ struct AgentCardView: View {
                         Image(systemName: "phone.circle.fill")
                             .font(.system(size: 28))
                             .foregroundStyle(Color.risingSuccess)
+                            .accessibilityLabel("Call \(phone)")
                     }
                 }
 
@@ -137,6 +142,7 @@ struct AgentCardView: View {
                         Image(systemName: "envelope.circle.fill")
                             .font(.system(size: 28))
                             .foregroundStyle(Color.risingPrimary)
+                            .accessibilityLabel("Email \(email)")
                     }
                 }
 
@@ -146,13 +152,14 @@ struct AgentCardView: View {
             if let notes = agent.notes, !notes.isEmpty {
                 Text(notes)
                     .risingCaption()
-                    .foregroundStyle(Color.risingTextSecondaryDark)
+                    .foregroundStyle(Color.risingTextSecondary)
                     .lineLimit(3)
             }
         }
         .padding(RisingSpacing.md)
-        .background(Color.risingSurfaceDark)
+        .background(Color.risingSurface)
         .clipShape(RoundedRectangle(cornerRadius: RisingRadius.lg))
+        .accessibilityLabel("\(agent.name), \(agent.phone ?? "no phone"), \(agent.email ?? "no email")")
         .contextMenu {
             Button(role: .destructive) {
                 onDelete()
@@ -165,5 +172,5 @@ struct AgentCardView: View {
 
 #Preview {
     AgentListView()
-        .background(Color.risingBackgroundDark)
+        .background(Color.risingBackground)
 }

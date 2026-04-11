@@ -23,7 +23,7 @@ struct MortgageCalculatorView: View {
 
     var body: some View {
         ZStack {
-            Color.risingBackgroundDark
+            Color.risingBackground
                 .ignoresSafeArea()
 
             ScrollView {
@@ -33,14 +33,15 @@ struct MortgageCalculatorView: View {
                         Image(systemName: "house.circle")
                             .font(.system(size: 40))
                             .foregroundStyle(Color.risingPrimary)
+                            .accessibilityHidden(true)
 
                         Text("Mortgage Calculator")
                             .risingHeading1()
-                            .foregroundStyle(Color.risingTextPrimaryDark)
+                            .foregroundStyle(Color.risingTextPrimary)
 
                         Text("Estimate your monthly payment")
                             .risingBody()
-                            .foregroundStyle(Color.risingTextSecondaryDark)
+                            .foregroundStyle(Color.risingTextSecondary)
                     }
                     .padding(.top, RisingSpacing.md)
 
@@ -60,7 +61,7 @@ struct MortgageCalculatorView: View {
                             HStack {
                                 Text("Down Payment")
                                     .risingLabel()
-                                    .foregroundStyle(Color.risingTextSecondaryDark)
+                                    .foregroundStyle(Color.risingTextSecondary)
                                 Spacer()
                                 Text("\(downPaymentPercent)%")
                                     .risingBody()
@@ -78,14 +79,14 @@ struct MortgageCalculatorView: View {
                             .tint(Color.risingPrimary)
 
                             HStack {
-                                Text("$\(formatNumber(calculatedDownPayment))")
+                                Text("$\(calculatedDownPayment.formattedDecimal)")
                                     .risingCaption()
-                                    .foregroundStyle(Color.risingTextSecondaryDark)
+                                    .foregroundStyle(Color.risingTextSecondary)
                                 Spacer()
                             }
                         }
                         .padding(RisingSpacing.md)
-                        .background(Color.risingSurfaceDark)
+                        .background(Color.risingSurface)
                         .clipShape(RoundedRectangle(cornerRadius: RisingRadius.md))
 
                         // Interest Rate
@@ -101,7 +102,7 @@ struct MortgageCalculatorView: View {
                         VStack(alignment: .leading, spacing: RisingSpacing.xs) {
                             Text("Loan Term")
                                 .risingLabel()
-                                .foregroundStyle(Color.risingTextSecondaryDark)
+                                .foregroundStyle(Color.risingTextSecondary)
 
                             Picker("Loan Term", selection: $loanTerm) {
                                 Text("15 years").tag(15)
@@ -112,7 +113,7 @@ struct MortgageCalculatorView: View {
                             .tint(Color.risingPrimary)
                         }
                         .padding(RisingSpacing.md)
-                        .background(Color.risingSurfaceDark)
+                        .background(Color.risingSurface)
                         .clipShape(RoundedRectangle(cornerRadius: RisingRadius.md))
                     }
                     .padding(.horizontal, RisingSpacing.md)
@@ -151,9 +152,9 @@ struct MortgageCalculatorView: View {
             VStack(spacing: RisingSpacing.xs) {
                 Text("Estimated Monthly Payment")
                     .risingLabel()
-                    .foregroundStyle(Color.risingTextSecondaryDark)
+                    .foregroundStyle(Color.risingTextSecondary)
 
-                Text(formatCurrency(result.monthlyPayment))
+                Text(result.monthlyPayment.formattedCurrency)
                     .risingDisplay()
                     .foregroundStyle(Color.risingPrimary)
             }
@@ -164,20 +165,20 @@ struct MortgageCalculatorView: View {
 
             // Breakdown
             VStack(spacing: RisingSpacing.sm) {
-                BreakdownRow(title: "Principal & Interest", value: formatCurrency(result.monthlyPayment - result.tax - result.insurance))
-                Divider().background(Color.risingCardDark)
-                BreakdownRow(title: "Property Tax (monthly)", value: formatCurrency(result.tax))
-                Divider().background(Color.risingCardDark)
-                BreakdownRow(title: "Home Insurance (monthly)", value: formatCurrency(result.insurance))
-                Divider().background(Color.risingCardDark)
-                BreakdownRow(title: "Loan Amount", value: formatCurrency(result.principal))
-                Divider().background(Color.risingCardDark)
-                BreakdownRow(title: "Total Interest", value: formatCurrency(result.totalInterest))
-                Divider().background(Color.risingCardDark)
-                BreakdownRow(title: "Total Payment", value: formatCurrency(result.totalPayment), isBold: true)
+                BreakdownRow(title: "Principal & Interest", value: (result.monthlyPayment - result.tax - result.insurance).formattedCurrency)
+                Divider().background(Color.risingCard)
+                BreakdownRow(title: "Property Tax (monthly)", value: result.tax.formattedCurrency)
+                Divider().background(Color.risingCard)
+                BreakdownRow(title: "Home Insurance (monthly)", value: result.insurance.formattedCurrency)
+                Divider().background(Color.risingCard)
+                BreakdownRow(title: "Loan Amount", value: result.principal.formattedCurrency)
+                Divider().background(Color.risingCard)
+                BreakdownRow(title: "Total Interest", value: result.totalInterest.formattedCurrency)
+                Divider().background(Color.risingCard)
+                BreakdownRow(title: "Total Payment", value: result.totalPayment.formattedCurrency, isBold: true)
             }
             .padding(RisingSpacing.md)
-            .background(Color.risingSurfaceDark)
+            .background(Color.risingSurface)
             .clipShape(RoundedRectangle(cornerRadius: RisingRadius.lg))
 
             // Affordability Note
@@ -202,7 +203,7 @@ struct MortgageCalculatorView: View {
                 HStack(spacing: RisingSpacing.sm) {
                     Image(systemName: "exclamationmark.circle.fill")
                         .foregroundStyle(Color.risingWarning)
-                    Text("Consider a \u{201C}need\u{201D} of \(formatCurrency(affordable)) with this payment.")
+                    Text("Consider a \u{201C}need\u{201D} of \(affordable.formattedCurrency) with this payment.")
                         .risingCaption()
                         .foregroundStyle(Color.risingWarning)
                 }
@@ -236,21 +237,6 @@ struct MortgageCalculatorView: View {
             showResult = true
         }
     }
-
-    private func formatCurrency(_ value: Double) -> String {
-        let formatter = NumberFormatter()
-        formatter.numberStyle = .currency
-        formatter.currencyCode = "USD"
-        formatter.maximumFractionDigits = 0
-        return formatter.string(from: NSNumber(value: value)) ?? "$0"
-    }
-
-    private func formatNumber(_ value: Double) -> String {
-        let formatter = NumberFormatter()
-        formatter.numberStyle = .decimal
-        formatter.maximumFractionDigits = 0
-        return formatter.string(from: NSNumber(value: value)) ?? "0"
-    }
 }
 
 // MARK: - Input Field
@@ -267,29 +253,29 @@ struct InputField: View {
         VStack(alignment: .leading, spacing: RisingSpacing.xs) {
             Text(label)
                 .risingLabel()
-                .foregroundStyle(Color.risingTextSecondaryDark)
+                .foregroundStyle(Color.risingTextSecondary)
 
             HStack {
                 if let prefix = prefix {
                     Text(prefix)
                         .risingBody()
-                        .foregroundStyle(Color.risingTextSecondaryDark)
+                        .foregroundStyle(Color.risingTextSecondary)
                 }
 
                 TextField(placeholder, text: $value)
                     .font(.body)
-                    .foregroundStyle(Color.risingTextPrimaryDark)
+                    .foregroundStyle(Color.risingTextPrimary)
                     .keyboardType(keyboard)
                     .tint(Color.risingPrimary)
 
                 if let suffix = suffix {
                     Text(suffix)
                         .risingBody()
-                        .foregroundStyle(Color.risingTextSecondaryDark)
+                        .foregroundStyle(Color.risingTextSecondary)
                 }
             }
             .padding(RisingSpacing.md)
-            .background(Color.risingSurfaceDark)
+            .background(Color.risingSurface)
             .clipShape(RoundedRectangle(cornerRadius: RisingRadius.md))
         }
     }
@@ -306,13 +292,13 @@ struct BreakdownRow: View {
         HStack {
             Text(title)
                 .font(isBold ? .body.weight(.semibold) : .body)
-                .foregroundStyle(isBold ? Color.risingTextPrimaryDark : Color.risingTextSecondaryDark)
+                .foregroundStyle(isBold ? Color.risingTextPrimary : Color.risingTextSecondary)
 
             Spacer()
 
             Text(value)
                 .font(isBold ? .body.weight(.semibold) : .body)
-                .foregroundStyle(isBold ? Color.risingPrimary : Color.risingTextPrimaryDark)
+                .foregroundStyle(isBold ? Color.risingPrimary : Color.risingTextPrimary)
         }
     }
 }

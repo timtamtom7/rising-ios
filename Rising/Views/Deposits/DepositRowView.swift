@@ -15,18 +15,20 @@ struct DepositRowView: View {
                 Image(systemName: "plus")
                     .font(.system(size: 16, weight: .semibold))
                     .foregroundStyle(Color.risingSuccess)
+                    .accessibilityHidden(true)
             }
 
             // Info
             VStack(alignment: .leading, spacing: RisingSpacing.xxs) {
-                Text(formatCurrency(deposit.amount))
+                Text(deposit.amount.formattedCurrency)
                     .risingBody()
                     .foregroundStyle(Color.risingSuccess)
+                    .accessibilityLabel("\(deposit.amount.formattedCurrency) deposit")
 
                 if let note = deposit.note, !note.isEmpty {
                     Text(note)
                         .risingCaption()
-                        .foregroundStyle(Color.risingTextSecondaryDark)
+                        .foregroundStyle(Color.risingTextSecondary)
                         .lineLimit(1)
                 }
             }
@@ -37,12 +39,14 @@ struct DepositRowView: View {
             VStack(alignment: .trailing, spacing: RisingSpacing.xxs) {
                 Text(formatDate(deposit.date))
                     .risingCaption()
-                    .foregroundStyle(Color.risingTextSecondaryDark)
+                    .foregroundStyle(Color.risingTextSecondary)
+                    .accessibilityLabel("Deposited on \(formatDate(deposit.date))")
             }
         }
         .padding(RisingSpacing.md)
-        .background(Color.risingSurfaceDark)
+        .background(Color.risingSurface)
         .clipShape(RoundedRectangle(cornerRadius: RisingRadius.md))
+        .accessibilityLabel("\(deposit.amount.formattedCurrency) deposit on \(formatDate(deposit.date))")
         .contextMenu {
             Button(role: .destructive) {
                 onDelete()
@@ -50,14 +54,6 @@ struct DepositRowView: View {
                 Label("Delete", systemImage: "trash")
             }
         }
-    }
-
-    private func formatCurrency(_ value: Double) -> String {
-        let formatter = NumberFormatter()
-        formatter.numberStyle = .currency
-        formatter.currencyCode = "USD"
-        formatter.maximumFractionDigits = 0
-        return formatter.string(from: NSNumber(value: value)) ?? "$0"
     }
 
     private func formatDate(_ date: Date) -> String {
@@ -79,5 +75,5 @@ struct DepositRowView: View {
         onDelete: {}
     )
     .padding()
-    .background(Color.risingBackgroundDark)
+    .background(Color.risingBackground)
 }

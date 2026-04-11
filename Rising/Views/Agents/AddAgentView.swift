@@ -12,7 +12,7 @@ struct AddAgentView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                Color.risingBackgroundDark
+                Color.risingBackground
                     .ignoresSafeArea()
 
                 ScrollView {
@@ -21,13 +21,13 @@ struct AddAgentView: View {
                         VStack(alignment: .leading, spacing: RisingSpacing.xs) {
                             Text("Agent Name")
                                 .risingLabel()
-                                .foregroundStyle(Color.risingTextSecondaryDark)
+                                .foregroundStyle(Color.risingTextSecondary)
 
                             TextField("Jane Smith", text: $viewModel.name)
                                 .font(.body)
-                                .foregroundStyle(Color.risingTextPrimaryDark)
+                                .foregroundStyle(Color.risingTextPrimary)
                                 .padding(RisingSpacing.md)
-                                .background(Color.risingSurfaceDark)
+                                .background(Color.risingSurface)
                                 .clipShape(RoundedRectangle(cornerRadius: RisingRadius.md))
                                 .tint(Color.risingPrimary)
                         }
@@ -36,14 +36,14 @@ struct AddAgentView: View {
                         VStack(alignment: .leading, spacing: RisingSpacing.xs) {
                             Text("Phone (optional)")
                                 .risingLabel()
-                                .foregroundStyle(Color.risingTextSecondaryDark)
+                                .foregroundStyle(Color.risingTextSecondary)
 
                             TextField("(555) 123-4567", text: $viewModel.phone)
                                 .font(.body)
-                                .foregroundStyle(Color.risingTextPrimaryDark)
+                                .foregroundStyle(Color.risingTextPrimary)
                                 .keyboardType(.phonePad)
                                 .padding(RisingSpacing.md)
-                                .background(Color.risingSurfaceDark)
+                                .background(Color.risingSurface)
                                 .clipShape(RoundedRectangle(cornerRadius: RisingRadius.md))
                                 .tint(Color.risingPrimary)
                         }
@@ -52,15 +52,15 @@ struct AddAgentView: View {
                         VStack(alignment: .leading, spacing: RisingSpacing.xs) {
                             Text("Email (optional)")
                                 .risingLabel()
-                                .foregroundStyle(Color.risingTextSecondaryDark)
+                                .foregroundStyle(Color.risingTextSecondary)
 
                             TextField("jane@realty.com", text: $viewModel.email)
                                 .font(.body)
-                                .foregroundStyle(Color.risingTextPrimaryDark)
+                                .foregroundStyle(Color.risingTextPrimary)
                                 .keyboardType(.emailAddress)
                                 .autocapitalization(.none)
                                 .padding(RisingSpacing.md)
-                                .background(Color.risingSurfaceDark)
+                                .background(Color.risingSurface)
                                 .clipShape(RoundedRectangle(cornerRadius: RisingRadius.md))
                                 .tint(Color.risingPrimary)
                         }
@@ -69,14 +69,14 @@ struct AddAgentView: View {
                         VStack(alignment: .leading, spacing: RisingSpacing.xs) {
                             Text("Notes (optional)")
                                 .risingLabel()
-                                .foregroundStyle(Color.risingTextSecondaryDark)
+                                .foregroundStyle(Color.risingTextSecondary)
 
                             TextField("Met at open house March 15...", text: $viewModel.notes, axis: .vertical)
                                 .font(.body)
-                                .foregroundStyle(Color.risingTextPrimaryDark)
+                                .foregroundStyle(Color.risingTextPrimary)
                                 .lineLimit(3...6)
                                 .padding(RisingSpacing.md)
-                                .background(Color.risingSurfaceDark)
+                                .background(Color.risingSurface)
                                 .clipShape(RoundedRectangle(cornerRadius: RisingRadius.md))
                                 .tint(Color.risingPrimary)
                         }
@@ -91,7 +91,7 @@ struct AddAgentView: View {
                     Button("Cancel") {
                         dismiss()
                     }
-                    .foregroundStyle(Color.risingTextSecondaryDark)
+                    .foregroundStyle(Color.risingTextSecondary)
                 }
 
                 ToolbarItem(placement: .topBarTrailing) {
@@ -99,7 +99,7 @@ struct AddAgentView: View {
                         Task { await save() }
                     }
                     .font(.body.weight(.semibold))
-                    .foregroundStyle(viewModel.isValid ? Color.risingPrimary : Color.risingTextSecondaryDark)
+                    .foregroundStyle(viewModel.isValid ? Color.risingPrimary : Color.risingTextSecondary)
                     .disabled(!viewModel.isValid || isSaving)
                 }
             }

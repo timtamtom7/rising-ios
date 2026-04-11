@@ -7,11 +7,11 @@ struct WhyRisingStepView: View {
                 VStack(spacing: RisingSpacing.xl) {
                     Text("Why Rising?")
                         .risingDisplay()
-                        .foregroundStyle(Color.risingTextPrimaryDark)
+                        .foregroundStyle(Color.risingTextPrimary)
 
                     Text("Built for people serious about their goals.")
                         .risingBody()
-                        .foregroundStyle(Color.risingTextSecondaryDark)
+                        .foregroundStyle(Color.risingTextSecondary)
                         .multilineTextAlignment(.center)
                 }
                 .padding(.top, RisingSpacing.xxl)
@@ -69,22 +69,22 @@ struct FeatureRow: View {
             VStack(alignment: .leading, spacing: RisingSpacing.xxs) {
                 Text(title)
                     .risingHeading3()
-                    .foregroundStyle(Color.risingTextPrimaryDark)
+                    .foregroundStyle(Color.risingTextPrimary)
 
                 Text(description)
                     .risingBodySmall()
-                    .foregroundStyle(Color.risingTextSecondaryDark)
+                    .foregroundStyle(Color.risingTextSecondary)
             }
 
             Spacer()
         }
         .padding(RisingSpacing.md)
-        .background(Color.risingSurfaceDark)
+        .background(Color.risingSurface)
         .clipShape(RoundedRectangle(cornerRadius: RisingRadius.lg))
     }
 }
 
 #Preview {
     WhyRisingStepView()
-        .background(Color.risingBackgroundDark)
+        .background(Color.risingBackground)
 }

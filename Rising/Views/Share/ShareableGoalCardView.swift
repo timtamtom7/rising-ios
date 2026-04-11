@@ -12,10 +12,11 @@ struct ShareableGoalCardView: View {
                 Image(systemName: "arrow.up.right.circle.fill")
                     .font(.system(size: 20))
                     .foregroundStyle(Color.risingPrimary)
+                    .accessibilityHidden(true)
 
                 Text("Rising")
-                    .font(.system(size: 16, weight: .semibold))
-                    .foregroundStyle(Color.risingTextSecondaryDark)
+                    .risingBodySmall()
+                    .foregroundStyle(Color.risingTextSecondary)
 
                 Spacer()
             }
@@ -23,13 +24,13 @@ struct ShareableGoalCardView: View {
             // Goal name
             Text(goal.name)
                 .risingHeading1()
-                .foregroundStyle(Color.risingTextPrimaryDark)
+                .foregroundStyle(Color.risingTextPrimary)
                 .multilineTextAlignment(.center)
 
             // Progress Ring
             ZStack {
                 Circle()
-                    .stroke(Color.risingCardDark, lineWidth: 10)
+                    .stroke(Color.risingCard, lineWidth: 10)
                     .frame(width: 120, height: 120)
 
                 Circle()
@@ -43,56 +44,57 @@ struct ShareableGoalCardView: View {
 
                 VStack(spacing: 2) {
                     Text("\(Int(goal.progress * 100))%")
-                        .font(.system(size: 24, weight: .bold))
-                        .foregroundStyle(Color.risingTextPrimaryDark)
+                        .risingHeading2()
+                        .foregroundStyle(Color.risingTextPrimary)
 
                     Text("saved")
-                        .font(.caption2)
-                        .foregroundStyle(Color.risingTextSecondaryDark)
+                        .risingCaption()
+                        .foregroundStyle(Color.risingTextSecondary)
                 }
             }
+            .accessibilityLabel("\(Int(goal.progress * 100)) percent of goal saved")
 
             // Amounts
             HStack(spacing: RisingSpacing.xl) {
                 VStack(spacing: 2) {
-                    Text(formatCurrency(goal.currentAmount))
-                        .font(.system(size: 18, weight: .semibold))
+                    Text(goal.currentAmount.formattedCurrency)
+                        .risingBody()
                         .foregroundStyle(Color.risingPrimary)
 
                     Text("Saved")
-                        .font(.caption2)
-                        .foregroundStyle(Color.risingTextSecondaryDark)
+                        .risingCaption()
+                        .foregroundStyle(Color.risingTextSecondary)
                 }
 
                 VStack(spacing: 2) {
-                    Text(formatCurrency(goal.targetAmount))
-                        .font(.system(size: 18, weight: .semibold))
-                        .foregroundStyle(Color.risingTextSecondaryDark)
+                    Text(goal.targetAmount.formattedCurrency)
+                        .risingBody()
+                        .foregroundStyle(Color.risingTextSecondary)
 
                     Text("Goal")
-                        .font(.caption2)
-                        .foregroundStyle(Color.risingTextSecondaryDark)
+                        .risingCaption()
+                        .foregroundStyle(Color.risingTextSecondary)
                 }
 
                 VStack(spacing: 2) {
-                    Text(formatCurrency(goal.remainingAmount))
-                        .font(.system(size: 18, weight: .semibold))
+                    Text(goal.remainingAmount.formattedCurrency)
+                        .risingBody()
                         .foregroundStyle(Color.risingAccent)
 
                     Text("Left")
-                        .font(.caption2)
-                        .foregroundStyle(Color.risingTextSecondaryDark)
+                        .risingCaption()
+                        .foregroundStyle(Color.risingTextSecondary)
                 }
             }
 
             // Motivational message
             Text(motivationalMessage)
-                .font(.caption)
-                .foregroundStyle(Color.risingTextSecondaryDark)
+                .risingCaption()
+                .foregroundStyle(Color.risingTextSecondary)
                 .italic()
         }
         .padding(RisingSpacing.xl)
-        .background(Color.risingSurfaceDark)
+        .background(Color.risingSurface)
         .clipShape(RoundedRectangle(cornerRadius: RisingRadius.xl))
     }
 
@@ -110,14 +112,6 @@ struct ShareableGoalCardView: View {
             return "The journey of a thousand miles begins with a single step."
         }
     }
-
-    private func formatCurrency(_ value: Double) -> String {
-        let formatter = NumberFormatter()
-        formatter.numberStyle = .currency
-        formatter.currencyCode = "USD"
-        formatter.maximumFractionDigits = 0
-        return formatter.string(from: NSNumber(value: value)) ?? "$0"
-    }
 }
 
 // MARK: - Share Card Wrapper (with capture support)
@@ -133,7 +127,7 @@ struct ShareCardWrapper: View {
             ShareableGoalCardView(goal: goal)
                 .padding(RisingSpacing.lg)
         }
-        .background(Color.risingBackgroundDark)
+        .background(Color.risingBackground)
     }
 }
 
@@ -146,17 +140,17 @@ struct ShareCardSheet: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                Color.risingBackgroundDark
+                Color.risingBackground
                     .ignoresSafeArea()
 
                 VStack(spacing: RisingSpacing.xl) {
                     Text("Share Your Progress")
                         .risingHeading1()
-                        .foregroundStyle(Color.risingTextPrimaryDark)
+                        .foregroundStyle(Color.risingTextPrimary)
 
                     Text("Let your friends know you're working toward your goal!")
                         .risingBody()
-                        .foregroundStyle(Color.risingTextSecondaryDark)
+                        .foregroundStyle(Color.risingTextSecondary)
                         .multilineTextAlignment(.center)
                         .padding(.horizontal)
 
@@ -171,6 +165,7 @@ struct ShareCardSheet: View {
                     ) {
                         HStack {
                             Image(systemName: "square.and.arrow.up")
+                                .accessibilityHidden(true)
                             Text("Share Card")
                         }
                         .font(.body.weight(.semibold))
@@ -211,5 +206,5 @@ struct ShareCardSheet: View {
         targetAmount: 50000,
         currentAmount: 17500
     ))
-    .background(Color.risingBackgroundDark)
+    .background(Color.risingBackground)
 }

@@ -16,7 +16,7 @@ struct GoalDetailView: View {
 
     var body: some View {
         ZStack {
-            Color.risingBackgroundDark
+            Color.risingBackground
                 .ignoresSafeArea()
 
             ScrollView {
@@ -62,7 +62,7 @@ struct GoalDetailView: View {
                     showMortgageCalculator = true
                 } label: {
                     Image(systemName: "calculator")
-                        .foregroundStyle(Color.risingTextSecondaryDark)
+                        .foregroundStyle(Color.risingTextSecondary)
                 }
             }
             ToolbarItem(placement: .topBarTrailing) {
@@ -78,7 +78,7 @@ struct GoalDetailView: View {
                         showEditGoal = true
                     } label: {
                         Image(systemName: "pencil")
-                            .foregroundStyle(Color.risingTextSecondaryDark)
+                            .foregroundStyle(Color.risingTextSecondary)
                     }
                 }
             }
@@ -99,7 +99,7 @@ struct GoalDetailView: View {
         .sheet(isPresented: $showMilestones) {
             NavigationStack {
                 MilestoneTrackerView(goalId: viewModel.goal.id, goal: viewModel.goal)
-                    .background(Color.risingBackgroundDark)
+                    .background(Color.risingBackground)
                     .navigationTitle("Milestones")
                     .navigationBarTitleDisplayMode(.inline)
             }
@@ -107,7 +107,7 @@ struct GoalDetailView: View {
         .sheet(isPresented: $showAgents) {
             NavigationStack {
                 AgentListView()
-                    .background(Color.risingBackgroundDark)
+                    .background(Color.risingBackground)
                     .navigationTitle("Agents")
                     .navigationBarTitleDisplayMode(.inline)
             }
@@ -118,7 +118,7 @@ struct GoalDetailView: View {
         .sheet(isPresented: $showMortgageCalculator) {
             NavigationStack {
                 MortgageCalculatorView()
-                    .background(Color.risingBackgroundDark)
+                    .background(Color.risingBackground)
                     .navigationTitle("Calculator")
                     .navigationBarTitleDisplayMode(.inline)
             }
@@ -133,7 +133,7 @@ struct GoalDetailView: View {
             // Large Progress Ring
             ZStack {
                 Circle()
-                    .stroke(Color.risingCardDark, lineWidth: 12)
+                    .stroke(Color.risingCard, lineWidth: 12)
                     .frame(width: 160, height: 160)
 
                 Circle()
@@ -149,11 +149,11 @@ struct GoalDetailView: View {
                 VStack(spacing: RisingSpacing.xxs) {
                     Text("\(Int(viewModel.progress * 100))%")
                         .risingDisplay()
-                        .foregroundStyle(Color.risingTextPrimaryDark)
+                        .foregroundStyle(Color.risingTextPrimary)
 
                     Text("saved")
                         .risingCaption()
-                        .foregroundStyle(Color.risingTextSecondaryDark)
+                        .foregroundStyle(Color.risingTextSecondary)
                 }
             }
 
@@ -161,34 +161,34 @@ struct GoalDetailView: View {
             HStack(spacing: RisingSpacing.xl) {
                 StatItem(
                     title: "Saved",
-                    value: formatCurrency(viewModel.goal.currentAmount),
+                    value: viewModel.goal.currentAmount.formattedCurrency,
                     color: Color.risingPrimary
                 )
 
                 Divider()
                     .frame(height: 40)
-                    .background(Color.risingCardDark)
+                    .background(Color.risingCard)
 
                 StatItem(
                     title: "Remaining",
-                    value: formatCurrency(viewModel.remainingAmount),
+                    value: viewModel.remainingAmount.formattedCurrency,
                     color: Color.risingAccent
                 )
 
                 if let days = viewModel.daysRemaining {
                     Divider()
                         .frame(height: 40)
-                        .background(Color.risingCardDark)
+                        .background(Color.risingCard)
 
                     StatItem(
                         title: "Days Left",
                         value: "\(days)",
-                        color: Color.risingTextSecondaryDark
+                        color: Color.risingTextSecondary
                     )
                 }
             }
             .padding(RisingSpacing.lg)
-            .background(Color.risingSurfaceDark)
+            .background(Color.risingSurface)
             .clipShape(RoundedRectangle(cornerRadius: RisingRadius.xl))
         }
     }
@@ -218,10 +218,10 @@ struct GoalDetailView: View {
                     Text("Milestones")
                 }
                 .font(.body.weight(.medium))
-                .foregroundStyle(Color.risingTextPrimaryDark)
+                .foregroundStyle(Color.risingTextPrimary)
                 .frame(maxWidth: .infinity)
                 .padding(.vertical, RisingSpacing.md)
-                .background(Color.risingSurfaceDark)
+                .background(Color.risingSurface)
                 .clipShape(RoundedRectangle(cornerRadius: RisingRadius.lg))
             }
         }
@@ -254,7 +254,7 @@ struct GoalDetailView: View {
                 .sheet(isPresented: $showPropertyList) {
                     NavigationStack {
                         PropertyListView(goal: viewModel.goal)
-                            .background(Color.risingBackgroundDark)
+                            .background(Color.risingBackground)
                             .navigationTitle("Properties")
                             .navigationBarTitleDisplayMode(.inline)
                     }
@@ -272,7 +272,7 @@ struct GoalDetailView: View {
                 .sheet(isPresented: $showAgents) {
                     NavigationStack {
                         AgentListView()
-                            .background(Color.risingBackgroundDark)
+                            .background(Color.risingBackground)
                             .navigationTitle("Agents")
                             .navigationBarTitleDisplayMode(.inline)
                     }
@@ -284,7 +284,7 @@ struct GoalDetailView: View {
         VStack(alignment: .leading, spacing: RisingSpacing.md) {
             Text("Deposit History")
                 .risingHeading2()
-                .foregroundStyle(Color.risingTextPrimaryDark)
+                .foregroundStyle(Color.risingTextPrimary)
 
             if viewModel.deposits.isEmpty {
                 emptyDeposits
@@ -302,28 +302,20 @@ struct GoalDetailView: View {
         VStack(spacing: RisingSpacing.md) {
             Image(systemName: "banknote")
                 .font(.system(size: 32, weight: .light))
-                .foregroundStyle(Color.risingTextSecondaryDark)
+                .foregroundStyle(Color.risingTextSecondary)
 
             Text("No deposits yet")
                 .risingBody()
-                .foregroundStyle(Color.risingTextSecondaryDark)
+                .foregroundStyle(Color.risingTextSecondary)
 
             Text("Add your first deposit to see it here.")
                 .risingCaption()
-                .foregroundStyle(Color.risingTextSecondaryDark)
+                .foregroundStyle(Color.risingTextSecondary)
         }
         .frame(maxWidth: .infinity)
         .padding(.vertical, RisingSpacing.xl)
-        .background(Color.risingSurfaceDark)
+        .background(Color.risingSurface)
         .clipShape(RoundedRectangle(cornerRadius: RisingRadius.lg))
-    }
-
-    private func formatCurrency(_ value: Double) -> String {
-        let formatter = NumberFormatter()
-        formatter.numberStyle = .currency
-        formatter.currencyCode = "USD"
-        formatter.maximumFractionDigits = 0
-        return formatter.string(from: NSNumber(value: value)) ?? "$0"
     }
 }
 
@@ -341,7 +333,7 @@ struct SectionHeader: View {
 
             Text(title)
                 .risingHeading2()
-                .foregroundStyle(Color.risingTextPrimaryDark)
+                .foregroundStyle(Color.risingTextPrimary)
 
             Spacer()
 
@@ -349,7 +341,7 @@ struct SectionHeader: View {
                 action()
             } label: {
                 Image(systemName: "chevron.right")
-                    .foregroundStyle(Color.risingTextSecondaryDark)
+                    .foregroundStyle(Color.risingTextSecondary)
             }
         }
     }
@@ -369,10 +361,10 @@ struct MilestonePreviewView: View {
             if viewModel.milestones.isEmpty {
                 Text("Tap to set up milestones")
                     .risingCaption()
-                    .foregroundStyle(Color.risingTextSecondaryDark)
+                    .foregroundStyle(Color.risingTextSecondary)
                     .frame(maxWidth: .infinity)
                     .padding(.vertical, RisingSpacing.md)
-                    .background(Color.risingSurfaceDark)
+                    .background(Color.risingSurface)
                     .clipShape(RoundedRectangle(cornerRadius: RisingRadius.lg))
             } else {
                 ForEach(viewModel.milestones.prefix(3)) { milestone in
@@ -383,7 +375,7 @@ struct MilestonePreviewView: View {
                     HStack {
                         Text("+\(viewModel.milestones.count - 3) more")
                             .risingCaption()
-                            .foregroundStyle(Color.risingTextSecondaryDark)
+                            .foregroundStyle(Color.risingTextSecondary)
                         Spacer()
                     }
                     .padding(.top, RisingSpacing.xxs)
@@ -403,20 +395,20 @@ struct MilestonePreviewRow: View {
         HStack(spacing: RisingSpacing.sm) {
             Image(systemName: milestone.status == .completed ? "checkmark.circle.fill" : "circle")
                 .font(.system(size: 16))
-                .foregroundStyle(milestone.status == .completed ? Color.risingSuccess : Color.risingCardDark)
+                .foregroundStyle(milestone.status == .completed ? Color.risingSuccess : Color.risingCard)
 
             Text(milestone.title.isEmpty ? milestone.type.displayTitle : milestone.title)
                 .risingBodySmall()
                 .foregroundStyle(
                     milestone.status == .completed
-                    ? Color.risingTextSecondaryDark
-                    : Color.risingTextPrimaryDark
+                    ? Color.risingTextSecondary
+                    : Color.risingTextPrimary
                 )
 
             Spacer()
         }
         .padding(RisingSpacing.sm)
-        .background(Color.risingSurfaceDark)
+        .background(Color.risingSurface)
         .clipShape(RoundedRectangle(cornerRadius: RisingRadius.md))
     }
 }
@@ -436,7 +428,7 @@ struct StatItem: View {
 
             Text(title)
                 .risingCaption()
-                .foregroundStyle(Color.risingTextSecondaryDark)
+                .foregroundStyle(Color.risingTextSecondary)
         }
     }
 }

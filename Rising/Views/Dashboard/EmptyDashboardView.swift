@@ -20,16 +20,17 @@ struct EmptyDashboardView: View {
                 Image(systemName: "arrow.up.right.circle")
                     .font(.system(size: 48, weight: .light))
                     .foregroundStyle(Color.risingPrimary)
+                    .accessibilityHidden(true)
             }
 
             VStack(spacing: RisingSpacing.md) {
                 Text("No goals yet")
                     .risingHeading1()
-                    .foregroundStyle(Color.risingTextPrimaryDark)
+                    .foregroundStyle(Color.risingTextPrimary)
 
                 Text("Create your first savings goal and watch your money rise.")
                     .risingBody()
-                    .foregroundStyle(Color.risingTextSecondaryDark)
+                    .foregroundStyle(Color.risingTextSecondary)
                     .multilineTextAlignment(.center)
                     .padding(.horizontal, RisingSpacing.xl)
             }
@@ -39,6 +40,7 @@ struct EmptyDashboardView: View {
             } label: {
                 HStack(spacing: RisingSpacing.xs) {
                     Image(systemName: "plus.circle.fill")
+                        .accessibilityHidden(true)
                     Text("Create Your First Goal")
                 }
                 .font(.body.weight(.semibold))
@@ -56,5 +58,5 @@ struct EmptyDashboardView: View {
 
 #Preview {
     EmptyDashboardView(onCreateGoal: {})
-        .background(Color.risingBackgroundDark)
+        .background(Color.risingBackground)
 }

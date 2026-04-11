@@ -243,6 +243,25 @@ final class DatabaseService {
         return result
     }
 
+    func fetchAllDeposits() throws -> [Deposit] {
+        guard let db = db else { return [] }
+
+        let query = deposits.order(depositDate.desc)
+        var result: [Deposit] = []
+        for row in try db.prepare(query) {
+            let deposit = Deposit(
+                id: UUID(uuidString: row[depositId]) ?? UUID(),
+                goalId: UUID(uuidString: row[depositGoalId]) ?? UUID(),
+                amount: row[depositAmount],
+                date: row[depositDate],
+                note: row[depositNote],
+                createdAt: row[depositCreatedAt]
+            )
+            result.append(deposit)
+        }
+        return result
+    }
+
     func insertDeposit(_ deposit: Deposit) throws {
         guard let db = db else { return }
 

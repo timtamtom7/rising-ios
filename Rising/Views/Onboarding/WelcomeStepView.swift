@@ -19,12 +19,12 @@ struct WelcomeStepView: View {
             VStack(spacing: RisingSpacing.md) {
                 Text("Your money, rising.")
                     .risingDisplay()
-                    .foregroundStyle(Color.risingTextPrimaryDark)
+                    .foregroundStyle(Color.risingTextPrimary)
                     .multilineTextAlignment(.center)
 
                 Text("Track your savings goals, visualize your progress, and understand your money — all in one place.")
                     .risingBody()
-                    .foregroundStyle(Color.risingTextSecondaryDark)
+                    .foregroundStyle(Color.risingTextSecondary)
                     .multilineTextAlignment(.center)
                     .padding(.horizontal, RisingSpacing.lg)
             }
@@ -38,5 +38,5 @@ struct WelcomeStepView: View {
 
 #Preview {
     WelcomeStepView()
-        .background(Color.risingBackgroundDark)
+        .background(Color.risingBackground)
 }

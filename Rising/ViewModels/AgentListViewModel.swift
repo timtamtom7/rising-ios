@@ -9,15 +9,21 @@ final class AgentListViewModel {
     var isLoading = false
     var errorMessage: String?
 
+    private let agentService: AgentServiceProtocol
+
+    init(agentService: AgentServiceProtocol = AgentService.shared) {
+        self.agentService = agentService
+    }
+
     func load() async {
         isLoading = true
-        agents = await AgentService.shared.fetchAll()
+        agents = await agentService.fetchAll()
         isLoading = false
     }
 
     func delete(_ agent: Agent) async {
         do {
-            try await AgentService.shared.delete(id: agent.id)
+            try await agentService.delete(id: agent.id)
             agents.removeAll { $0.id == agent.id }
         } catch {
             errorMessage = "Failed to delete agent."

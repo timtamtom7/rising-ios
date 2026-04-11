@@ -1,0 +1,44 @@
+{
+  "/Users/mauriello/Dev/rising-ios/Rising/Models/Property.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/arm64/Property.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/arm64/Property.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/arm64/Property.dia",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/arm64/Property.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/arm64/Property.swiftdeps"
+  },
+  "/Users/mauriello/Dev/rising-ios/Rising/Services/OnboardingService.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/arm64/OnboardingService.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/arm64/OnboardingService.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/arm64/OnboardingService.dia",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/arm64/OnboardingService.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/arm64/OnboardingService.swiftdeps"
+  },
+  "/Users/mauriello/Dev/rising-ios/Rising/ViewModels/OnboardingViewModel.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/arm64/OnboardingViewModel.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/arm64/OnboardingViewModel.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/arm64/OnboardingViewModel.dia",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/arm64/OnboardingViewModel.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/arm64/OnboardingViewModel.swiftdeps"
+  },
+  "/Users/mauriello/Dev/rising-ios/Rising/Views/Onboarding/OnboardingView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/arm64/OnboardingView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/arm64/OnboardingView.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/arm64/OnboardingView.dia",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/arm64/OnboardingView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/arm64/OnboardingView.swiftdeps"
+  },
+  "/Users/mauriello/Dev/rising-ios/Rising/Views/Portfolio/PortfolioView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/arm64/PortfolioView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/arm64/PortfolioView.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/arm64/PortfolioView.dia",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/arm64/PortfolioView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/arm64/PortfolioView.swiftdeps"
+  },
+  "/Users/mauriello/Dev/rising-ios/Rising/Views/Settings/NotificationSettingsView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/arm64/NotificationSettingsView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/arm64/NotificationSettingsView.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/arm64/NotificationSettingsView.dia",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/arm64/NotificationSettingsView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/arm64/NotificationSettingsView.swiftdeps"
+  }
+}

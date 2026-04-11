@@ -1,0 +1,44 @@
+{
+  "/Users/mauriello/Dev/rising-ios/Rising/Services/RisingR11Service.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/RisingR11Service.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/RisingR11Service.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/RisingR11Service.dia",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/RisingR11Service.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/RisingR11Service.swiftdeps"
+  },
+  "/Users/mauriello/Dev/rising-ios/Rising/Services/RisingR12Service.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/RisingR12Service.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/RisingR12Service.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/RisingR12Service.dia",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/RisingR12Service.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/RisingR12Service.swiftdeps"
+  },
+  "/Users/mauriello/Dev/rising-ios/Rising/ViewModels/SettingsViewModel.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/SettingsViewModel.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/SettingsViewModel.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/SettingsViewModel.dia",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/SettingsViewModel.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/SettingsViewModel.swiftdeps"
+  },
+  "/Users/mauriello/Dev/rising-ios/Rising/ViewModels/ShareCardViewModel.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/ShareCardViewModel.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/ShareCardViewModel.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/ShareCardViewModel.dia",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/ShareCardViewModel.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/ShareCardViewModel.swiftdeps"
+  },
+  "/Users/mauriello/Dev/rising-ios/Rising/Views/Settings/SettingsView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/SettingsView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/SettingsView.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/SettingsView.dia",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/SettingsView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/SettingsView.swiftdeps"
+  },
+  "/Users/mauriello/Dev/rising-ios/Rising/Views/Share/ShareableGoalCardView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/ShareableGoalCardView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/ShareableGoalCardView.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/ShareableGoalCardView.dia",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/ShareableGoalCardView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/ShareableGoalCardView.swiftdeps"
+  }
+}

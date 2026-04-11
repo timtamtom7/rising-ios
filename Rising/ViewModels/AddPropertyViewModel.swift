@@ -11,14 +11,16 @@ final class AddPropertyViewModel {
     var notes = ""
 
     let goalId: UUID
+    private let propertyService: PropertyServiceProtocol
+
+    init(goalId: UUID, propertyService: PropertyServiceProtocol = PropertyService.shared) {
+        self.goalId = goalId
+        self.propertyService = propertyService
+    }
 
     var isValid: Bool {
         !address.trimmingCharacters(in: .whitespaces).isEmpty &&
         (Double(price) ?? 0) > 0
-    }
-
-    init(goalId: UUID) {
-        self.goalId = goalId
     }
 
     func save() async throws {
@@ -26,7 +28,7 @@ final class AddPropertyViewModel {
             throw PropertyError.invalidPrice
         }
 
-        try await PropertyService.shared.create(
+        try await propertyService.create(
             goalId: goalId,
             address: address.trimmingCharacters(in: .whitespaces),
             price: priceValue,

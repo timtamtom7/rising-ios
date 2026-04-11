@@ -1,0 +1,51 @@
+{
+  "/Users/mauriello/Dev/rising-ios/Rising/Models/Agent.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/Agent.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/Agent.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/Agent.dia",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/Agent.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/Agent.swiftdeps"
+  },
+  "/Users/mauriello/Dev/rising-ios/Rising/ViewModels/AddAgentViewModel.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AddAgentViewModel.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AddAgentViewModel.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AddAgentViewModel.dia",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AddAgentViewModel.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AddAgentViewModel.swiftdeps"
+  },
+  "/Users/mauriello/Dev/rising-ios/Rising/ViewModels/AddDepositViewModel.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AddDepositViewModel.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AddDepositViewModel.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AddDepositViewModel.dia",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AddDepositViewModel.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AddDepositViewModel.swiftdeps"
+  },
+  "/Users/mauriello/Dev/rising-ios/Rising/ViewModels/AddPropertyViewModel.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AddPropertyViewModel.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AddPropertyViewModel.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AddPropertyViewModel.dia",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AddPropertyViewModel.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AddPropertyViewModel.swiftdeps"
+  },
+  "/Users/mauriello/Dev/rising-ios/Rising/Views/Agents/AddAgentView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AddAgentView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AddAgentView.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AddAgentView.dia",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AddAgentView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AddAgentView.swiftdeps"
+  },
+  "/Users/mauriello/Dev/rising-ios/Rising/Views/Deposits/AddDepositView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AddDepositView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AddDepositView.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AddDepositView.dia",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AddDepositView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AddDepositView.swiftdeps"
+  },
+  "/Users/mauriello/Dev/rising-ios/Rising/Views/Properties/AddPropertyView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AddPropertyView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AddPropertyView.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AddPropertyView.dia",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AddPropertyView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AddPropertyView.swiftdeps"
+  }
+}

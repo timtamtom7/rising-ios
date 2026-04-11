@@ -2,13 +2,14 @@ import Foundation
 
 // R12: Social Features — Shared Goals, Homebuyer Community, Challenges
 @MainActor
-final class RisingR12Service: ObservableObject {
+@Observable
+final class RisingR12Service {
     static let shared = RisingR12Service()
 
-    @Published var sharedGoals: [SharedGoal] = []
-    @Published var communityPosts: [CommunityPost] = []
-    @Published var savingsChallenges: [SavingsChallenge] = []
-    @Published var homeBuyerGroups: [HomeBuyerGroup] = []
+    var sharedGoals: [SharedGoal] = []
+    var communityPosts: [CommunityPost] = []
+    var savingsChallenges: [SavingsChallenge] = []
+    var homeBuyerGroups: [HomeBuyerGroup] = []
 
     private let storageKey = "risingSocialData"
 

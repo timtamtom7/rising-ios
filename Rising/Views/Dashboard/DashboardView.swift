@@ -5,12 +5,12 @@ struct DashboardView: View {
     @State private var showCreateGoal = false
     @State private var showSettings = false
     @State private var showCommunity = false
+    @State private var showAchievements = false
 
     var body: some View {
         NavigationStack {
             ZStack {
-                // Background
-                Color.risingBackgroundDark
+                Color.risingBackground
                     .ignoresSafeArea()
 
                 if viewModel.isLoading && viewModel.goals.isEmpty {
@@ -28,17 +28,27 @@ struct DashboardView: View {
                 ToolbarItem(placement: .topBarTrailing) {
                     HStack(spacing: RisingSpacing.sm) {
                         Button {
+                            showAchievements = true
+                        } label: {
+                            Image(systemName: "trophy")
+                                .foregroundStyle(Color.risingAccent)
+                                .accessibilityLabel("Achievements")
+                        }
+
+                        Button {
                             showCommunity = true
                         } label: {
                             Image(systemName: "person.3")
                                 .foregroundStyle(Color.risingPrimary)
+                                .accessibilityLabel("Community")
                         }
                         
                         Button {
                             showSettings = true
                         } label: {
                             Image(systemName: "gearshape")
-                                .foregroundStyle(Color.risingTextSecondaryDark)
+                                .foregroundStyle(Color.risingTextSecondary)
+                                .accessibilityLabel("Settings")
                         }
                     }
                 }
@@ -54,11 +64,17 @@ struct DashboardView: View {
             .sheet(isPresented: $showCommunity) {
                 CommunityView()
             }
+            .sheet(isPresented: $showAchievements) {
+                AchievementsView()
+            }
             .task {
                 await viewModel.load()
             }
             .refreshable {
                 await viewModel.load()
+            }
+            .errorAlert(errorMessage: $viewModel.errorMessage) {
+                Task { await viewModel.load() }
             }
         }
     }
@@ -100,7 +116,7 @@ struct DashboardView: View {
                     .foregroundStyle(Color.risingPrimary)
                     .frame(maxWidth: .infinity)
                     .padding(.vertical, RisingSpacing.md)
-                    .background(Color.risingSurfaceDark)
+                    .background(Color.risingSurface)
                     .clipShape(RoundedRectangle(cornerRadius: RisingRadius.lg))
                 }
                 .padding(.horizontal, RisingSpacing.md)
@@ -116,11 +132,11 @@ struct DashboardView: View {
                 VStack(alignment: .leading, spacing: RisingSpacing.xxs) {
                     Text("Total Saved")
                         .risingLabel()
-                        .foregroundStyle(Color.risingTextSecondaryDark)
+                        .foregroundStyle(Color.risingTextSecondary)
 
-                    Text(formatCurrency(viewModel.totalSaved))
+                    Text(viewModel.totalSaved.formattedCurrency)
                         .risingHeading1()
-                        .foregroundStyle(Color.risingTextPrimaryDark)
+                        .foregroundStyle(Color.risingTextPrimary)
                 }
 
                 Spacer()
@@ -128,11 +144,11 @@ struct DashboardView: View {
                 VStack(alignment: .trailing, spacing: RisingSpacing.xxs) {
                     Text("Goal")
                         .risingLabel()
-                        .foregroundStyle(Color.risingTextSecondaryDark)
+                        .foregroundStyle(Color.risingTextSecondary)
 
-                    Text(formatCurrency(viewModel.totalTarget))
+                    Text(viewModel.totalTarget.formattedCurrency)
                         .risingHeading2()
-                        .foregroundStyle(Color.risingTextSecondaryDark)
+                        .foregroundStyle(Color.risingTextSecondary)
                 }
             }
 
@@ -140,7 +156,7 @@ struct DashboardView: View {
             GeometryReader { geometry in
                 ZStack(alignment: .leading) {
                     RoundedRectangle(cornerRadius: RisingRadius.full)
-                        .fill(Color.risingCardDark)
+                        .fill(Color.risingCard)
                         .frame(height: 8)
 
                     RoundedRectangle(cornerRadius: RisingRadius.full)
@@ -154,26 +170,19 @@ struct DashboardView: View {
             HStack {
                 Text("\(Int(viewModel.overallProgress * 100))% of total goal")
                     .risingCaption()
-                    .foregroundStyle(Color.risingTextSecondaryDark)
+                    .foregroundStyle(Color.risingTextSecondary)
 
                 Spacer()
 
                 Text("\(viewModel.goals.count) goal\(viewModel.goals.count == 1 ? "" : "s")")
                     .risingCaption()
-                    .foregroundStyle(Color.risingTextSecondaryDark)
+                    .foregroundStyle(Color.risingTextSecondary)
             }
         }
         .padding(RisingSpacing.lg)
-        .background(Color.risingSurfaceDark)
+        .background(Color.risingSurface)
         .clipShape(RoundedRectangle(cornerRadius: RisingRadius.xl))
-    }
-
-    private func formatCurrency(_ value: Double) -> String {
-        let formatter = NumberFormatter()
-        formatter.numberStyle = .currency
-        formatter.currencyCode = "USD"
-        formatter.maximumFractionDigits = 0
-        return formatter.string(from: NSNumber(value: value)) ?? "$0"
+        .accessibilityLabel("Summary: \(Int(viewModel.overallProgress * 100))% of total goal, \(viewModel.goals.count) goals, total saved \(viewModel.totalSaved.formattedCurrency) of \(viewModel.totalTarget.formattedCurrency)")
     }
 }
 

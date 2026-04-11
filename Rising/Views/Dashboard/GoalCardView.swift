@@ -14,31 +14,32 @@ struct GoalCardView: View {
                 Image(systemName: goal.iconName)
                     .font(.system(size: 22, weight: .medium))
                     .foregroundStyle(Color.risingPrimary)
+                    .accessibilityHidden(true)
             }
 
             // Info
             VStack(alignment: .leading, spacing: RisingSpacing.xxs) {
                 Text(goal.name)
                     .risingHeading3()
-                    .foregroundStyle(Color.risingTextPrimaryDark)
+                    .foregroundStyle(Color.risingTextPrimary)
                     .lineLimit(1)
                     .accessibilityLabel("\(goal.name) goal")
 
                 HStack(spacing: RisingSpacing.xxs) {
-                    Text(formatCurrency(goal.currentAmount))
+                    Text(goal.currentAmount.formattedCurrency)
                         .risingBodySmall()
                         .foregroundStyle(Color.risingPrimary)
 
-                    Text("of \(formatCurrency(goal.targetAmount))")
+                    Text("of \(goal.targetAmount.formattedCurrency)")
                         .risingBodySmall()
-                        .foregroundStyle(Color.risingTextSecondaryDark)
+                        .foregroundStyle(Color.risingTextSecondary)
                 }
-                .accessibilityLabel("\(formatCurrency(goal.currentAmount)) of \(formatCurrency(goal.targetAmount)) saved")
+                .accessibilityLabel("\(goal.currentAmount.formattedCurrency) of \(goal.targetAmount.formattedCurrency) saved")
 
                 if let days = goal.daysRemaining {
                     Text("\(days) days remaining")
                         .risingCaption()
-                        .foregroundStyle(Color.risingTextSecondaryDark)
+                        .foregroundStyle(Color.risingTextSecondary)
                         .accessibilityLabel("\(days) days remaining to reach goal")
                 }
             }
@@ -49,17 +50,10 @@ struct GoalCardView: View {
             ProgressRingView(progress: goal.progress, size: 44)
         }
         .padding(RisingSpacing.md)
-        .background(Color.risingSurfaceDark)
+        .background(Color.risingSurface)
         .clipShape(RoundedRectangle(cornerRadius: RisingRadius.lg))
     }
 
-    private func formatCurrency(_ value: Double) -> String {
-        let formatter = NumberFormatter()
-        formatter.numberStyle = .currency
-        formatter.currencyCode = "USD"
-        formatter.maximumFractionDigits = 0
-        return formatter.string(from: NSNumber(value: value)) ?? "$0"
-    }
 }
 
 // MARK: - Progress Ring
@@ -72,7 +66,7 @@ struct ProgressRingView: View {
     var body: some View {
         ZStack {
             Circle()
-                .stroke(Color.risingCardDark, lineWidth: lineWidth)
+                .stroke(Color.risingCard, lineWidth: lineWidth)
 
             Circle()
                 .trim(from: 0, to: min(progress, 1.0))
@@ -85,10 +79,11 @@ struct ProgressRingView: View {
 
             Text("\(Int(progress * 100))%")
                 .risingCaption()
-                .foregroundStyle(Color.risingTextPrimaryDark)
+                .foregroundStyle(Color.risingTextPrimary)
                 .font(.system(size: size * 0.22, weight: .semibold))
         }
         .frame(width: size, height: size)
+        .accessibilityLabel("\(Int(progress * 100)) percent progress")
     }
 }
 
@@ -100,5 +95,5 @@ struct ProgressRingView: View {
         deadline: Calendar.current.date(byAdding: .month, value: 6, to: Date())
     ))
     .padding()
-    .background(Color.risingBackgroundDark)
+    .background(Color.risingBackground)
 }

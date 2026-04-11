@@ -11,7 +11,7 @@ struct CreateGoalView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                Color.risingBackgroundDark
+                Color.risingBackground
                     .ignoresSafeArea()
 
                 ScrollView {
@@ -50,13 +50,13 @@ struct CreateGoalView: View {
         VStack(alignment: .leading, spacing: RisingSpacing.xs) {
             Text("Goal Name")
                 .risingLabel()
-                .foregroundStyle(Color.risingTextSecondaryDark)
+                .foregroundStyle(Color.risingTextSecondary)
 
             TextField("e.g. House Down Payment", text: $viewModel.name)
                 .font(.body)
-                .foregroundStyle(Color.risingTextPrimaryDark)
+                .foregroundStyle(Color.risingTextPrimary)
                 .padding(RisingSpacing.md)
-                .background(Color.risingSurfaceDark)
+                .background(Color.risingSurface)
                 .clipShape(RoundedRectangle(cornerRadius: RisingRadius.md))
                 .tint(Color.risingPrimary)
         }
@@ -66,21 +66,21 @@ struct CreateGoalView: View {
         VStack(alignment: .leading, spacing: RisingSpacing.xs) {
             Text("Target Amount")
                 .risingLabel()
-                .foregroundStyle(Color.risingTextSecondaryDark)
+                .foregroundStyle(Color.risingTextSecondary)
 
             HStack {
                 Text("$")
                     .risingBody()
-                    .foregroundStyle(Color.risingTextSecondaryDark)
+                    .foregroundStyle(Color.risingTextSecondary)
 
                 TextField("25,000", text: $viewModel.targetAmount)
                     .font(.body)
-                    .foregroundStyle(Color.risingTextPrimaryDark)
+                    .foregroundStyle(Color.risingTextPrimary)
                     .keyboardType(.decimalPad)
                     .tint(Color.risingPrimary)
             }
             .padding(RisingSpacing.md)
-            .background(Color.risingSurfaceDark)
+            .background(Color.risingSurface)
             .clipShape(RoundedRectangle(cornerRadius: RisingRadius.md))
         }
     }
@@ -90,11 +90,11 @@ struct CreateGoalView: View {
             Toggle(isOn: $viewModel.hasDeadline) {
                 Text("Set a target date")
                     .risingBody()
-                    .foregroundStyle(Color.risingTextPrimaryDark)
+                    .foregroundStyle(Color.risingTextPrimary)
             }
             .tint(Color.risingPrimary)
             .padding(RisingSpacing.md)
-            .background(Color.risingSurfaceDark)
+            .background(Color.risingSurface)
             .clipShape(RoundedRectangle(cornerRadius: RisingRadius.md))
 
             if viewModel.hasDeadline {
@@ -107,9 +107,9 @@ struct CreateGoalView: View {
                 .datePickerStyle(.compact)
                 .tint(Color.risingPrimary)
                 .padding(RisingSpacing.md)
-                .background(Color.risingSurfaceDark)
+                .background(Color.risingSurface)
                 .clipShape(RoundedRectangle(cornerRadius: RisingRadius.md))
-                .foregroundStyle(Color.risingTextSecondaryDark)
+                .foregroundStyle(Color.risingTextSecondary)
             }
         }
     }
@@ -118,7 +118,7 @@ struct CreateGoalView: View {
         VStack(alignment: .leading, spacing: RisingSpacing.xs) {
             Text("Icon")
                 .risingLabel()
-                .foregroundStyle(Color.risingTextSecondaryDark)
+                .foregroundStyle(Color.risingTextSecondary)
 
             LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: 5), spacing: RisingSpacing.sm) {
                 ForEach(viewModel.iconOptions, id: \.self) { icon in
@@ -126,7 +126,7 @@ struct CreateGoalView: View {
                 }
             }
             .padding(RisingSpacing.md)
-            .background(Color.risingSurfaceDark)
+            .background(Color.risingSurface)
             .clipShape(RoundedRectangle(cornerRadius: RisingRadius.md))
         }
     }
@@ -135,14 +135,14 @@ struct CreateGoalView: View {
         VStack(alignment: .leading, spacing: RisingSpacing.xs) {
             Text("Description (optional)")
                 .risingLabel()
-                .foregroundStyle(Color.risingTextSecondaryDark)
+                .foregroundStyle(Color.risingTextSecondary)
 
             TextField("Why is this important?", text: $viewModel.description, axis: .vertical)
                 .font(.body)
-                .foregroundStyle(Color.risingTextPrimaryDark)
+                .foregroundStyle(Color.risingTextPrimary)
                 .lineLimit(3...6)
                 .padding(RisingSpacing.md)
-                .background(Color.risingSurfaceDark)
+                .background(Color.risingSurface)
                 .clipShape(RoundedRectangle(cornerRadius: RisingRadius.md))
                 .tint(Color.risingPrimary)
         }
@@ -159,7 +159,7 @@ struct CreateGoalView: View {
                 Circle()
                     .fill(viewModel.selectedIcon == icon
                         ? Color.risingPrimary.opacity(0.2)
-                        : Color.risingSurfaceDark)
+                        : Color.risingSurface)
                     .frame(width: 50, height: 50)
 
                 Image(systemName: icon)
@@ -167,7 +167,7 @@ struct CreateGoalView: View {
                     .foregroundStyle(
                         viewModel.selectedIcon == icon
                         ? Color.risingPrimary
-                        : Color.risingTextSecondaryDark
+                        : Color.risingTextSecondary
                     )
             }
         }
@@ -182,7 +182,7 @@ struct CreateGoalView: View {
             HapticsService.shared.impactLight()
             dismiss()
         }
-        .foregroundStyle(Color.risingTextSecondaryDark)
+        .foregroundStyle(Color.risingTextSecondary)
         .accessibilityLabel("Cancel creating goal")
         .accessibilityHint("Closes this view without saving")
     }
@@ -193,7 +193,7 @@ struct CreateGoalView: View {
             Task { await save() }
         }
         .font(.body.weight(.semibold))
-        .foregroundStyle(viewModel.isValid ? Color.risingPrimary : Color.risingTextSecondaryDark)
+        .foregroundStyle(viewModel.isValid ? Color.risingPrimary : Color.risingTextSecondary)
         .disabled(!viewModel.isValid)
         .accessibilityLabel("Save goal")
         .accessibilityValue(viewModel.isValid ? "Ready" : "Fill in required fields")

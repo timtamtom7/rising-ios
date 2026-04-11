@@ -9,11 +9,11 @@ struct FirstGoalStepView: View {
                 VStack(alignment: .leading, spacing: RisingSpacing.xs) {
                     Text("Let's start with your first goal")
                         .risingHeading1()
-                        .foregroundStyle(Color.risingTextPrimaryDark)
+                        .foregroundStyle(Color.risingTextPrimary)
 
                     Text("What are you saving for?")
                         .risingBody()
-                        .foregroundStyle(Color.risingTextSecondaryDark)
+                        .foregroundStyle(Color.risingTextSecondary)
                 }
                 .padding(.top, RisingSpacing.xl)
 
@@ -22,13 +22,13 @@ struct FirstGoalStepView: View {
                     VStack(alignment: .leading, spacing: RisingSpacing.xs) {
                         Text("Goal Name")
                             .risingLabel()
-                            .foregroundStyle(Color.risingTextSecondaryDark)
+                            .foregroundStyle(Color.risingTextSecondary)
 
                         TextField("e.g. House Down Payment", text: $viewModel.goalName)
                             .font(.body)
-                            .foregroundStyle(Color.risingTextPrimaryDark)
+                            .foregroundStyle(Color.risingTextPrimary)
                             .padding(RisingSpacing.md)
-                            .background(Color.risingCardDark)
+                            .background(Color.risingCard)
                             .clipShape(RoundedRectangle(cornerRadius: RisingRadius.md))
                             .tint(Color.risingPrimary)
                     }
@@ -37,21 +37,21 @@ struct FirstGoalStepView: View {
                     VStack(alignment: .leading, spacing: RisingSpacing.xs) {
                         Text("Target Amount")
                             .risingLabel()
-                            .foregroundStyle(Color.risingTextSecondaryDark)
+                            .foregroundStyle(Color.risingTextSecondary)
 
                         HStack {
                             Text("$")
                                 .risingBody()
-                                .foregroundStyle(Color.risingTextSecondaryDark)
+                                .foregroundStyle(Color.risingTextSecondary)
 
                             TextField("25,000", text: $viewModel.goalTargetAmount)
                                 .font(.body)
-                                .foregroundStyle(Color.risingTextPrimaryDark)
+                                .foregroundStyle(Color.risingTextPrimary)
                                 .keyboardType(.decimalPad)
                                 .tint(Color.risingPrimary)
                         }
                         .padding(RisingSpacing.md)
-                        .background(Color.risingCardDark)
+                        .background(Color.risingCard)
                         .clipShape(RoundedRectangle(cornerRadius: RisingRadius.md))
                     }
 
@@ -59,7 +59,7 @@ struct FirstGoalStepView: View {
                     VStack(alignment: .leading, spacing: RisingSpacing.xs) {
                         Text("Target Date (optional)")
                             .risingLabel()
-                            .foregroundStyle(Color.risingTextSecondaryDark)
+                            .foregroundStyle(Color.risingTextSecondary)
 
                         DatePicker(
                             "Deadline",
@@ -70,23 +70,23 @@ struct FirstGoalStepView: View {
                         .datePickerStyle(.compact)
                         .tint(Color.risingPrimary)
                         .padding(RisingSpacing.sm)
-                        .background(Color.risingCardDark)
+                        .background(Color.risingCard)
                         .clipShape(RoundedRectangle(cornerRadius: RisingRadius.md))
-                        .foregroundStyle(Color.risingTextSecondaryDark)
+                        .foregroundStyle(Color.risingTextSecondary)
                     }
 
                     // Description
                     VStack(alignment: .leading, spacing: RisingSpacing.xs) {
                         Text("Description (optional)")
                             .risingLabel()
-                            .foregroundStyle(Color.risingTextSecondaryDark)
+                            .foregroundStyle(Color.risingTextSecondary)
 
                         TextField("Why is this important to you?", text: $viewModel.goalDescription, axis: .vertical)
                             .font(.body)
-                            .foregroundStyle(Color.risingTextPrimaryDark)
+                            .foregroundStyle(Color.risingTextPrimary)
                             .lineLimit(3...6)
                             .padding(RisingSpacing.md)
-                            .background(Color.risingCardDark)
+                            .background(Color.risingCard)
                             .clipShape(RoundedRectangle(cornerRadius: RisingRadius.md))
                             .tint(Color.risingPrimary)
                     }
@@ -101,5 +101,5 @@ struct FirstGoalStepView: View {
 
 #Preview {
     FirstGoalStepView(viewModel: OnboardingViewModel())
-        .background(Color.risingBackgroundDark)
+        .background(Color.risingBackground)
 }

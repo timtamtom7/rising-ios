@@ -17,7 +17,7 @@ struct AddPropertyView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                Color.risingBackgroundDark
+                Color.risingBackground
                     .ignoresSafeArea()
 
                 ScrollView {
@@ -26,13 +26,13 @@ struct AddPropertyView: View {
                         VStack(alignment: .leading, spacing: RisingSpacing.xs) {
                             Text("Property Address")
                                 .risingLabel()
-                                .foregroundStyle(Color.risingTextSecondaryDark)
+                                .foregroundStyle(Color.risingTextSecondary)
 
                             TextField("123 Main St, City, State", text: $viewModel.address)
                                 .font(.body)
-                                .foregroundStyle(Color.risingTextPrimaryDark)
+                                .foregroundStyle(Color.risingTextPrimary)
                                 .padding(RisingSpacing.md)
-                                .background(Color.risingSurfaceDark)
+                                .background(Color.risingSurface)
                                 .clipShape(RoundedRectangle(cornerRadius: RisingRadius.md))
                                 .tint(Color.risingPrimary)
                         }
@@ -41,21 +41,21 @@ struct AddPropertyView: View {
                         VStack(alignment: .leading, spacing: RisingSpacing.xs) {
                             Text("Property Price")
                                 .risingLabel()
-                                .foregroundStyle(Color.risingTextSecondaryDark)
+                                .foregroundStyle(Color.risingTextSecondary)
 
                             HStack {
                                 Text("$")
                                     .risingBody()
-                                    .foregroundStyle(Color.risingTextSecondaryDark)
+                                    .foregroundStyle(Color.risingTextSecondary)
 
                                 TextField("350,000", text: $viewModel.price)
                                     .font(.body)
-                                    .foregroundStyle(Color.risingTextPrimaryDark)
+                                    .foregroundStyle(Color.risingTextPrimary)
                                     .keyboardType(.numberPad)
                                     .tint(Color.risingPrimary)
                             }
                             .padding(RisingSpacing.md)
-                            .background(Color.risingSurfaceDark)
+                            .background(Color.risingSurface)
                             .clipShape(RoundedRectangle(cornerRadius: RisingRadius.md))
                         }
 
@@ -63,15 +63,15 @@ struct AddPropertyView: View {
                         VStack(alignment: .leading, spacing: RisingSpacing.xs) {
                             Text("Listing Link (optional)")
                                 .risingLabel()
-                                .foregroundStyle(Color.risingTextSecondaryDark)
+                                .foregroundStyle(Color.risingTextSecondary)
 
                             TextField("https://zillow.com/...", text: $viewModel.link)
                                 .font(.body)
-                                .foregroundStyle(Color.risingTextPrimaryDark)
+                                .foregroundStyle(Color.risingTextPrimary)
                                 .keyboardType(.URL)
                                 .autocapitalization(.none)
                                 .padding(RisingSpacing.md)
-                                .background(Color.risingSurfaceDark)
+                                .background(Color.risingSurface)
                                 .clipShape(RoundedRectangle(cornerRadius: RisingRadius.md))
                                 .tint(Color.risingPrimary)
                         }
@@ -80,14 +80,14 @@ struct AddPropertyView: View {
                         VStack(alignment: .leading, spacing: RisingSpacing.xs) {
                             Text("Notes (optional)")
                                 .risingLabel()
-                                .foregroundStyle(Color.risingTextSecondaryDark)
+                                .foregroundStyle(Color.risingTextSecondary)
 
                             TextField("Open house March 15, beautiful backyard...", text: $viewModel.notes, axis: .vertical)
                                 .font(.body)
-                                .foregroundStyle(Color.risingTextPrimaryDark)
+                                .foregroundStyle(Color.risingTextPrimary)
                                 .lineLimit(3...6)
                                 .padding(RisingSpacing.md)
-                                .background(Color.risingSurfaceDark)
+                                .background(Color.risingSurface)
                                 .clipShape(RoundedRectangle(cornerRadius: RisingRadius.md))
                                 .tint(Color.risingPrimary)
                         }
@@ -102,7 +102,7 @@ struct AddPropertyView: View {
                     Button("Cancel") {
                         dismiss()
                     }
-                    .foregroundStyle(Color.risingTextSecondaryDark)
+                    .foregroundStyle(Color.risingTextSecondary)
                 }
 
                 ToolbarItem(placement: .topBarTrailing) {
@@ -110,7 +110,7 @@ struct AddPropertyView: View {
                         Task { await save() }
                     }
                     .font(.body.weight(.semibold))
-                    .foregroundStyle(viewModel.isValid ? Color.risingPrimary : Color.risingTextSecondaryDark)
+                    .foregroundStyle(viewModel.isValid ? Color.risingPrimary : Color.risingTextSecondary)
                     .disabled(!viewModel.isValid || isSaving)
                 }
             }

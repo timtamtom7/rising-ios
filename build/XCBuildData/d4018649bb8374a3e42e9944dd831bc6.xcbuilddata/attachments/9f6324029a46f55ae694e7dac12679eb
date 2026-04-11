@@ -1,0 +1,629 @@
+{
+  "" : {
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/Rising-primary.dia",
+    "emit-module-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/Rising-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/Rising-primary-emit-module.dia",
+    "pch" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/Rising-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/Rising-primary.swiftdeps"
+  },
+  "/Users/mauriello/Dev/rising-ios/Rising/App/ContentView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/ContentView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/ContentView.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/ContentView.dia",
+    "index-unit-output-path" : "/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/ContentView.o",
+    "llvm-bc" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/ContentView.bc",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/ContentView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/ContentView.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/ContentView~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/rising-ios/Rising/App/RisingApp.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/RisingApp.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/RisingApp.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/RisingApp.dia",
+    "index-unit-output-path" : "/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/RisingApp.o",
+    "llvm-bc" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/RisingApp.bc",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/RisingApp.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/RisingApp.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/RisingApp~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/rising-ios/Rising/Calculators/ROICalculatorView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/ROICalculatorView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/ROICalculatorView.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/ROICalculatorView.dia",
+    "index-unit-output-path" : "/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/ROICalculatorView.o",
+    "llvm-bc" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/ROICalculatorView.bc",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/ROICalculatorView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/ROICalculatorView.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/ROICalculatorView~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/rising-ios/Rising/Design/Colors.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/Colors.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/Colors.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/Colors.dia",
+    "index-unit-output-path" : "/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/Colors.o",
+    "llvm-bc" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/Colors.bc",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/Colors.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/Colors.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/Colors~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/rising-ios/Rising/Design/Spacing.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/Spacing.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/Spacing.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/Spacing.dia",
+    "index-unit-output-path" : "/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/Spacing.o",
+    "llvm-bc" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/Spacing.bc",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/Spacing.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/Spacing.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/Spacing~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/rising-ios/Rising/Design/Typography.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/Typography.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/Typography.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/Typography.dia",
+    "index-unit-output-path" : "/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/Typography.o",
+    "llvm-bc" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/Typography.bc",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/Typography.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/Typography.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/Typography~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/rising-ios/Rising/Models/Agent.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/Agent.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/Agent.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/Agent.dia",
+    "index-unit-output-path" : "/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/Agent.o",
+    "llvm-bc" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/Agent.bc",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/Agent.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/Agent.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/Agent~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/rising-ios/Rising/Models/Deposit.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/Deposit.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/Deposit.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/Deposit.dia",
+    "index-unit-output-path" : "/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/Deposit.o",
+    "llvm-bc" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/Deposit.bc",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/Deposit.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/Deposit.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/Deposit~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/rising-ios/Rising/Models/Goal.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/Goal.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/Goal.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/Goal.dia",
+    "index-unit-output-path" : "/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/Goal.o",
+    "llvm-bc" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/Goal.bc",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/Goal.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/Goal.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/Goal~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/rising-ios/Rising/Models/InvestmentPortfolio.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/InvestmentPortfolio.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/InvestmentPortfolio.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/InvestmentPortfolio.dia",
+    "index-unit-output-path" : "/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/InvestmentPortfolio.o",
+    "llvm-bc" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/InvestmentPortfolio.bc",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/InvestmentPortfolio.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/InvestmentPortfolio.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/InvestmentPortfolio~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/rising-ios/Rising/Models/Milestone.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/Milestone.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/Milestone.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/Milestone.dia",
+    "index-unit-output-path" : "/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/Milestone.o",
+    "llvm-bc" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/Milestone.bc",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/Milestone.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/Milestone.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/Milestone~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/rising-ios/Rising/Models/Property.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/Property.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/Property.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/Property.dia",
+    "index-unit-output-path" : "/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/Property.o",
+    "llvm-bc" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/Property.bc",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/Property.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/Property.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/Property~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/rising-ios/Rising/Services/AgentService.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AgentService.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AgentService.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AgentService.dia",
+    "index-unit-output-path" : "/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AgentService.o",
+    "llvm-bc" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AgentService.bc",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AgentService.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AgentService.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AgentService~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/rising-ios/Rising/Services/DatabaseService.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/DatabaseService.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/DatabaseService.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/DatabaseService.dia",
+    "index-unit-output-path" : "/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/DatabaseService.o",
+    "llvm-bc" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/DatabaseService.bc",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/DatabaseService.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/DatabaseService.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/DatabaseService~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/rising-ios/Rising/Services/DepositService.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/DepositService.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/DepositService.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/DepositService.dia",
+    "index-unit-output-path" : "/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/DepositService.o",
+    "llvm-bc" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/DepositService.bc",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/DepositService.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/DepositService.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/DepositService~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/rising-ios/Rising/Services/GoalService.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/GoalService.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/GoalService.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/GoalService.dia",
+    "index-unit-output-path" : "/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/GoalService.o",
+    "llvm-bc" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/GoalService.bc",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/GoalService.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/GoalService.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/GoalService~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/rising-ios/Rising/Services/MilestoneService.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/MilestoneService.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/MilestoneService.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/MilestoneService.dia",
+    "index-unit-output-path" : "/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/MilestoneService.o",
+    "llvm-bc" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/MilestoneService.bc",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/MilestoneService.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/MilestoneService.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/MilestoneService~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/rising-ios/Rising/Services/MortgageCalculatorService.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/MortgageCalculatorService.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/MortgageCalculatorService.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/MortgageCalculatorService.dia",
+    "index-unit-output-path" : "/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/MortgageCalculatorService.o",
+    "llvm-bc" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/MortgageCalculatorService.bc",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/MortgageCalculatorService.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/MortgageCalculatorService.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/MortgageCalculatorService~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/rising-ios/Rising/Services/NotificationService.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/NotificationService.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/NotificationService.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/NotificationService.dia",
+    "index-unit-output-path" : "/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/NotificationService.o",
+    "llvm-bc" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/NotificationService.bc",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/NotificationService.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/NotificationService.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/NotificationService~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/rising-ios/Rising/Services/OnboardingService.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/OnboardingService.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/OnboardingService.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/OnboardingService.dia",
+    "index-unit-output-path" : "/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/OnboardingService.o",
+    "llvm-bc" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/OnboardingService.bc",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/OnboardingService.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/OnboardingService.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/OnboardingService~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/rising-ios/Rising/Services/PropertyService.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/PropertyService.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/PropertyService.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/PropertyService.dia",
+    "index-unit-output-path" : "/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/PropertyService.o",
+    "llvm-bc" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/PropertyService.bc",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/PropertyService.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/PropertyService.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/PropertyService~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/rising-ios/Rising/Services/RisingR11Service.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/RisingR11Service.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/RisingR11Service.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/RisingR11Service.dia",
+    "index-unit-output-path" : "/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/RisingR11Service.o",
+    "llvm-bc" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/RisingR11Service.bc",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/RisingR11Service.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/RisingR11Service.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/RisingR11Service~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/rising-ios/Rising/Services/RisingR12Service.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/RisingR12Service.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/RisingR12Service.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/RisingR12Service.dia",
+    "index-unit-output-path" : "/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/RisingR12Service.o",
+    "llvm-bc" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/RisingR12Service.bc",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/RisingR12Service.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/RisingR12Service.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/RisingR12Service~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/rising-ios/Rising/Services/ThemeService.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/ThemeService.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/ThemeService.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/ThemeService.dia",
+    "index-unit-output-path" : "/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/ThemeService.o",
+    "llvm-bc" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/ThemeService.bc",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/ThemeService.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/ThemeService.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/ThemeService~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/rising-ios/Rising/ViewModels/AddAgentViewModel.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AddAgentViewModel.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AddAgentViewModel.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AddAgentViewModel.dia",
+    "index-unit-output-path" : "/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AddAgentViewModel.o",
+    "llvm-bc" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AddAgentViewModel.bc",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AddAgentViewModel.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AddAgentViewModel.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AddAgentViewModel~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/rising-ios/Rising/ViewModels/AddDepositViewModel.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AddDepositViewModel.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AddDepositViewModel.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AddDepositViewModel.dia",
+    "index-unit-output-path" : "/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AddDepositViewModel.o",
+    "llvm-bc" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AddDepositViewModel.bc",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AddDepositViewModel.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AddDepositViewModel.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AddDepositViewModel~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/rising-ios/Rising/ViewModels/AddPropertyViewModel.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AddPropertyViewModel.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AddPropertyViewModel.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AddPropertyViewModel.dia",
+    "index-unit-output-path" : "/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AddPropertyViewModel.o",
+    "llvm-bc" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AddPropertyViewModel.bc",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AddPropertyViewModel.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AddPropertyViewModel.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AddPropertyViewModel~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/rising-ios/Rising/ViewModels/AgentListViewModel.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AgentListViewModel.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AgentListViewModel.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AgentListViewModel.dia",
+    "index-unit-output-path" : "/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AgentListViewModel.o",
+    "llvm-bc" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AgentListViewModel.bc",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AgentListViewModel.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AgentListViewModel.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AgentListViewModel~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/rising-ios/Rising/ViewModels/CreateGoalViewModel.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/CreateGoalViewModel.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/CreateGoalViewModel.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/CreateGoalViewModel.dia",
+    "index-unit-output-path" : "/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/CreateGoalViewModel.o",
+    "llvm-bc" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/CreateGoalViewModel.bc",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/CreateGoalViewModel.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/CreateGoalViewModel.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/CreateGoalViewModel~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/rising-ios/Rising/ViewModels/DashboardViewModel.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/DashboardViewModel.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/DashboardViewModel.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/DashboardViewModel.dia",
+    "index-unit-output-path" : "/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/DashboardViewModel.o",
+    "llvm-bc" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/DashboardViewModel.bc",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/DashboardViewModel.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/DashboardViewModel.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/DashboardViewModel~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/rising-ios/Rising/ViewModels/GoalDetailViewModel.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/GoalDetailViewModel.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/GoalDetailViewModel.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/GoalDetailViewModel.dia",
+    "index-unit-output-path" : "/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/GoalDetailViewModel.o",
+    "llvm-bc" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/GoalDetailViewModel.bc",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/GoalDetailViewModel.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/GoalDetailViewModel.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/GoalDetailViewModel~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/rising-ios/Rising/ViewModels/MilestoneTrackerViewModel.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/MilestoneTrackerViewModel.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/MilestoneTrackerViewModel.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/MilestoneTrackerViewModel.dia",
+    "index-unit-output-path" : "/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/MilestoneTrackerViewModel.o",
+    "llvm-bc" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/MilestoneTrackerViewModel.bc",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/MilestoneTrackerViewModel.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/MilestoneTrackerViewModel.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/MilestoneTrackerViewModel~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/rising-ios/Rising/ViewModels/OnboardingViewModel.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/OnboardingViewModel.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/OnboardingViewModel.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/OnboardingViewModel.dia",
+    "index-unit-output-path" : "/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/OnboardingViewModel.o",
+    "llvm-bc" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/OnboardingViewModel.bc",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/OnboardingViewModel.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/OnboardingViewModel.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/OnboardingViewModel~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/rising-ios/Rising/ViewModels/PropertyListViewModel.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/PropertyListViewModel.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/PropertyListViewModel.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/PropertyListViewModel.dia",
+    "index-unit-output-path" : "/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/PropertyListViewModel.o",
+    "llvm-bc" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/PropertyListViewModel.bc",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/PropertyListViewModel.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/PropertyListViewModel.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/PropertyListViewModel~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/rising-ios/Rising/ViewModels/SettingsViewModel.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/SettingsViewModel.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/SettingsViewModel.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/SettingsViewModel.dia",
+    "index-unit-output-path" : "/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/SettingsViewModel.o",
+    "llvm-bc" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/SettingsViewModel.bc",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/SettingsViewModel.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/SettingsViewModel.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/SettingsViewModel~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/rising-ios/Rising/ViewModels/ShareCardViewModel.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/ShareCardViewModel.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/ShareCardViewModel.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/ShareCardViewModel.dia",
+    "index-unit-output-path" : "/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/ShareCardViewModel.o",
+    "llvm-bc" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/ShareCardViewModel.bc",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/ShareCardViewModel.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/ShareCardViewModel.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/ShareCardViewModel~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/rising-ios/Rising/Views/Agents/AddAgentView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AddAgentView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AddAgentView.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AddAgentView.dia",
+    "index-unit-output-path" : "/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AddAgentView.o",
+    "llvm-bc" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AddAgentView.bc",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AddAgentView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AddAgentView.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AddAgentView~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/rising-ios/Rising/Views/Agents/AgentListView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AgentListView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AgentListView.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AgentListView.dia",
+    "index-unit-output-path" : "/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AgentListView.o",
+    "llvm-bc" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AgentListView.bc",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AgentListView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AgentListView.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AgentListView~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/rising-ios/Rising/Views/Calculators/MortgageCalculatorView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/MortgageCalculatorView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/MortgageCalculatorView.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/MortgageCalculatorView.dia",
+    "index-unit-output-path" : "/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/MortgageCalculatorView.o",
+    "llvm-bc" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/MortgageCalculatorView.bc",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/MortgageCalculatorView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/MortgageCalculatorView.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/MortgageCalculatorView~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/rising-ios/Rising/Views/Charts/DepositChartView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/DepositChartView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/DepositChartView.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/DepositChartView.dia",
+    "index-unit-output-path" : "/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/DepositChartView.o",
+    "llvm-bc" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/DepositChartView.bc",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/DepositChartView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/DepositChartView.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/DepositChartView~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/rising-ios/Rising/Views/Community/CommunityView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/CommunityView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/CommunityView.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/CommunityView.dia",
+    "index-unit-output-path" : "/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/CommunityView.o",
+    "llvm-bc" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/CommunityView.bc",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/CommunityView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/CommunityView.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/CommunityView~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/rising-ios/Rising/Views/Dashboard/DashboardView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/DashboardView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/DashboardView.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/DashboardView.dia",
+    "index-unit-output-path" : "/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/DashboardView.o",
+    "llvm-bc" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/DashboardView.bc",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/DashboardView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/DashboardView.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/DashboardView~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/rising-ios/Rising/Views/Dashboard/EmptyDashboardView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/EmptyDashboardView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/EmptyDashboardView.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/EmptyDashboardView.dia",
+    "index-unit-output-path" : "/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/EmptyDashboardView.o",
+    "llvm-bc" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/EmptyDashboardView.bc",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/EmptyDashboardView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/EmptyDashboardView.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/EmptyDashboardView~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/rising-ios/Rising/Views/Dashboard/GoalCardView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/GoalCardView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/GoalCardView.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/GoalCardView.dia",
+    "index-unit-output-path" : "/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/GoalCardView.o",
+    "llvm-bc" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/GoalCardView.bc",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/GoalCardView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/GoalCardView.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/GoalCardView~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/rising-ios/Rising/Views/Deposits/AddDepositView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AddDepositView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AddDepositView.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AddDepositView.dia",
+    "index-unit-output-path" : "/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AddDepositView.o",
+    "llvm-bc" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AddDepositView.bc",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AddDepositView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AddDepositView.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AddDepositView~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/rising-ios/Rising/Views/Deposits/DepositRowView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/DepositRowView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/DepositRowView.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/DepositRowView.dia",
+    "index-unit-output-path" : "/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/DepositRowView.o",
+    "llvm-bc" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/DepositRowView.bc",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/DepositRowView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/DepositRowView.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/DepositRowView~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/rising-ios/Rising/Views/Goals/CreateGoalView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/CreateGoalView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/CreateGoalView.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/CreateGoalView.dia",
+    "index-unit-output-path" : "/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/CreateGoalView.o",
+    "llvm-bc" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/CreateGoalView.bc",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/CreateGoalView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/CreateGoalView.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/CreateGoalView~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/rising-ios/Rising/Views/Goals/EditGoalView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/EditGoalView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/EditGoalView.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/EditGoalView.dia",
+    "index-unit-output-path" : "/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/EditGoalView.o",
+    "llvm-bc" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/EditGoalView.bc",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/EditGoalView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/EditGoalView.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/EditGoalView~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/rising-ios/Rising/Views/Goals/GoalDetailView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/GoalDetailView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/GoalDetailView.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/GoalDetailView.dia",
+    "index-unit-output-path" : "/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/GoalDetailView.o",
+    "llvm-bc" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/GoalDetailView.bc",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/GoalDetailView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/GoalDetailView.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/GoalDetailView~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/rising-ios/Rising/Views/Milestones/MilestoneTrackerView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/MilestoneTrackerView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/MilestoneTrackerView.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/MilestoneTrackerView.dia",
+    "index-unit-output-path" : "/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/MilestoneTrackerView.o",
+    "llvm-bc" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/MilestoneTrackerView.bc",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/MilestoneTrackerView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/MilestoneTrackerView.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/MilestoneTrackerView~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/rising-ios/Rising/Views/Onboarding/FirstGoalStepView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/FirstGoalStepView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/FirstGoalStepView.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/FirstGoalStepView.dia",
+    "index-unit-output-path" : "/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/FirstGoalStepView.o",
+    "llvm-bc" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/FirstGoalStepView.bc",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/FirstGoalStepView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/FirstGoalStepView.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/FirstGoalStepView~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/rising-ios/Rising/Views/Onboarding/OnboardingView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/OnboardingView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/OnboardingView.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/OnboardingView.dia",
+    "index-unit-output-path" : "/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/OnboardingView.o",
+    "llvm-bc" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/OnboardingView.bc",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/OnboardingView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/OnboardingView.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/OnboardingView~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/rising-ios/Rising/Views/Onboarding/ReadyStepView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/ReadyStepView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/ReadyStepView.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/ReadyStepView.dia",
+    "index-unit-output-path" : "/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/ReadyStepView.o",
+    "llvm-bc" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/ReadyStepView.bc",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/ReadyStepView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/ReadyStepView.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/ReadyStepView~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/rising-ios/Rising/Views/Onboarding/WelcomeStepView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/WelcomeStepView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/WelcomeStepView.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/WelcomeStepView.dia",
+    "index-unit-output-path" : "/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/WelcomeStepView.o",
+    "llvm-bc" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/WelcomeStepView.bc",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/WelcomeStepView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/WelcomeStepView.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/WelcomeStepView~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/rising-ios/Rising/Views/Onboarding/WhyRisingStepView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/WhyRisingStepView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/WhyRisingStepView.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/WhyRisingStepView.dia",
+    "index-unit-output-path" : "/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/WhyRisingStepView.o",
+    "llvm-bc" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/WhyRisingStepView.bc",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/WhyRisingStepView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/WhyRisingStepView.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/WhyRisingStepView~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/rising-ios/Rising/Views/Portfolio/PortfolioView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/PortfolioView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/PortfolioView.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/PortfolioView.dia",
+    "index-unit-output-path" : "/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/PortfolioView.o",
+    "llvm-bc" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/PortfolioView.bc",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/PortfolioView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/PortfolioView.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/PortfolioView~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/rising-ios/Rising/Views/Properties/AddPropertyView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AddPropertyView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AddPropertyView.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AddPropertyView.dia",
+    "index-unit-output-path" : "/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AddPropertyView.o",
+    "llvm-bc" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AddPropertyView.bc",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AddPropertyView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AddPropertyView.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/AddPropertyView~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/rising-ios/Rising/Views/Properties/PropertyListView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/PropertyListView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/PropertyListView.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/PropertyListView.dia",
+    "index-unit-output-path" : "/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/PropertyListView.o",
+    "llvm-bc" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/PropertyListView.bc",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/PropertyListView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/PropertyListView.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/PropertyListView~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/rising-ios/Rising/Views/Settings/NotificationSettingsView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/NotificationSettingsView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/NotificationSettingsView.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/NotificationSettingsView.dia",
+    "index-unit-output-path" : "/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/NotificationSettingsView.o",
+    "llvm-bc" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/NotificationSettingsView.bc",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/NotificationSettingsView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/NotificationSettingsView.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/NotificationSettingsView~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/rising-ios/Rising/Views/Settings/SettingsView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/SettingsView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/SettingsView.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/SettingsView.dia",
+    "index-unit-output-path" : "/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/SettingsView.o",
+    "llvm-bc" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/SettingsView.bc",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/SettingsView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/SettingsView.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/SettingsView~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/rising-ios/Rising/Views/Share/ShareableGoalCardView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/ShareableGoalCardView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/ShareableGoalCardView.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/ShareableGoalCardView.dia",
+    "index-unit-output-path" : "/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/ShareableGoalCardView.o",
+    "llvm-bc" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/ShareableGoalCardView.bc",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/ShareableGoalCardView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/ShareableGoalCardView.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/ShareableGoalCardView~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+    "const-values" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/GeneratedAssetSymbols.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/GeneratedAssetSymbols.d",
+    "diagnostics" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/GeneratedAssetSymbols.dia",
+    "index-unit-output-path" : "/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/GeneratedAssetSymbols.o",
+    "llvm-bc" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/GeneratedAssetSymbols.bc",
+    "object" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/GeneratedAssetSymbols.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/GeneratedAssetSymbols.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/rising-ios/build/Rising.build/Debug-iphonesimulator/Rising.build/Objects-normal/x86_64/GeneratedAssetSymbols~partial.swiftmodule"
+  }
+}

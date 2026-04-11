@@ -1,0 +1,53 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build-and-test:
+    runs-on: macos-latest
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Check Xcode version
+        run: xcodebuild -version
+
+      - name: List available simulators
+        run: xcrun simctl list devices available | head -20
+
+      - name: Generate Xcode project
+        run: |
+          if which xcodegen > /dev/null; then
+            xcodegen generate
+          else
+            echo "xcodegen not found, checking project file..."
+          fi
+
+      - name: Build iOS Project
+        run: |
+          xcodebuild -project Rising.xcodeproj \
+            -scheme Rising \
+            -configuration Debug \
+            -destination 'platform=iOS Simulator,name=iPhone 17 Pro' \
+            build
+
+      - name: Run Tests
+        run: |
+          xcodebuild -project Rising.xcodeproj \
+            -scheme Rising \
+            -configuration Debug \
+            -destination 'platform=iOS Simulator,name=iPhone 17 Pro' \
+            test
+
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-results
+          path: ~/Library/Developer/Xcode/DerivedData/*/Logs/Test/*.xcresult
+          retention-days: 7

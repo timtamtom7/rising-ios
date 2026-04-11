@@ -1,13 +1,11 @@
 import Foundation
 
-// R11: Zillow Integration, Milestones, Notifications for Rising
 @MainActor
-final class RisingR11Service: ObservableObject {
+@Observable
+final class RisingR11Service {
     static let shared = RisingR11Service()
 
-    @Published var savedProperties: [SavedProperty] = []
-
-    private init() {}
+    var savedProperties: [SavedProperty] = []
 
     // MARK: - Zillow Integration
 

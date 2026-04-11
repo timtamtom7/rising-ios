@@ -4,15 +4,40 @@ struct SettingsView: View {
     @Environment(\.dismiss) private var dismiss
     @State private var viewModel = SettingsViewModel()
     @State private var showResetAlert = false
-    @State private var showNotificationSettings = false
+    @State private var showPaywall = false
 
     var body: some View {
         NavigationStack {
             ZStack {
-                Color.risingBackgroundDark
+                Color.risingBackground
                     .ignoresSafeArea()
 
                 List {
+                    // Premium Section
+                    Section {
+                        Button {
+                            showPaywall = true
+                        } label: {
+                            HStack {
+                                Image(systemName: "crown.fill")
+                                    .foregroundStyle(Color.risingPrimary)
+                                Text("Rising Premium")
+                                    .foregroundStyle(Color.risingTextPrimary)
+                                Spacer()
+                                Text(viewModel.subscriptionTierName)
+                                    .font(.caption)
+                                    .foregroundStyle(Color.risingTextSecondary)
+                                Image(systemName: "chevron.right")
+                                    .font(.caption)
+                                    .foregroundStyle(Color.risingTextSecondary)
+                            }
+                        }
+                    } header: {
+                        Text("Subscription")
+                            .foregroundStyle(Color.risingTextSecondary)
+                    }
+                    .listRowBackground(Color.risingSurface)
+
                     // Appearance Section
                     Section {
                         Picker("Theme", selection: $viewModel.themeMode) {
@@ -23,9 +48,9 @@ struct SettingsView: View {
                         .tint(Color.risingPrimary)
                     } header: {
                         Text("Appearance")
-                            .foregroundStyle(Color.risingTextSecondaryDark)
+                            .foregroundStyle(Color.risingTextSecondary)
                     }
-                    .listRowBackground(Color.risingSurfaceDark)
+                    .listRowBackground(Color.risingSurface)
 
                     // Investment Tools Section (R7)
                     Section {
@@ -36,7 +61,7 @@ struct SettingsView: View {
                                 Image(systemName: "chart.line.uptrend.xyaxis")
                                     .foregroundStyle(Color.risingPrimary)
                                 Text("ROI Calculator")
-                                    .foregroundStyle(Color.risingTextPrimaryDark)
+                                    .foregroundStyle(Color.risingTextPrimary)
                             }
                         }
                         
@@ -47,14 +72,14 @@ struct SettingsView: View {
                                 Image(systemName: "building.columns")
                                     .foregroundStyle(Color.risingPrimary)
                                 Text("Investment Portfolio")
-                                    .foregroundStyle(Color.risingTextPrimaryDark)
+                                    .foregroundStyle(Color.risingTextPrimary)
                             }
                         }
                     } header: {
                         Text("Investment Tools")
-                            .foregroundStyle(Color.risingTextSecondaryDark)
+                            .foregroundStyle(Color.risingTextSecondary)
                     }
-                    .listRowBackground(Color.risingSurfaceDark)
+                    .listRowBackground(Color.risingSurface)
 
                     // Notifications Section
                     Section {
@@ -65,14 +90,14 @@ struct SettingsView: View {
                                 Image(systemName: "bell.fill")
                                     .foregroundStyle(Color.risingPrimary)
                                 Text("Notifications")
-                                    .foregroundStyle(Color.risingTextPrimaryDark)
+                                    .foregroundStyle(Color.risingTextPrimary)
                             }
                         }
                     } header: {
                         Text("Reminders")
-                            .foregroundStyle(Color.risingTextSecondaryDark)
+                            .foregroundStyle(Color.risingTextSecondary)
                     }
-                    .listRowBackground(Color.risingSurfaceDark)
+                    .listRowBackground(Color.risingSurface)
 
                     // Data Section
                     Section {
@@ -88,24 +113,24 @@ struct SettingsView: View {
                         }
                     } header: {
                         Text("Data")
-                            .foregroundStyle(Color.risingTextSecondaryDark)
+                            .foregroundStyle(Color.risingTextSecondary)
                     }
-                    .listRowBackground(Color.risingSurfaceDark)
+                    .listRowBackground(Color.risingSurface)
 
                     // About Section
                     Section {
                         HStack {
                             Text("Version")
-                                .foregroundStyle(Color.risingTextPrimaryDark)
+                                .foregroundStyle(Color.risingTextPrimary)
                             Spacer()
                             Text(viewModel.appVersion)
-                                .foregroundStyle(Color.risingTextSecondaryDark)
+                                .foregroundStyle(Color.risingTextSecondary)
                         }
                     } header: {
                         Text("About")
-                            .foregroundStyle(Color.risingTextSecondaryDark)
+                            .foregroundStyle(Color.risingTextSecondary)
                     }
-                    .listRowBackground(Color.risingSurfaceDark)
+                    .listRowBackground(Color.risingSurface)
                 }
                 .scrollContentBackground(.hidden)
                 .listStyle(.insetGrouped)
@@ -128,6 +153,9 @@ struct SettingsView: View {
                 }
             } message: {
                 Text("This will show the onboarding screens again on next launch.")
+            }
+            .sheet(isPresented: $showPaywall) {
+                SubscriptionPaywallView()
             }
         }
     }

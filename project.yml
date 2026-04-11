@@ -41,3 +41,31 @@ targets:
     dependencies:
       - package: SQLite.swift
         product: SQLite
+
+  RisingTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: RisingTests
+    settings:
+      base:
+        INFOPLIST_FILE: RisingTests/Info.plist
+    dependencies:
+      - target: Rising
+
+schemes:
+  Rising:
+    build:
+      targets:
+        Rising: all
+    test:
+      targets:
+        - RisingTests
+    run:
+      config: Debug
+  RisingTests:
+    build:
+      targets:
+        RisingTests: all
+    run:
+      config: Debug

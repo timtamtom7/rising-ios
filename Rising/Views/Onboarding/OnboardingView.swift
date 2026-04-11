@@ -10,7 +10,7 @@ struct OnboardingView: View {
     var body: some View {
         ZStack {
             // Background
-            Color.risingBackgroundDark
+            Color.risingBackground
                 .ignoresSafeArea()
 
             VStack(spacing: 0) {
@@ -18,7 +18,7 @@ struct OnboardingView: View {
                 HStack(spacing: RisingSpacing.xxs) {
                     ForEach(0..<viewModel.totalSteps, id: \.self) { index in
                         Capsule()
-                            .fill(index <= viewModel.currentStep ? Color.risingPrimary : Color.risingCardDark)
+                            .fill(index <= viewModel.currentStep ? Color.risingPrimary : Color.risingCard)
                             .frame(height: 4)
                     }
                 }
@@ -57,10 +57,10 @@ struct OnboardingView: View {
                             } label: {
                                 Text("Back")
                                     .font(.body.weight(.medium))
-                                    .foregroundStyle(Color.risingTextSecondaryDark)
+                                    .foregroundStyle(Color.risingTextSecondary)
                                     .frame(maxWidth: .infinity)
                                     .padding(.vertical, RisingSpacing.md)
-                                    .background(Color.risingCardDark)
+                                    .background(Color.risingCard)
                                     .clipShape(RoundedRectangle(cornerRadius: RisingRadius.lg))
                             }
                         }
@@ -84,7 +84,7 @@ struct OnboardingView: View {
                                     .frame(maxWidth: .infinity)
                                     .padding(.vertical, RisingSpacing.md)
                                     .background(
-                                        viewModel.canProceed ? Color.risingPrimary : Color.risingCardDark
+                                        viewModel.canProceed ? Color.risingPrimary : Color.risingCard
                                     )
                                     .clipShape(RoundedRectangle(cornerRadius: RisingRadius.lg))
                             }

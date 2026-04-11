@@ -10,14 +10,16 @@ final class AddDepositViewModel {
     var note = ""
 
     let goalId: UUID
+    private let depositService: DepositServiceProtocol
+
+    init(goalId: UUID, depositService: DepositServiceProtocol = DepositService.shared) {
+        self.goalId = goalId
+        self.depositService = depositService
+    }
 
     var isValid: Bool {
         guard let value = Double(amount) else { return false }
         return value > 0
-    }
-
-    init(goalId: UUID) {
-        self.goalId = goalId
     }
 
     func save() async throws {
@@ -25,7 +27,7 @@ final class AddDepositViewModel {
             throw DepositError.invalidAmount
         }
 
-        try await DepositService.shared.create(
+        try await depositService.create(
             goalId: goalId,
             amount: depositAmount,
             date: date,

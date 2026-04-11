@@ -2,7 +2,7 @@ import SwiftUI
 
 // R12: Community & Social Features View
 struct CommunityView: View {
-    @State private var socialService = RisingR12Service.shared
+    @State private var viewModel = CommunityViewModel()
     @State private var selectedTab: CommunityTab = .feed
     @State private var showingNewPost = false
     @State private var showingNewGoal = false
@@ -18,7 +18,7 @@ struct CommunityView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                Color.risingBackgroundDark
+                Color.risingBackground
                     .ignoresSafeArea()
 
                 VStack(spacing: 0) {
@@ -73,16 +73,16 @@ struct CommunityView: View {
                 }
             }
             .sheet(isPresented: $showingNewPost) {
-                NewCommunityPostSheet(socialService: socialService)
+                NewCommunityPostSheet(viewModel: viewModel)
             }
             .sheet(isPresented: $showingNewGoal) {
-                NewSharedGoalSheet(socialService: socialService)
+                NewSharedGoalSheet(viewModel: viewModel)
             }
             .sheet(isPresented: $showingNewChallenge) {
-                NewChallengeSheet(socialService: socialService)
+                NewChallengeSheet(viewModel: viewModel)
             }
             .onAppear {
-                socialService.loadDemoData()
+                viewModel.load()
             }
         }
     }
@@ -91,11 +91,9 @@ struct CommunityView: View {
 
     private var feedView: some View {
         LazyVStack(spacing: RisingSpacing.md) {
-            ForEach(socialService.communityPosts) { post in
-                CommunityPostCard(post: post, socialService: socialService)
-            }
+            ForEach(viewModel.communityPosts) { post in CommunityPostCard(post: post, viewModel: viewModel) }
 
-            if socialService.communityPosts.isEmpty {
+            if viewModel.communityPosts.isEmpty {
                 emptyFeedView
             }
         }
@@ -108,14 +106,15 @@ struct CommunityView: View {
             Image(systemName: "bubble.left.and.bubble.right")
                 .font(.system(size: 48))
                 .foregroundStyle(Color.risingPrimary.opacity(0.5))
+                .accessibilityHidden(true)
 
             Text("No posts yet")
                 .risingHeading3()
-                .foregroundStyle(Color.risingTextSecondaryDark)
+                .foregroundStyle(Color.risingTextSecondary)
 
             Text("Ask questions, share tips, and celebrate milestones with other homebuyers")
                 .risingBody()
-                .foregroundStyle(Color.risingTextSecondaryDark)
+                .foregroundStyle(Color.risingTextSecondary)
                 .multilineTextAlignment(.center)
 
             Button {
@@ -124,7 +123,7 @@ struct CommunityView: View {
                 Text("Create Post")
                     .risingBody()
                     .fontWeight(.semibold)
-                    .foregroundStyle(Color.risingBackgroundDark)
+                    .foregroundStyle(Color.risingBackground)
                     .padding(.horizontal, 24)
                     .padding(.vertical, 12)
                     .background(Color.risingPrimary)
@@ -138,11 +137,10 @@ struct CommunityView: View {
 
     private var goalsView: some View {
         LazyVStack(spacing: RisingSpacing.md) {
-            ForEach(socialService.sharedGoals) { goal in
-                SharedGoalCard(goal: goal, socialService: socialService)
-            }
+            ForEach(viewModel.sharedGoals) { goal in
+                SharedGoalCard(goal: goal, viewModel: viewModel) }
 
-            if socialService.sharedGoals.isEmpty {
+            if viewModel.sharedGoals.isEmpty {
                 emptyGoalsView
             }
         }
@@ -155,14 +153,15 @@ struct CommunityView: View {
             Image(systemName: "target")
                 .font(.system(size: 48))
                 .foregroundStyle(Color.risingPrimary.opacity(0.5))
+                .accessibilityHidden(true)
 
             Text("No shared goals")
                 .risingHeading3()
-                .foregroundStyle(Color.risingTextSecondaryDark)
+                .foregroundStyle(Color.risingTextSecondary)
 
             Text("Track your homeownership savings together with family or partners")
                 .risingBody()
-                .foregroundStyle(Color.risingTextSecondaryDark)
+                .foregroundStyle(Color.risingTextSecondary)
                 .multilineTextAlignment(.center)
 
             Button {
@@ -171,7 +170,7 @@ struct CommunityView: View {
                 Text("Create Goal")
                     .risingBody()
                     .fontWeight(.semibold)
-                    .foregroundStyle(Color.risingBackgroundDark)
+                    .foregroundStyle(Color.risingBackground)
                     .padding(.horizontal, 24)
                     .padding(.vertical, 12)
                     .background(Color.risingPrimary)
@@ -185,11 +184,11 @@ struct CommunityView: View {
 
     private var challengesView: some View {
         LazyVStack(spacing: RisingSpacing.md) {
-            ForEach(socialService.savingsChallenges) { challenge in
-                SavingsChallengeCard(challenge: challenge, socialService: socialService)
+            ForEach(viewModel.savingsChallenges) { challenge in
+                SavingsChallengeCard(challenge: challenge, viewModel: viewModel)
             }
 
-            if socialService.savingsChallenges.isEmpty {
+            if viewModel.savingsChallenges.isEmpty {
                 emptyChallengesView
             }
         }
@@ -202,14 +201,15 @@ struct CommunityView: View {
             Image(systemName: "flame")
                 .font(.system(size: 48))
                 .foregroundStyle(Color.risingAccent.opacity(0.5))
+                .accessibilityHidden(true)
 
             Text("No challenges")
                 .risingHeading3()
-                .foregroundStyle(Color.risingTextSecondaryDark)
+                .foregroundStyle(Color.risingTextSecondary)
 
             Text("Start a savings challenge to stay motivated")
                 .risingBody()
-                .foregroundStyle(Color.risingTextSecondaryDark)
+                .foregroundStyle(Color.risingTextSecondary)
                 .multilineTextAlignment(.center)
 
             Button {
@@ -218,7 +218,7 @@ struct CommunityView: View {
                 Text("Create Challenge")
                     .risingBody()
                     .fontWeight(.semibold)
-                    .foregroundStyle(Color.risingBackgroundDark)
+                    .foregroundStyle(Color.risingBackground)
                     .padding(.horizontal, 24)
                     .padding(.vertical, 12)
                     .background(Color.risingAccent)
@@ -232,11 +232,11 @@ struct CommunityView: View {
 
     private var groupsView: some View {
         LazyVStack(spacing: RisingSpacing.md) {
-            ForEach(socialService.homeBuyerGroups) { group in
-                HomeBuyerGroupCard(group: group, socialService: socialService)
+            ForEach(viewModel.homeBuyerGroups) { group in
+                HomeBuyerGroupCard(group: group, viewModel: viewModel)
             }
 
-            if socialService.homeBuyerGroups.isEmpty {
+            if viewModel.homeBuyerGroups.isEmpty {
                 emptyGroupsView
             }
         }
@@ -249,14 +249,15 @@ struct CommunityView: View {
             Image(systemName: "person.3")
                 .font(.system(size: 48))
                 .foregroundStyle(Color.risingPrimary.opacity(0.5))
+                .accessibilityHidden(true)
 
             Text("No groups yet")
                 .risingHeading3()
-                .foregroundStyle(Color.risingTextSecondaryDark)
+                .foregroundStyle(Color.risingTextSecondary)
 
             Text("Join a homebuyer group in your city")
                 .risingBody()
-                .foregroundStyle(Color.risingTextSecondaryDark)
+                .foregroundStyle(Color.risingTextSecondary)
                 .multilineTextAlignment(.center)
         }
         .padding(.vertical, 48)
@@ -267,7 +268,7 @@ struct CommunityView: View {
 
 struct CommunityPostCard: View {
     let post: RisingR12Service.CommunityPost
-    @ObservedObject var socialService: RisingR12Service
+    let viewModel: CommunityViewModel
 
     var body: some View {
         VStack(alignment: .leading, spacing: RisingSpacing.sm) {
@@ -286,18 +287,18 @@ struct CommunityPostCard: View {
                         Text(post.displayName)
                             .font(.subheadline)
                             .fontWeight(.semibold)
-                            .foregroundStyle(Color.risingTextPrimaryDark)
+                            .foregroundStyle(Color.risingTextPrimary)
 
                         if let city = post.city {
                             Text("in \(city)")
                                 .font(.caption)
-                                .foregroundStyle(Color.risingTextSecondaryDark)
+                                .foregroundStyle(Color.risingTextSecondary)
                         }
                     }
 
                     Text(formatDate(post.createdAt))
                         .font(.caption)
-                        .foregroundStyle(Color.risingTextSecondaryDark)
+                        .foregroundStyle(Color.risingTextSecondary)
                 }
 
                 Spacer()
@@ -314,11 +315,11 @@ struct CommunityPostCard: View {
 
             Text(post.content)
                 .risingBody()
-                .foregroundStyle(Color.risingTextPrimaryDark)
+                .foregroundStyle(Color.risingTextPrimary)
                 .lineLimit(5)
 
             Divider()
-                .background(Color.risingCardDark)
+                .background(Color.risingCard)
 
             HStack(spacing: RisingSpacing.md) {
                 ForEach(RisingR12Service.CommunityPost.Reaction.ReactionType.allCases, id: \.self) { reactionType in
@@ -327,14 +328,14 @@ struct CommunityPostCard: View {
                     let hasReacted = reaction?.hasReacted ?? false
 
                     Button {
-                        socialService.reactToPost(post.id, reaction: reactionType)
+                        viewModel.reactToPost(post.id, reaction: reactionType)
                     } label: {
                         HStack(spacing: 2) {
                             Text(reactionType.rawValue)
                             if count > 0 {
                                 Text("\(count)")
                                     .font(.caption)
-                                    .foregroundStyle(hasReacted ? Color.risingPrimary : Color.risingTextSecondaryDark)
+                                    .foregroundStyle(hasReacted ? Color.risingPrimary : Color.risingTextSecondary)
                             }
                         }
                     }
@@ -346,7 +347,7 @@ struct CommunityPostCard: View {
             }
         }
         .padding(RisingSpacing.md)
-        .background(Color.risingSurfaceDark)
+        .background(Color.risingSurface)
         .clipShape(RoundedRectangle(cornerRadius: RisingRadius.lg))
     }
 
@@ -361,7 +362,7 @@ struct CommunityPostCard: View {
 
 struct SharedGoalCard: View {
     let goal: RisingR12Service.SharedGoal
-    @ObservedObject var socialService: RisingR12Service
+    let viewModel: CommunityViewModel
 
     var body: some View {
         VStack(alignment: .leading, spacing: RisingSpacing.sm) {
@@ -369,15 +370,16 @@ struct SharedGoalCard: View {
                 VStack(alignment: .leading, spacing: 4) {
                     Text(goal.name)
                         .font(.headline)
-                        .foregroundStyle(Color.risingTextPrimaryDark)
+                        .foregroundStyle(Color.risingTextPrimary)
 
                     HStack(spacing: 4) {
                         Image(systemName: goal.isPublic ? "globe" : "lock")
                             .font(.caption2)
+                            .accessibilityHidden(true)
                         Text(goal.isPublic ? "Public" : "Private")
                             .font(.caption)
                     }
-                    .foregroundStyle(goal.isPublic ? Color.risingPrimary : Color.risingTextSecondaryDark)
+                    .foregroundStyle(goal.isPublic ? Color.risingPrimary : Color.risingTextSecondary)
                 }
 
                 Spacer()
@@ -389,15 +391,14 @@ struct SharedGoalCard: View {
                         .foregroundStyle(Color.risingPrimary)
                     Text("progress")
                         .font(.caption)
-                        .foregroundStyle(Color.risingTextSecondaryDark)
+                        .foregroundStyle(Color.risingTextSecondary)
                 }
             }
 
-            // Progress bar
             GeometryReader { geometry in
                 ZStack(alignment: .leading) {
                     RoundedRectangle(cornerRadius: RisingRadius.full)
-                        .fill(Color.risingCardDark)
+                        .fill(Color.risingCard)
                         .frame(height: 8)
 
                     RoundedRectangle(cornerRadius: RisingRadius.full)
@@ -411,10 +412,10 @@ struct SharedGoalCard: View {
                 Text("$\(Int(goal.currentAmount))")
                     .font(.subheadline)
                     .fontWeight(.semibold)
-                    .foregroundStyle(Color.risingTextPrimaryDark)
+                    .foregroundStyle(Color.risingTextPrimary)
                 Text("/ $\(Int(goal.targetAmount))")
                     .font(.caption)
-                    .foregroundStyle(Color.risingTextSecondaryDark)
+                    .foregroundStyle(Color.risingTextSecondary)
 
                 Spacer()
 
@@ -426,18 +427,18 @@ struct SharedGoalCard: View {
                                 .frame(width: 20, height: 20)
                                 .overlay {
                                     Circle()
-                                        .stroke(Color.risingSurfaceDark, lineWidth: 1)
+                                        .stroke(Color.risingSurface, lineWidth: 1)
                                 }
                         }
                         Text("\(goal.contributorIds.count) contributors")
                             .font(.caption)
-                            .foregroundStyle(Color.risingTextSecondaryDark)
+                            .foregroundStyle(Color.risingTextSecondary)
                     }
                 }
             }
 
             Button {
-                socialService.deleteSharedGoal(goal.id)
+                viewModel.deleteSharedGoal(goal.id)
             } label: {
                 Label("Delete", systemImage: "trash")
                     .font(.caption)
@@ -445,8 +446,9 @@ struct SharedGoalCard: View {
             }
         }
         .padding(RisingSpacing.md)
-        .background(Color.risingSurfaceDark)
+        .background(Color.risingSurface)
         .clipShape(RoundedRectangle(cornerRadius: RisingRadius.lg))
+        .accessibilityLabel("Shared goal: \(goal.name), \(Int(goal.progress * 100))% progress, \(goal.isPublic ? "Public" : "Private")")
     }
 }
 
@@ -454,7 +456,7 @@ struct SharedGoalCard: View {
 
 struct SavingsChallengeCard: View {
     let challenge: RisingR12Service.SavingsChallenge
-    @ObservedObject var socialService: RisingR12Service
+    let viewModel: CommunityViewModel
 
     var body: some View {
         VStack(alignment: .leading, spacing: RisingSpacing.sm) {
@@ -462,15 +464,16 @@ struct SavingsChallengeCard: View {
                 VStack(alignment: .leading, spacing: 4) {
                     Text(challenge.name)
                         .font(.headline)
-                        .foregroundStyle(Color.risingTextPrimaryDark)
+                        .foregroundStyle(Color.risingTextPrimary)
 
                     HStack(spacing: 4) {
                         Image(systemName: "clock")
                             .font(.caption2)
+                            .accessibilityHidden(true)
                         Text("\(challenge.daysRemaining) days left")
                             .font(.caption)
                     }
-                    .foregroundStyle(challenge.daysRemaining < 7 ? Color.risingWarning : Color.risingTextSecondaryDark)
+                    .foregroundStyle(challenge.daysRemaining < 7 ? Color.risingWarning : Color.risingTextSecondary)
                 }
 
                 Spacer()
@@ -479,6 +482,7 @@ struct SavingsChallengeCard: View {
                     Circle()
                         .fill(Color.risingSuccess)
                         .frame(width: 8, height: 8)
+                        .accessibilityHidden(true)
                     Text("Active")
                         .font(.caption)
                         .foregroundStyle(Color.risingSuccess)
@@ -488,7 +492,7 @@ struct SavingsChallengeCard: View {
             if !challenge.description.isEmpty {
                 Text(challenge.description)
                     .font(.subheadline)
-                    .foregroundStyle(Color.risingTextSecondaryDark)
+                    .foregroundStyle(Color.risingTextSecondary)
                     .lineLimit(2)
             }
 
@@ -496,7 +500,7 @@ struct SavingsChallengeCard: View {
                 VStack(alignment: .leading, spacing: 2) {
                     Text("Target")
                         .font(.caption2)
-                        .foregroundStyle(Color.risingTextSecondaryDark)
+                        .foregroundStyle(Color.risingTextSecondary)
                     Text("$\(Int(challenge.targetAmount))")
                         .font(.subheadline)
                         .fontWeight(.semibold)
@@ -508,23 +512,24 @@ struct SavingsChallengeCard: View {
                 VStack(alignment: .trailing, spacing: 2) {
                     Text("Duration")
                         .font(.caption2)
-                        .foregroundStyle(Color.risingTextSecondaryDark)
+                        .foregroundStyle(Color.risingTextSecondary)
                     Text("\(challenge.durationDays) days")
                         .font(.subheadline)
-                        .foregroundStyle(Color.risingTextPrimaryDark)
+                        .foregroundStyle(Color.risingTextPrimary)
                 }
             }
 
             HStack(spacing: 4) {
                 Image(systemName: "person.2")
                     .font(.caption2)
+                    .accessibilityHidden(true)
                 Text("\(challenge.participantIds.count) participants")
                     .font(.caption)
             }
-            .foregroundStyle(Color.risingTextSecondaryDark)
+            .foregroundStyle(Color.risingTextSecondary)
 
             Button {
-                socialService.deleteChallenge(challenge.id)
+                viewModel.deleteChallenge(challenge.id)
             } label: {
                 Label("Delete", systemImage: "trash")
                     .font(.caption)
@@ -532,8 +537,9 @@ struct SavingsChallengeCard: View {
             }
         }
         .padding(RisingSpacing.md)
-        .background(Color.risingSurfaceDark)
+        .background(Color.risingSurface)
         .clipShape(RoundedRectangle(cornerRadius: RisingRadius.lg))
+        .accessibilityLabel("Savings challenge: \(challenge.name), \(challenge.daysRemaining) days left, target $\(Int(challenge.targetAmount))")
     }
 }
 
@@ -541,7 +547,7 @@ struct SavingsChallengeCard: View {
 
 struct HomeBuyerGroupCard: View {
     let group: RisingR12Service.HomeBuyerGroup
-    @ObservedObject var socialService: RisingR12Service
+    let viewModel: CommunityViewModel
 
     var body: some View {
         VStack(alignment: .leading, spacing: RisingSpacing.sm) {
@@ -549,11 +555,12 @@ struct HomeBuyerGroupCard: View {
                 VStack(alignment: .leading, spacing: 4) {
                     Text(group.name)
                         .font(.headline)
-                        .foregroundStyle(Color.risingTextPrimaryDark)
+                        .foregroundStyle(Color.risingTextPrimary)
 
                     HStack(spacing: 4) {
                         Image(systemName: "mappin")
                             .font(.caption2)
+                            .accessibilityHidden(true)
                         Text(group.city)
                             .font(.caption)
                     }
@@ -566,40 +573,41 @@ struct HomeBuyerGroupCard: View {
                     Text("\(group.memberCount)")
                         .font(.title3)
                         .fontWeight(.bold)
-                        .foregroundStyle(Color.risingTextPrimaryDark)
+                        .foregroundStyle(Color.risingTextPrimary)
                     Text("members")
                         .font(.caption)
-                        .foregroundStyle(Color.risingTextSecondaryDark)
+                        .foregroundStyle(Color.risingTextSecondary)
                 }
             }
 
             if !group.description.isEmpty {
                 Text(group.description)
                     .font(.subheadline)
-                    .foregroundStyle(Color.risingTextSecondaryDark)
+                    .foregroundStyle(Color.risingTextSecondary)
                     .lineLimit(2)
             }
 
             Button {
                 if group.isJoined {
-                    socialService.leaveGroup(group.id)
+                    viewModel.leaveGroup(group.id)
                 } else {
-                    socialService.joinGroup(group.id)
+                    viewModel.joinGroup(group.id)
                 }
             } label: {
                 Text(group.isJoined ? "Leave Group" : "Join Group")
                     .font(.subheadline)
                     .fontWeight(.medium)
-                    .foregroundStyle(group.isJoined ? Color.risingTextSecondaryDark : Color.risingBackgroundDark)
+                    .foregroundStyle(group.isJoined ? Color.risingTextSecondary : Color.risingBackground)
                     .frame(maxWidth: .infinity)
                     .padding(.vertical, 8)
-                    .background(group.isJoined ? Color.risingCardDark : Color.risingPrimary)
+                    .background(group.isJoined ? Color.risingCard : Color.risingPrimary)
                     .clipShape(RoundedRectangle(cornerRadius: RisingRadius.md))
             }
         }
         .padding(RisingSpacing.md)
-        .background(Color.risingSurfaceDark)
+        .background(Color.risingSurface)
         .clipShape(RoundedRectangle(cornerRadius: RisingRadius.lg))
+        .accessibilityLabel("Home buyer group: \(group.name) in \(group.city), \(group.memberCount) members")
     }
 }
 
@@ -607,7 +615,7 @@ struct HomeBuyerGroupCard: View {
 
 struct NewCommunityPostSheet: View {
     @Environment(\.dismiss) private var dismiss
-    @ObservedObject var socialService: RisingR12Service
+    let viewModel: CommunityViewModel
     @State private var content = ""
     @State private var selectedType: RisingR12Service.CommunityPost.PostType = .question
     @State private var city = ""
@@ -616,7 +624,7 @@ struct NewCommunityPostSheet: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                Color.risingBackgroundDark.ignoresSafeArea()
+                Color.risingBackground.ignoresSafeArea()
 
                 VStack(spacing: RisingSpacing.md) {
                     Picker("Type", selection: $selectedType) {
@@ -630,13 +638,13 @@ struct NewCommunityPostSheet: View {
                         .textFieldStyle(.plain)
                         .lineLimit(4...8)
                         .padding(RisingSpacing.md)
-                        .background(Color.risingSurfaceDark)
+                        .background(Color.risingSurface)
                         .clipShape(RoundedRectangle(cornerRadius: RisingRadius.md))
 
                     TextField("City (optional)", text: $city)
                         .textFieldStyle(.plain)
                         .padding(RisingSpacing.md)
-                        .background(Color.risingSurfaceDark)
+                        .background(Color.risingSurface)
                         .clipShape(RoundedRectangle(cornerRadius: RisingRadius.md))
 
                     Toggle("Post Anonymously", isOn: $isAnonymous)
@@ -646,7 +654,7 @@ struct NewCommunityPostSheet: View {
                     Spacer()
 
                     Button {
-                        _ = socialService.createPost(
+                        viewModel.createPost(
                             content: content,
                             type: selectedType,
                             city: city.isEmpty ? nil : city,
@@ -656,10 +664,10 @@ struct NewCommunityPostSheet: View {
                     } label: {
                         Text("Post")
                             .font(.headline)
-                            .foregroundStyle(Color.risingBackgroundDark)
+                            .foregroundStyle(Color.risingBackground)
                             .frame(maxWidth: .infinity)
                             .padding(.vertical, RisingSpacing.md)
-                            .background(content.isEmpty ? Color.risingCardDark : Color.risingPrimary)
+                            .background(content.isEmpty ? Color.risingCard : Color.risingPrimary)
                             .clipShape(RoundedRectangle(cornerRadius: RisingRadius.md))
                     }
                     .disabled(content.isEmpty)
@@ -681,7 +689,7 @@ struct NewCommunityPostSheet: View {
 
 struct NewSharedGoalSheet: View {
     @Environment(\.dismiss) private var dismiss
-    @ObservedObject var socialService: RisingR12Service
+    let viewModel: CommunityViewModel
     @State private var name = ""
     @State private var targetAmount = ""
     @State private var isPublic = false
@@ -689,20 +697,20 @@ struct NewSharedGoalSheet: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                Color.risingBackgroundDark.ignoresSafeArea()
+                Color.risingBackground.ignoresSafeArea()
 
                 VStack(spacing: RisingSpacing.md) {
                     TextField("Goal Name", text: $name)
                         .textFieldStyle(.plain)
                         .padding(RisingSpacing.md)
-                        .background(Color.risingSurfaceDark)
+                        .background(Color.risingSurface)
                         .clipShape(RoundedRectangle(cornerRadius: RisingRadius.md))
 
                     TextField("Target Amount ($)", text: $targetAmount)
                         .keyboardType(.decimalPad)
                         .textFieldStyle(.plain)
                         .padding(RisingSpacing.md)
-                        .background(Color.risingSurfaceDark)
+                        .background(Color.risingSurface)
                         .clipShape(RoundedRectangle(cornerRadius: RisingRadius.md))
 
                     Toggle("Make Public", isOn: $isPublic)
@@ -713,16 +721,16 @@ struct NewSharedGoalSheet: View {
 
                     Button {
                         if let amount = Double(targetAmount) {
-                            _ = socialService.createSharedGoal(name: name, targetAmount: amount, isPublic: isPublic)
+                            viewModel.createSharedGoal(name: name, targetAmount: amount, isPublic: isPublic)
                             dismiss()
                         }
                     } label: {
                         Text("Create Goal")
                             .font(.headline)
-                            .foregroundStyle(Color.risingBackgroundDark)
+                            .foregroundStyle(Color.risingBackground)
                             .frame(maxWidth: .infinity)
                             .padding(.vertical, RisingSpacing.md)
-                            .background(name.isEmpty ? Color.risingCardDark : Color.risingPrimary)
+                            .background(name.isEmpty ? Color.risingCard : Color.risingPrimary)
                             .clipShape(RoundedRectangle(cornerRadius: RisingRadius.md))
                     }
                     .disabled(name.isEmpty || targetAmount.isEmpty)
@@ -744,7 +752,7 @@ struct NewSharedGoalSheet: View {
 
 struct NewChallengeSheet: View {
     @Environment(\.dismiss) private var dismiss
-    @ObservedObject var socialService: RisingR12Service
+    let viewModel: CommunityViewModel
     @State private var name = ""
     @State private var description = ""
     @State private var targetAmount = ""
@@ -753,20 +761,20 @@ struct NewChallengeSheet: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                Color.risingBackgroundDark.ignoresSafeArea()
+                Color.risingBackground.ignoresSafeArea()
 
                 VStack(spacing: RisingSpacing.md) {
                     TextField("Challenge Name", text: $name)
                         .textFieldStyle(.plain)
                         .padding(RisingSpacing.md)
-                        .background(Color.risingSurfaceDark)
+                        .background(Color.risingSurface)
                         .clipShape(RoundedRectangle(cornerRadius: RisingRadius.md))
 
                     TextField("Description (optional)", text: $description, axis: .vertical)
                         .textFieldStyle(.plain)
                         .lineLimit(2...4)
                         .padding(RisingSpacing.md)
-                        .background(Color.risingSurfaceDark)
+                        .background(Color.risingSurface)
                         .clipShape(RoundedRectangle(cornerRadius: RisingRadius.md))
 
                     HStack(spacing: RisingSpacing.md) {
@@ -774,14 +782,14 @@ struct NewChallengeSheet: View {
                             .keyboardType(.decimalPad)
                             .textFieldStyle(.plain)
                             .padding(RisingSpacing.md)
-                            .background(Color.risingSurfaceDark)
+                            .background(Color.risingSurface)
                             .clipShape(RoundedRectangle(cornerRadius: RisingRadius.md))
 
                         TextField("Days", text: $durationDays)
                             .keyboardType(.numberPad)
                             .textFieldStyle(.plain)
                             .padding(RisingSpacing.md)
-                            .background(Color.risingSurfaceDark)
+                            .background(Color.risingSurface)
                             .clipShape(RoundedRectangle(cornerRadius: RisingRadius.md))
                     }
 
@@ -789,16 +797,16 @@ struct NewChallengeSheet: View {
 
                     Button {
                         if let amount = Double(targetAmount), let days = Int(durationDays) {
-                            _ = socialService.createChallenge(name: name, description: description, targetAmount: amount, durationDays: days)
+                            viewModel.createChallenge(name: name, description: description, targetAmount: amount, durationDays: days)
                             dismiss()
                         }
                     } label: {
                         Text("Create Challenge")
                             .font(.headline)
-                            .foregroundStyle(Color.risingBackgroundDark)
+                            .foregroundStyle(Color.risingBackground)
                             .frame(maxWidth: .infinity)
                             .padding(.vertical, RisingSpacing.md)
-                            .background(name.isEmpty ? Color.risingCardDark : Color.risingAccent)
+                            .background(name.isEmpty ? Color.risingCard : Color.risingAccent)
                             .clipShape(RoundedRectangle(cornerRadius: RisingRadius.md))
                     }
                     .disabled(name.isEmpty || targetAmount.isEmpty)

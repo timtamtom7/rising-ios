@@ -10,7 +10,7 @@ struct PortfolioView: View {
     
     var body: some View {
         ZStack {
-            Color.risingBackgroundDark.ignoresSafeArea()
+            Color.risingBackground.ignoresSafeArea()
             
             if portfolios.isEmpty {
                 emptyState
@@ -27,6 +27,7 @@ struct PortfolioView: View {
                 } label: {
                     Image(systemName: "plus")
                         .foregroundStyle(Color.risingPrimary)
+                        .accessibilityLabel("Add portfolio")
                 }
             }
         }
@@ -45,16 +46,16 @@ struct PortfolioView: View {
         VStack(spacing: 16) {
             Image(systemName: "building.columns")
                 .font(.system(size: 56))
-                .foregroundStyle(Color.risingTextSecondaryDark)
+                .foregroundStyle(Color.risingTextSecondary)
             
             Text("No investment portfolios yet")
                 .font(.title3)
                 .fontWeight(.semibold)
-                .foregroundStyle(Color.risingTextPrimaryDark)
+                .foregroundStyle(Color.risingTextPrimary)
             
             Text("Track your investment properties\nand see your total returns.")
                 .font(.body)
-                .foregroundStyle(Color.risingTextSecondaryDark)
+                .foregroundStyle(Color.risingTextSecondary)
                 .multilineTextAlignment(.center)
             
             Button {
@@ -80,6 +81,7 @@ struct PortfolioView: View {
                         .onTapGesture {
                             selectedPortfolio = portfolio
                         }
+                        .accessibilityLabel("Portfolio: \(portfolio.name), \(portfolio.properties.count) properties, total value $\(Int(portfolio.totalCurrentValue / 1000))K")
                 }
             }
             .padding(16)
@@ -105,17 +107,18 @@ struct PortfolioCard: View {
                 VStack(alignment: .leading, spacing: 4) {
                     Text(portfolio.name)
                         .font(.headline)
-                        .foregroundStyle(Color.risingTextPrimaryDark)
+                        .foregroundStyle(Color.risingTextPrimary)
                     
                     Text("\(portfolio.properties.count) properties")
                         .font(.caption)
-                        .foregroundStyle(Color.risingTextSecondaryDark)
+                        .foregroundStyle(Color.risingTextSecondary)
                 }
                 
                 Spacer()
                 
                 Image(systemName: "chevron.right")
-                    .foregroundStyle(Color.risingTextSecondaryDark)
+                    .foregroundStyle(Color.risingTextSecondary)
+                    .accessibilityHidden(true)
             }
             
             // Summary metrics
@@ -144,7 +147,7 @@ struct PortfolioCard: View {
             }
         }
         .padding(16)
-        .background(Color.risingSurfaceDark)
+        .background(Color.risingSurface)
         .clipShape(RoundedRectangle(cornerRadius: RisingRadius.xl))
     }
     
@@ -156,7 +159,7 @@ struct PortfolioCard: View {
                 .foregroundStyle(color)
             Text(title)
                 .font(.caption2)
-                .foregroundStyle(Color.risingTextSecondaryDark)
+                .foregroundStyle(Color.risingTextSecondary)
         }
         .frame(maxWidth: .infinity)
     }
@@ -172,15 +175,15 @@ struct CreatePortfolioSheet: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                Color.risingBackgroundDark.ignoresSafeArea()
+                Color.risingBackground.ignoresSafeArea()
                 
                 VStack(spacing: 24) {
                     TextField("Portfolio Name", text: $name)
                         .textFieldStyle(.plain)
                         .padding(12)
-                        .background(Color.risingSurfaceDark)
+                        .background(Color.risingSurface)
                         .clipShape(RoundedRectangle(cornerRadius: RisingRadius.md))
-                        .foregroundStyle(Color.risingTextPrimaryDark)
+                        .foregroundStyle(Color.risingTextPrimary)
                     
                     Spacer()
                 }
@@ -191,7 +194,7 @@ struct CreatePortfolioSheet: View {
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
                     Button("Cancel") { dismiss() }
-                        .foregroundStyle(Color.risingTextSecondaryDark)
+                        .foregroundStyle(Color.risingTextSecondary)
                 }
                 ToolbarItem(placement: .confirmationAction) {
                     Button("Create") {
@@ -221,7 +224,7 @@ struct PortfolioDetailSheet: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                Color.risingBackgroundDark.ignoresSafeArea()
+                Color.risingBackground.ignoresSafeArea()
                 
                 ScrollView {
                     VStack(spacing: 24) {
@@ -232,10 +235,10 @@ struct PortfolioDetailSheet: View {
                                     Text("$\(Int(portfolio.totalCurrentValue / 1000))K")
                                         .font(.title)
                                         .fontWeight(.bold)
-                                        .foregroundStyle(Color.risingTextPrimaryDark)
+                                        .foregroundStyle(Color.risingTextPrimary)
                                     Text("Total Value")
                                         .font(.caption)
-                                        .foregroundStyle(Color.risingTextSecondaryDark)
+                                        .foregroundStyle(Color.risingTextSecondary)
                                 }
                                 
                                 VStack(spacing: 4) {
@@ -245,25 +248,25 @@ struct PortfolioDetailSheet: View {
                                         .foregroundStyle(portfolio.totalROI >= 0 ? Color.risingSuccess : Color.risingError)
                                     Text("Total ROI")
                                         .font(.caption)
-                                        .foregroundStyle(Color.risingTextSecondaryDark)
+                                        .foregroundStyle(Color.risingTextSecondary)
                                 }
                             }
                         }
                         .padding(20)
                         .frame(maxWidth: .infinity)
-                        .background(Color.risingSurfaceDark)
+                        .background(Color.risingSurface)
                         .clipShape(RoundedRectangle(cornerRadius: RisingRadius.xl))
                         
                         // Properties
                         VStack(alignment: .leading, spacing: 12) {
                             Text("Properties (\(portfolio.properties.count))")
                                 .font(.headline)
-                                .foregroundStyle(Color.risingTextPrimaryDark)
+                                .foregroundStyle(Color.risingTextPrimary)
                             
                             if portfolio.properties.isEmpty {
                                 Text("No properties in this portfolio yet.")
                                     .font(.body)
-                                    .foregroundStyle(Color.risingTextSecondaryDark)
+                                    .foregroundStyle(Color.risingTextSecondary)
                                     .padding(.vertical, 20)
                             } else {
                                 ForEach(portfolio.properties) { prop in
@@ -273,7 +276,7 @@ struct PortfolioDetailSheet: View {
                         }
                         .padding(16)
                         .frame(maxWidth: .infinity, alignment: .leading)
-                        .background(Color.risingSurfaceDark)
+                        .background(Color.risingSurface)
                         .clipShape(RoundedRectangle(cornerRadius: RisingRadius.xl))
                     }
                     .padding(16)
@@ -300,7 +303,7 @@ struct PortfolioPropertyRow: View {
                 Text("Property \(property.propertyId.uuidString.prefix(6))")
                     .font(.subheadline)
                     .fontWeight(.semibold)
-                    .foregroundStyle(Color.risingTextPrimaryDark)
+                    .foregroundStyle(Color.risingTextPrimary)
                 
                 Spacer()
                 
@@ -313,15 +316,15 @@ struct PortfolioPropertyRow: View {
             HStack(spacing: 16) {
                 Text("$\(Int(property.purchasePrice / 1000))K purchase")
                     .font(.caption)
-                    .foregroundStyle(Color.risingTextSecondaryDark)
+                    .foregroundStyle(Color.risingTextSecondary)
                 
                 Text("$\(Int(property.cashFlow))/mo cash flow")
                     .font(.caption)
-                    .foregroundStyle(Color.risingTextSecondaryDark)
+                    .foregroundStyle(Color.risingTextSecondary)
             }
         }
         .padding(12)
-        .background(Color.risingBackgroundDark)
+        .background(Color.risingBackground)
         .clipShape(RoundedRectangle(cornerRadius: RisingRadius.md))
     }
 }
